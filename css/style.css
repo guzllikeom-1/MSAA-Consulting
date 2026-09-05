@@ -10682,6 +10682,8 @@ strong{
 
     display:flex;
 
+    justify-content:center;
+	
     gap:22px;
 
 }
