@@ -1,0 +1,1713 @@
+/* =========================================
+        MSAA CONSULTING
+        PROPERTY MANAGEMENT PAGE
+========================================= */
+
+
+/* =========================================
+        PAGE
+========================================= */
+
+.management-page{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    direction:rtl;
+
+    background:#f7faff;
+
+}
+
+
+/* =========================================
+        HERO
+========================================= */
+
+.management-hero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:480px;
+
+    padding:150px 0 105px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 14% 35%,
+            rgba(76,141,218,.14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(18,61,114,.07),
+            transparent 27%
+        ),
+
+        linear-gradient(
+            125deg,
+            #edf5fc 0%,
+            #f8fbff 45%,
+            #ffffff 72%,
+            #f1f7fc 100%
+        );
+
+}
+
+
+/* =========================================
+        BLUEPRINT BACKGROUND
+========================================= */
+
+.management-hero-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+
+/* Buildings */
+
+.management-hero-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-5%;
+
+    bottom:-55px;
+
+    width:58%;
+
+    height:100%;
+
+    background-image:
+        url("../images/buildings/hero-buildings.png");
+
+    background-repeat:no-repeat;
+
+    background-position:left bottom;
+
+    background-size:contain;
+
+    opacity:.075;
+
+}
+
+
+/* Architectural grid */
+
+.management-hero-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(18,61,114,.022) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(18,61,114,.022) 1px,
+            transparent 1px
+        );
+
+    background-size:75px 75px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.7),
+            transparent 95%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.7),
+            transparent 95%
+        );
+
+}
+
+
+/* =========================================
+        HERO CONTAINER
+========================================= */
+
+.management-hero-container{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.2fr)
+        minmax(300px,.8fr);
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+/* =========================================
+        HERO CONTENT
+========================================= */
+
+.management-hero-content{
+
+    position:relative;
+
+    max-width:780px;
+
+}
+
+
+/* =========================================
+        LABEL
+========================================= */
+
+.management-page-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-height:44px;
+
+    margin-bottom:22px;
+
+    padding:7px 21px;
+
+    border:
+        1px solid
+        rgba(18,61,114,.13);
+
+    border-radius:50px;
+
+    color:var(--primary-color);
+
+    background:
+        rgba(255,255,255,.72);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(18,61,114,.05);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================
+        HERO TITLE
+========================================= */
+
+.management-hero-content h1{
+
+    position:relative;
+
+    margin:0;
+
+    padding-bottom:27px;
+
+    color:var(--dark-blue);
+
+    font-size:
+        clamp(48px,5vw,74px);
+
+    font-weight:800;
+
+    line-height:1.4;
+
+    letter-spacing:-2px;
+
+}
+
+
+.management-hero-content h1::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:95px;
+
+    height:4px;
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--light-blue),
+            var(--primary-color)
+        );
+
+}
+
+
+/* =========================================
+        MANAGEMENT VISUAL
+========================================= */
+
+.management-hero-visual{
+
+    position:relative;
+
+    min-height:310px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+/* Large circle */
+
+.management-hero-visual::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:285px;
+
+    height:285px;
+
+    transform:
+        translate(-50%,-50%);
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.10);
+
+    border-radius:50%;
+
+    box-shadow:
+
+        0 0 0 28px
+        rgba(76,141,218,.025),
+
+        0 0 0 62px
+        rgba(18,61,114,.017);
+
+}
+
+
+/* =========================================
+        MAIN BUILDING ICON
+========================================= */
+
+.management-building-icon{
+
+    position:relative;
+
+    z-index:4;
+
+    width:145px;
+
+    height:145px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.9);
+
+    border-radius:34px;
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #2678ba 0%,
+            #123d72 52%,
+            #082c57 100%
+        );
+
+    box-shadow:
+
+        0 25px 55px
+        rgba(10,34,64,.22),
+
+        inset 0 1px 0
+        rgba(255,255,255,.28);
+
+    transform:
+        rotate(-3deg);
+
+    animation:
+        managementBuildingFloat
+        5.5s ease-in-out
+        infinite;
+
+}
+
+
+.management-building-icon i{
+
+    font-size:52px;
+
+    transform:
+        rotate(3deg);
+
+}
+
+
+/* =========================================
+        ORBIT ICONS
+========================================= */
+
+.management-orbit{
+
+    position:absolute;
+
+    z-index:5;
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.92);
+
+    border-radius:18px;
+
+    color:var(--primary-color);
+
+    background:
+        rgba(255,255,255,.88);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    box-shadow:
+        0 14px 32px
+        rgba(10,34,64,.11);
+
+    font-size:19px;
+
+}
+
+
+.orbit-one{
+
+    top:26px;
+
+    right:46px;
+
+    animation:
+        managementOrbitOne
+        5s ease-in-out
+        infinite;
+
+}
+
+
+.orbit-two{
+
+    left:35px;
+
+    top:105px;
+
+    animation:
+        managementOrbitTwo
+        5.8s ease-in-out
+        infinite;
+
+}
+
+
+.orbit-three{
+
+    right:55px;
+
+    bottom:18px;
+
+    animation:
+        managementOrbitThree
+        6.3s ease-in-out
+        infinite;
+
+}
+
+
+/* =========================================
+        HERO ANIMATIONS
+========================================= */
+
+@keyframes managementBuildingFloat{
+
+    0%,
+    100%{
+
+        transform:
+            rotate(-3deg)
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            rotate(-3deg)
+            translateY(-8px);
+
+    }
+
+}
+
+
+@keyframes managementOrbitOne{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-9px);
+
+    }
+
+}
+
+
+@keyframes managementOrbitTwo{
+
+    0%,
+    100%{
+
+        transform:
+            translate(0,0);
+
+    }
+
+    50%{
+
+        transform:
+            translate(-5px,7px);
+
+    }
+
+}
+
+
+@keyframes managementOrbitThree{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(8px);
+
+    }
+
+}
+
+
+/* =========================================
+        FORM SECTION
+========================================= */
+
+.management-form-section{
+
+    position:relative;
+
+    width:100%;
+
+    padding:
+        0 0 130px;
+
+    background:
+
+        radial-gradient(
+            circle at 100% 25%,
+            rgba(76,141,218,.055),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 0% 72%,
+            rgba(18,61,114,.04),
+            transparent 27%
+        ),
+
+        linear-gradient(
+            180deg,
+            #f5f9fd 0%,
+            #ffffff 48%,
+            #f7fafe 100%
+        );
+
+}
+
+
+/* Architectural decoration */
+
+.management-form-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:560px;
+
+    height:560px;
+
+    right:-420px;
+
+    top:34%;
+
+    border-radius:50%;
+
+    border:
+
+        90px solid
+        rgba(18,61,114,.018);
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================
+        FORM CONTAINER
+========================================= */
+
+.management-form-container{
+
+    position:relative;
+
+    z-index:3;
+
+    max-width:1160px;
+
+}
+
+
+/* =========================================
+        FORM GLASS PANEL
+========================================= */
+
+.management-form{
+
+    position:relative;
+
+    margin-top:-65px;
+
+    padding:55px;
+
+    overflow:hidden;
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.92);
+
+    border-radius:34px;
+
+    background:
+        rgba(255,255,255,.85);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+
+    box-shadow:
+
+        0 35px 90px
+        rgba(10,34,64,.105),
+
+        inset 0 1px 0
+        rgba(255,255,255,.96);
+
+}
+
+
+/* Top light */
+
+.management-form::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:10%;
+
+    width:80%;
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(76,141,218,.32),
+            transparent
+        );
+
+}
+
+
+/* =========================================
+        FORM BLOCKS
+========================================= */
+
+.management-form-block{
+
+    position:relative;
+
+    padding-bottom:48px;
+
+    margin-bottom:48px;
+
+    border-bottom:
+
+        1px solid
+        rgba(18,61,114,.075);
+
+}
+
+
+.management-form-block:last-of-type{
+
+    margin-bottom:30px;
+
+}
+
+
+/* =========================================
+        BLOCK NUMBER
+========================================= */
+
+.management-block-number{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+
+.management-block-number span{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #2678ba,
+            #123d72
+        );
+
+    box-shadow:
+        0 10px 24px
+        rgba(18,61,114,.18);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+
+.management-block-number::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    margin-right:18px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(18,61,114,.11)
+        );
+
+}
+
+
+/* =========================================
+        FORM GRID
+========================================= */
+
+.management-form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:
+        25px 28px;
+
+}
+
+
+/* =========================================
+        FORM GROUP
+========================================= */
+
+.management-form-group{
+
+    position:relative;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+.management-form-group label{
+
+    padding-right:3px;
+
+    color:var(--dark-blue);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================
+        INPUT WRAPPER
+========================================= */
+
+.management-input-wrap{
+
+    position:relative;
+
+    width:100%;
+
+}
+
+
+.management-input-wrap > i{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    z-index:2;
+
+    transform:
+        translateY(-50%);
+
+    width:20px;
+
+    color:
+        rgba(18,61,114,.55);
+
+    font-size:15px;
+
+    text-align:center;
+
+    pointer-events:none;
+
+    transition:
+
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+
+/* =========================================
+        INPUTS
+========================================= */
+
+.management-input-wrap input{
+
+    width:100%;
+
+    height:58px;
+
+    padding:
+        0 52px 0 18px;
+
+    outline:none;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.11);
+
+    border-radius:16px;
+
+    color:var(--text-color);
+
+    background:
+        rgba(247,250,254,.88);
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:14px;
+
+    transition:
+
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.management-input-wrap input:focus{
+
+    border-color:
+        rgba(18,61,114,.40);
+
+    background:#ffffff;
+
+    box-shadow:
+
+        0 0 0 4px
+        rgba(76,141,218,.075),
+
+        0 10px 25px
+        rgba(18,61,114,.05);
+
+}
+
+
+.management-input-wrap:focus-within > i{
+
+    color:
+        var(--primary-color);
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+
+}
+
+
+/* =========================================
+        QUESTION GRID
+========================================= */
+
+.management-question-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:22px;
+
+}
+
+
+/* =========================================
+        QUESTION CARD
+========================================= */
+
+.management-question-card{
+
+    min-width:0;
+
+    padding:26px;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.09);
+
+    border-radius:21px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(247,251,255,.96),
+            rgba(255,255,255,.98)
+        );
+
+    box-shadow:
+        0 8px 26px
+        rgba(10,34,64,.025);
+
+}
+
+
+.management-question-card legend{
+
+    width:100%;
+
+    margin-bottom:19px;
+
+    padding:0;
+
+    color:var(--dark-blue);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================
+        YES / NO
+========================================= */
+
+.management-yes-no{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+
+.management-yes-no label{
+
+    position:relative;
+
+    cursor:pointer;
+
+}
+
+
+.management-yes-no input{
+
+    position:absolute;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+.management-yes-no span{
+
+    min-height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.11);
+
+    border-radius:50px;
+
+    color:#52677c;
+
+    background:#ffffff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.management-yes-no label:hover span{
+
+    border-color:
+        rgba(18,61,114,.25);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.management-yes-no input:checked + span{
+
+    color:#ffffff;
+
+    border-color:
+        var(--primary-color);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--dark-blue)
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(18,61,114,.16);
+
+}
+
+
+/* =========================================
+        SERVICES
+========================================= */
+
+.management-services{
+
+    min-width:0;
+
+    margin:0;
+
+    padding:0;
+
+    border:0;
+
+}
+
+
+.management-services > legend{
+
+    margin-bottom:22px;
+
+    color:var(--dark-blue);
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================
+        SERVICES GRID
+========================================= */
+
+.management-services-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:18px;
+
+}
+
+
+/* =========================================
+        SERVICE CARD
+========================================= */
+
+.management-service-card{
+
+    position:relative;
+
+    cursor:pointer;
+
+}
+
+
+.management-service-card input{
+
+    position:absolute;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+.management-service-content{
+
+    position:relative;
+
+    min-height:145px;
+
+    padding:24px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:center;
+
+    gap:15px;
+
+    overflow:hidden;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.09);
+
+    border-radius:20px;
+
+    color:var(--dark-blue);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(247,251,255,.96),
+            rgba(255,255,255,.98)
+        );
+
+    box-shadow:
+        0 8px 26px
+        rgba(10,34,64,.025);
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:
+
+        transform .3s ease,
+        border-color .3s ease,
+        color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+/* Main icon */
+
+.management-service-content > i{
+
+    width:49px;
+
+    height:49px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    color:var(--primary-color);
+
+    background:
+        rgba(18,61,114,.07);
+
+    font-size:19px;
+
+    transition:
+        .3s ease;
+
+}
+
+
+/* Check */
+
+.management-check{
+
+    position:absolute;
+
+    top:16px;
+
+    left:16px;
+
+    width:27px;
+
+    height:27px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.12);
+
+    border-radius:50%;
+
+    color:transparent;
+
+    background:#ffffff;
+
+    font-size:10px;
+
+    transition:
+        .3s ease;
+
+}
+
+
+/* Hover */
+
+.management-service-card:hover
+.management-service-content{
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(18,61,114,.17);
+
+    box-shadow:
+        0 16px 35px
+        rgba(10,34,64,.07);
+
+}
+
+
+/* Selected */
+
+.management-service-card input:checked
++
+.management-service-content{
+
+    color:#ffffff;
+
+    border-color:transparent;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #1c6daf 0%,
+            #123d72 55%,
+            #092d58 100%
+        );
+
+    box-shadow:
+        0 18px 42px
+        rgba(11,58,105,.20);
+
+}
+
+
+.management-service-card input:checked
++
+.management-service-content
+> i{
+
+    color:#ffffff;
+
+    background:
+        rgba(255,255,255,.13);
+
+}
+
+
+.management-service-card input:checked
++
+.management-service-content
+.management-service-content
+.management-check{
+
+    color:#ffffff;
+
+}
+
+
+/* More reliable checked icon rule */
+
+.management-service-card input:checked
++
+.management-service-content
+> .management-check{
+
+    color:#ffffff;
+
+    border-color:
+        rgba(255,255,255,.28);
+
+    background:
+        rgba(255,255,255,.14);
+
+}
+
+
+/* =========================================
+        TEXTAREA
+========================================= */
+
+.management-form-group textarea{
+
+    width:100%;
+
+    min-height:180px;
+
+    padding:19px;
+
+    resize:vertical;
+
+    outline:none;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.11);
+
+    border-radius:18px;
+
+    color:var(--text-color);
+
+    background:
+        rgba(247,250,254,.88);
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:14px;
+
+    line-height:2;
+
+    transition:
+
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.management-form-group textarea:focus{
+
+    border-color:
+        rgba(18,61,114,.40);
+
+    background:#ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(76,141,218,.075);
+
+}
+
+
+/* =========================================
+        SUBMIT
+========================================= */
+
+.management-submit-area{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:flex-start;
+
+}
+
+
+.management-submit-btn{
+
+    position:relative;
+
+    min-width:260px;
+
+    min-height:63px;
+
+    padding:
+        0 32px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+    overflow:hidden;
+
+    border:0;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #1c6daf 0%,
+            #103f75 52%,
+            #082d59 100%
+        );
+
+    box-shadow:
+        0 15px 35px
+        rgba(11,58,105,.23);
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:
+
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+/* Shine */
+
+.management-submit-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-60%;
+
+    width:45%;
+
+    height:300%;
+
+    transform:
+        rotate(25deg);
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.22),
+            transparent
+        );
+
+    transition:
+        left .7s ease;
+
+}
+
+
+.management-submit-btn span,
+.management-submit-btn i{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.management-submit-btn i{
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.management-submit-btn:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 21px 46px
+        rgba(11,58,105,.31);
+
+}
+
+
+.management-submit-btn:hover::before{
+
+    left:130%;
+
+}
+
+
+.management-submit-btn:hover i{
+
+    transform:
+        translateX(-6px);
+
+}
+
+
+/* =========================================
+        ACCESSIBILITY
+========================================= */
+
+.management-service-card:focus-within
+.management-service-content,
+
+.management-yes-no label:focus-within span,
+
+.management-submit-btn:focus-visible{
+
+    outline:
+
+        3px solid
+        rgba(76,141,218,.20);
+
+    outline-offset:3px;
+
+}
+
+
+/* =========================================
+        REDUCED MOTION
+========================================= */
+
+@media
+(prefers-reduced-motion:reduce){
+
+    .management-building-icon,
+
+    .management-orbit{
+
+        animation:none;
+
+    }
+
+
+    .management-service-content,
+
+    .management-yes-no span,
+
+    .management-submit-btn{
+
+        transition:none;
+
+    }
+
+}

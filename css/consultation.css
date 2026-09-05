@@ -1,0 +1,761 @@
+/* =====================================================
+        CONSULTATION PAGE
+===================================================== */
+
+.consultation-page{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:170px 0 120px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f4f8fd 0%,
+        #ffffff 45%,
+        #f7fbff 100%
+    );
+
+}
+
+
+/* =====================================================
+        BACKGROUND
+===================================================== */
+
+.consultation-architecture{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        url("../images/buildings/consultation-bg.png")
+        no-repeat
+        left center;
+
+    background-size:cover;
+
+    opacity:.13;
+
+    pointer-events:none;
+
+}
+
+
+.consultation-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-220px;
+
+    left:-180px;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(18,61,114,.08),
+        transparent 70%
+    );
+
+}
+
+
+/* =====================================================
+        CONTAINER
+===================================================== */
+
+.consultation-container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1050px;
+
+}
+
+
+/* =====================================================
+        TITLE
+===================================================== */
+
+.consultation-heading{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+
+.consultation-heading h1{
+
+    font-size:54px;
+
+    color:var(--dark-blue);
+
+    font-weight:800;
+
+    line-height:1.4;
+
+}
+
+
+.consultation-title-line{
+
+    display:block;
+
+    width:90px;
+
+    height:4px;
+
+    margin:22px auto 0;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--primary-color),
+        var(--light-blue)
+    );
+
+}
+
+
+/* =====================================================
+        FORM
+===================================================== */
+
+.consultation-form{
+
+    background:
+    rgba(255,255,255,.72);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.85);
+
+    border-radius:35px;
+
+    padding:55px;
+
+    box-shadow:
+    0 35px 70px rgba(18,61,114,.08);
+
+}
+
+
+/* =====================================================
+        BLOCK
+===================================================== */
+
+.consultation-block{
+
+    margin-bottom:45px;
+
+}
+
+
+.consultation-block h2{
+
+    color:var(--dark-blue);
+
+    font-size:25px;
+
+    margin-bottom:22px;
+
+}
+
+
+/* =====================================================
+        OPTIONS GRID
+===================================================== */
+
+.consultation-options{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+
+.consultation-types{
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+}
+
+
+.duration-options{
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+}
+
+
+.meeting-options{
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+}
+
+
+/* =====================================================
+        OPTION
+===================================================== */
+
+.consultation-option{
+
+    cursor:pointer;
+
+}
+
+
+.consultation-option input{
+
+    display:none;
+
+}
+
+
+.consultation-option span{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:74px;
+
+    border-radius:18px;
+
+    border:2px solid #dbe7f4;
+
+    background:#fff;
+
+    color:var(--text-color);
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+
+.consultation-option:hover span{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 14px 30px rgba(18,61,114,.12);
+
+}
+
+
+.consultation-option input:checked + span{
+
+    color:#fff;
+
+    border-color:var(--primary-color);
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--dark-blue)
+    );
+
+}
+
+
+/* =====================================================
+        INFO CARDS
+===================================================== */
+
+.consultation-info{
+
+    display:flex;
+
+    gap:24px;
+
+    align-items:flex-start;
+
+    margin-top:45px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:#fff;
+
+    border:1px solid #e7eef8;
+
+}
+
+
+.consultation-info-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--dark-blue)
+    );
+
+    color:#fff;
+
+    font-size:26px;
+
+}
+
+
+.consultation-info-content h2{
+
+    margin-bottom:12px;
+
+    color:var(--dark-blue);
+
+}
+
+
+.consultation-info-content p{
+
+    line-height:2;
+
+    color:#4d6178;
+
+}
+
+
+.consultation-info-content ul{
+
+    margin-top:15px;
+
+    padding-right:18px;
+
+}
+
+
+.consultation-info-content li{
+
+    margin-bottom:10px;
+
+    color:#4d6178;
+
+}
+
+
+/* =====================================================
+        BUTTON
+===================================================== */
+
+.consultation-submit{
+
+    text-align:center;
+
+    margin-top:60px;
+
+}
+
+
+.consultation-submit-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    min-width:260px;
+
+    height:62px;
+
+    border-radius:50px;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--dark-blue)
+    );
+
+    transition:.35s;
+
+    box-shadow:
+    0 18px 35px rgba(18,61,114,.20);
+
+}
+
+
+.consultation-submit-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 25px 45px rgba(18,61,114,.28);
+
+}
+/* =====================================================
+        RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+    .consultation-form{
+
+        padding:35px;
+
+    }
+
+    .meeting-options{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .duration-options{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .consultation-page{
+
+        padding:130px 0 80px;
+
+    }
+
+    .consultation-heading h1{
+
+        font-size:38px;
+
+    }
+
+    .consultation-form{
+
+        padding:25px;
+
+        border-radius:25px;
+
+    }
+
+    .consultation-types{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .consultation-info{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .consultation-info-content{
+
+        text-align:center;
+
+    }
+
+}
+/* =========================================
+        PAYMENT SECTION
+========================================= */
+
+.consultation-payment {
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(20, 58, 100, 0.15);
+    box-shadow: 0 15px 45px rgba(20, 58, 100, 0.08);
+}
+
+
+/* Header */
+
+.payment-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.payment-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #0d3158;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.payment-header h2 {
+    color: #0d3158;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.payment-header p {
+    color: #68798c;
+    line-height: 1.9;
+}
+
+
+/* Payment information */
+
+.payment-info-box {
+    border: 1px solid rgba(20, 58, 100, 0.15);
+    border-radius: 20px;
+    padding: 10px 25px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.payment-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 5px;
+    border-bottom: 1px solid rgba(20, 58, 100, 0.1);
+}
+
+.payment-row:last-child {
+    border-bottom: none;
+}
+
+.payment-row span {
+    color: #53677d;
+}
+
+.payment-row strong {
+    color: #0d3158;
+    font-size: 19px;
+}
+
+.payment-number {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.copy-number-btn {
+    border: none;
+    background: #0d3158;
+    color: #fff;
+    padding: 9px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+/* Notice */
+
+.payment-notice {
+    margin-top: 25px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: rgba(13, 49, 88, 0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.payment-notice i {
+    color: #0d3158;
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+.payment-notice p {
+    margin: 0;
+    color: #53677d;
+    line-height: 1.8;
+}
+
+
+/* Receipt */
+
+.receipt-upload {
+    margin-top: 30px;
+}
+
+.receipt-upload h3 {
+    color: #0d3158;
+    margin-bottom: 15px;
+}
+
+.receipt-upload h3 span {
+    font-size: 14px;
+    color: #777;
+    font-weight: 400;
+}
+
+.receipt-upload-box {
+    min-height: 150px;
+    border: 2px dashed rgba(13, 49, 88, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.receipt-upload-box:hover {
+    border-color: #0d3158;
+    background: rgba(13, 49, 88, 0.04);
+}
+
+.receipt-upload-box i {
+    font-size: 32px;
+    color: #0d3158;
+}
+
+.receipt-upload-box strong {
+    color: #0d3158;
+}
+
+.receipt-upload-box span {
+    color: #8a96a3;
+    font-size: 13px;
+}
+
+
+/* Preview */
+
+.receipt-preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.receipt-preview img {
+    max-width: 250px;
+    max-height: 300px;
+    border-radius: 15px;
+    border: 1px solid rgba(13, 49, 88, 0.15);
+}
+
+.receipt-preview p {
+    color: #53677d;
+    margin-top: 8px;
+}
+
+
+/* Buttons */
+
+.payment-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.payment-cancel-btn,
+.payment-submit-btn {
+    min-height: 55px;
+    border-radius: 30px;
+    padding: 0 30px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.payment-cancel-btn {
+    flex: 0 0 150px;
+    background: transparent;
+    color: #0d3158;
+    border: 1px solid #0d3158;
+}
+
+.payment-submit-btn {
+    flex: 1;
+    background: #0d3158;
+    color: #fff;
+    border: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .consultation-payment {
+        padding: 25px 18px;
+    }
+
+    .payment-header h2 {
+        font-size: 23px;
+    }
+
+    .payment-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .payment-number {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .payment-actions {
+        flex-direction: column-reverse;
+    }
+
+    .payment-cancel-btn {
+        flex: none;
+        width: 100%;
+    }
+
+}

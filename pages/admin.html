@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSAA | لوحة الإدارة</title>
+  <link rel="stylesheet" href="../css/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <main class="admin-shell">
+
+    <section id="loginView" class="auth-card">
+      <div class="brand-mark">MSAA</div>
+      <h1>لوحة الإدارة</h1>
+      <p>تسجيل الدخول لإدارة الحجوزات والاستشارات.</p>
+
+      <form id="loginForm">
+        <label for="email">البريد الإلكتروني</label>
+        <input id="email" type="email" autocomplete="username" required>
+
+        <label for="password">كلمة المرور</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+
+        <button type="submit" class="primary-btn" id="loginBtn">تسجيل الدخول</button>
+        <p id="loginError" class="error-message" role="alert"></p>
+      </form>
+    </section>
+
+    <section id="dashboardView" class="dashboard" hidden>
+
+      <header class="dashboard-header">
+        <div>
+          <span class="eyebrow">MSAA CONSULTING</span>
+          <h1>لوحة إدارة الحجوزات</h1>
+          <p>عرض الحجوزات ومراجعة إيصالات التحويل وتحديث حالة الطلب.</p>
+        </div>
+
+        <div class="header-actions">
+  <span id="realtimeStatus" class="live-status">
+    <i></i> متصل
+  </span>
+
+  <button id="enableNotificationsBtn" class="secondary-btn" type="button">
+    🔔 تفعيل إشعارات الجهاز
+  </button>
+
+  <button id="refreshBtn" class="secondary-btn">تحديث</button>
+
+  <button id="logoutBtn" class="logout-btn">تسجيل الخروج</button>
+</div>
+      </header>
+
+      <section class="stats-grid" aria-label="إحصائيات الحجوزات">
+        <article class="stat-card">
+          <span>كل الحجوزات</span>
+          <strong id="totalCount">0</strong>
+        </article>
+
+        <article class="stat-card">
+          <span>حجوزات اليوم</span>
+          <strong id="todayCount">0</strong>
+        </article>
+
+        <article class="stat-card">
+          <span>بانتظار المراجعة</span>
+          <strong id="pendingCount">0</strong>
+        </article>
+
+        <article class="stat-card">
+          <span>المؤكدة</span>
+          <strong id="confirmedCount">0</strong>
+        </article>
+
+        <article class="stat-card">
+          <span>المرفوضة</span>
+          <strong id="rejectedCount">0</strong>
+        </article>
+
+        <article class="stat-card revenue-card">
+          <span>الإيرادات المؤكدة</span>
+          <strong id="revenueCount">0 ر.ع</strong>
+          <small id="revenueNote">محسوبة من الحجوزات المؤكدة</small>
+        </article>
+      </section>
+
+      <section class="dashboard-panel">
+        <div class="toolbar">
+          <div>
+            <h2>الحجوزات</h2>
+            <p id="dashboardMessage" class="dashboard-message" role="status"></p>
+          </div>
+
+          <div class="toolbar-controls">
+            <label class="search-box">
+              <span>بحث</span>
+              <input id="searchInput" type="search" placeholder="ابحث في نوع الاستشارة أو التاريخ..." autocomplete="off">
+            </label>
+          </div>
+        </div>
+
+        <div class="filters">
+          <button class="filter active" data-filter="all">الكل</button>
+          <button class="filter" data-filter="payment-receipt-submitted">بانتظار المراجعة</button>
+          <button class="filter" data-filter="confirmed">مؤكد</button>
+          <button class="filter" data-filter="rejected">مرفوض</button>
+          <button class="filter" data-filter="completed">مكتمل</button>
+          <button class="filter" data-filter="cancelled">ملغي</button>
+        </div>
+
+        <div id="appointmentsList" class="appointments-list"></div>
+      </section>
+
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>

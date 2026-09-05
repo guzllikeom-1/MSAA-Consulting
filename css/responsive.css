@@ -1,0 +1,6631 @@
+/* =========================================
+   MSAA CONSULTING
+   RESPONSIVE DESIGN
+   HEADER + HERO
+========================================= */
+
+
+/* =========================================
+   MEDIUM DESKTOP / SMALL LAPTOP
+   1200px AND BELOW
+========================================= */
+
+@media (max-width: 1200px){
+
+    .container{
+        width: 94%;
+    }
+
+
+    /* HEADER */
+
+    .header-container{
+        grid-template-columns:
+            175px
+            1fr
+            165px;
+
+        gap: 18px;
+
+        min-height: 100px;
+    }
+
+
+    .signature-logo{
+        width: 165px;
+        height: 78px;
+    }
+
+
+    .navbar{
+        gap: 18px;
+    }
+
+
+    .nav-item{
+        width: 46px;
+        height: 46px;
+
+        font-size: 21px;
+    }
+
+
+    .header-btn{
+        min-height: 50px;
+
+        padding:
+            0 20px;
+
+        font-size: 14px;
+    }
+
+
+    /* HERO */
+
+    .hero{
+        padding-top: 100px;
+    }
+
+
+    .hero-container{
+        min-height:
+            calc(100vh - 100px);
+
+        grid-template-columns:
+            minmax(0, 1.05fr)
+            minmax(330px, 0.95fr);
+
+        gap: 35px;
+    }
+
+
+    .hero-content h1{
+        font-size:
+            clamp(38px, 4.5vw, 58px);
+    }
+
+
+    .hero-content p{
+        font-size: 16px;
+    }
+
+
+    .hero-visual{
+        min-height: 590px;
+    }
+
+
+    .hero-person{
+        width:
+            min(100%, 450px);
+
+        max-height: 620px;
+    }
+
+
+    .hero-visual::before{
+        width: 145%;
+        height: 85%;
+    }
+
+}
+
+
+
+/* =========================================
+   TABLET
+   992px AND BELOW
+========================================= */
+
+@media (max-width: 992px){
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header-container{
+        min-height: 92px;
+
+        grid-template-columns:
+            145px
+            1fr
+            auto;
+
+        gap: 12px;
+    }
+
+
+    .signature-logo{
+        width: 140px;
+        height: 68px;
+    }
+
+
+    .navbar{
+        gap: 8px;
+    }
+
+
+    .nav-item{
+        width: 42px;
+        height: 42px;
+
+        font-size: 19px;
+    }
+
+
+    .header-btn{
+        min-height: 47px;
+
+        padding:
+            0 17px;
+
+        font-size: 13px;
+    }
+
+
+    .header-btn i{
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+        min-height: auto;
+
+        padding-top: 92px;
+    }
+
+
+    .hero-container{
+        min-height: auto;
+
+        grid-template-columns:
+            1fr 0.85fr;
+
+        gap: 25px;
+
+        padding-top: 35px;
+    }
+
+
+    .hero-content{
+        padding:
+            45px 0 60px;
+    }
+
+
+    .hero-content::before{
+        width: 55px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .hero-content h1{
+        margin-bottom: 22px;
+
+        font-size:
+            clamp(34px, 5vw, 48px);
+
+        line-height: 1.4;
+    }
+
+
+    .hero-content p{
+        font-size: 15px;
+
+        line-height: 1.95;
+    }
+
+
+    .hero-buttons{
+        gap: 10px;
+
+        margin-top: 28px;
+    }
+
+
+    .hero-buttons .primary-btn,
+    .hero-buttons .secondary-btn,
+    .hero-buttons .text-btn{
+        min-height: 50px;
+
+        padding:
+            0 18px;
+
+        font-size: 13px;
+    }
+
+
+    .hero-visual{
+        min-height: 530px;
+    }
+
+
+    .hero-person{
+        width:
+            min(100%, 390px);
+
+        max-height: 540px;
+    }
+
+
+    .hero-visual::before{
+        width: 155%;
+
+        height: 82%;
+
+        opacity: 0.32;
+    }
+
+
+    .hero-person-shadow{
+        width: 260px;
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE + SMALL TABLET
+   768px AND BELOW
+========================================= */
+
+@media (max-width: 768px){
+
+   /* =========================
+   MOBILE HEADER
+   نفس تصميم الكمبيوتر
+========================= */
+
+.header{
+    background: rgba(255, 255, 255, 0.97);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* الحاوية */
+
+.header-container{
+
+    width: 98%;
+
+    min-height: 72px;
+
+    display: grid;
+
+    grid-template-columns:
+        82px
+        1fr
+        42px;
+
+    align-items: center;
+
+    gap: 3px;
+
+}
+
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.brand{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+}
+
+
+.signature-logo{
+
+    width: 80px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================
+   NAVIGATION ICONS
+========================= */
+
+.navbar{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    width: 100%;
+
+}
+
+
+/* جميع الأيقونات تبقى ظاهرة */
+
+.nav-item{
+
+    flex-shrink: 0;
+
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+
+}
+
+
+/* لا نظهر أسماء الأيقونات عند اللمس */
+
+.nav-item::after,
+.nav-item::before{
+
+    display: none;
+
+}
+
+
+/* =========================
+   CONSULTATION BUTTON
+========================= */
+
+.header-btn{
+
+    width: 40px;
+
+    height: 40px;
+
+    min-width: 40px;
+
+    min-height: 40px;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+}
+
+
+/* نخفي النص فقط في الجوال
+   ونبقي أيقونة الحجز */
+
+.header-btn span{
+
+    display: none;
+
+}
+
+
+.header-btn i{
+
+    font-size: 16px;
+
+}
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+        min-height: auto;
+
+        padding-top: 82px;
+
+        overflow: hidden;
+    }
+
+
+    .hero-container{
+        width: 90%;
+
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding-top: 35px;
+    }
+
+
+    /* Text first */
+
+    .hero-content{
+        width: 100%;
+
+        max-width: 100%;
+
+        padding:
+            35px 0 25px;
+
+        text-align: center;
+
+        order: 1;
+    }
+
+
+    .hero-content::before{
+        width: 50px;
+
+        height: 3px;
+
+        margin:
+            0 auto 20px;
+    }
+
+
+    .hero-content h1{
+        margin-bottom: 20px;
+
+        font-size:
+            clamp(31px, 8vw, 43px);
+
+        line-height: 1.45;
+
+        letter-spacing: -1px;
+    }
+
+
+    .hero-content p{
+        max-width: 620px;
+
+        margin:
+            0 auto 12px;
+
+        font-size: 15px;
+
+        line-height: 1.95;
+    }
+
+
+    /* Buttons */
+
+    .hero-buttons{
+        justify-content: center;
+
+        gap: 10px;
+
+        margin-top: 27px;
+    }
+
+
+    .hero-buttons .primary-btn,
+    .hero-buttons .secondary-btn,
+    .hero-buttons .text-btn{
+        min-height: 49px;
+
+        padding:
+            0 18px;
+
+        font-size: 13px;
+    }
+
+
+    /* Mohammed */
+
+    .hero-visual{
+        width: 100%;
+
+        min-height: 530px;
+
+        order: 2;
+
+        margin-top: 5px;
+    }
+
+
+    .hero-person{
+        width:
+            min(100%, 390px);
+
+        max-height: 510px;
+    }
+
+
+    /* Buildings */
+
+    .hero-visual::before{
+        width: 135%;
+
+        height: 88%;
+
+        bottom: 5px;
+
+        background-position:
+            center bottom;
+
+        opacity: 0.34;
+    }
+
+
+    .hero-visual::after{
+        width: 330px;
+
+        height: 350px;
+    }
+
+
+    .hero-person-shadow{
+        width: 250px;
+
+        height: 35px;
+    }
+
+}
+
+
+
+/* =========================================
+   SMALL MOBILE
+   576px AND BELOW
+========================================= */
+
+@media (max-width: 576px){
+
+/* =========================
+   SMALL MOBILE HEADER
+========================= */
+
+.header-container{
+
+    width: 99%;
+
+    min-height: 68px;
+
+    grid-template-columns:
+        68px
+        1fr
+        36px;
+
+    gap: 1px;
+
+}
+
+
+/* التوقيع */
+
+.signature-logo{
+
+    width: 66px;
+
+    height: 48px;
+
+}
+
+
+/* الأيقونات */
+
+.navbar{
+
+    gap: 0;
+
+}
+
+
+.nav-item{
+
+    width: 29px;
+
+    height: 29px;
+
+    font-size: 13.5px;
+
+}
+
+
+/* زر الاستشارة */
+
+.header-btn{
+
+    width: 35px;
+
+    height: 35px;
+
+    min-width: 35px;
+
+    min-height: 35px;
+
+}
+
+
+.header-btn i{
+
+    font-size: 14px;
+
+}
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+        padding-top: 75px;
+    }
+
+
+    .hero-container{
+        width: 92%;
+
+        padding-top: 25px;
+    }
+
+
+    .hero-content{
+        padding:
+            30px 0 20px;
+    }
+
+
+    .hero-content h1{
+        font-size:
+            clamp(29px, 9vw, 38px);
+
+        line-height: 1.45;
+    }
+
+
+    .hero-content p{
+        font-size: 14px;
+
+        line-height: 1.9;
+    }
+
+
+    /* Buttons stack nicely */
+
+    .hero-buttons{
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 9px;
+    }
+
+
+    .hero-buttons .primary-btn{
+        grid-column:
+            1 / -1;
+    }
+
+
+    .hero-buttons .primary-btn,
+    .hero-buttons .secondary-btn,
+    .hero-buttons .text-btn{
+        width: 100%;
+
+        min-height: 48px;
+
+        padding:
+            0 12px;
+
+        font-size: 12.5px;
+    }
+
+
+    /* Mohammed */
+
+    .hero-visual{
+        min-height: 465px;
+    }
+
+
+    .hero-person{
+        width:
+            min(100%, 340px);
+
+        max-height: 450px;
+    }
+
+
+    /* Buildings */
+
+    .hero-visual::before{
+        width: 150%;
+
+        height: 85%;
+
+        opacity: 0.30;
+    }
+
+
+    .hero-visual::after{
+        width: 290px;
+
+        height: 310px;
+    }
+
+
+    .hero-person-shadow{
+        width: 215px;
+    }
+
+}
+
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   400px AND BELOW
+========================================= */
+
+@media (max-width: 400px){
+
+/* =========================
+   VERY SMALL MOBILE HEADER
+========================= */
+
+.header-container{
+
+    width: 100%;
+
+    min-height: 64px;
+
+    grid-template-columns:
+        58px
+        1fr
+        32px;
+
+    gap: 0;
+
+    padding-left: 3px;
+
+    padding-right: 3px;
+
+}
+
+
+.signature-logo{
+
+    width: 56px;
+
+    height: 43px;
+
+}
+
+
+.nav-item{
+
+    width: 27px;
+
+    height: 27px;
+
+    font-size: 12.5px;
+
+}
+
+
+.header-btn{
+
+    width: 31px;
+
+    height: 31px;
+
+    min-width: 31px;
+
+    min-height: 31px;
+
+}
+
+
+.header-btn i{
+
+    font-size: 13px;
+
+}
+
+
+    .hero-content h1{
+        font-size: 28px;
+    }
+
+
+    .hero-content p{
+        font-size: 13.5px;
+    }
+
+
+    .hero-visual{
+        min-height: 420px;
+    }
+
+
+    .hero-person{
+        width: 300px;
+
+        max-height: 410px;
+    }
+
+}
+
+
+
+/* =========================================
+   LANDSCAPE MOBILE
+========================================= */
+
+@media
+(max-width: 900px)
+and (orientation: landscape)
+and (max-height: 500px){
+
+    .hero{
+        min-height: auto;
+    }
+
+
+    .hero-container{
+        display: grid;
+
+        grid-template-columns:
+            1fr 0.75fr;
+
+        gap: 20px;
+
+        padding-top: 20px;
+    }
+
+
+    .hero-content{
+        text-align: right;
+
+        padding:
+            25px 0 35px;
+    }
+
+
+    .hero-content::before{
+        margin:
+            0 0 18px auto;
+    }
+
+
+    .hero-content h1{
+        font-size: 32px;
+    }
+
+
+    .hero-content p{
+        font-size: 13px;
+    }
+
+
+    .hero-buttons{
+        justify-content: flex-start;
+    }
+
+
+    .hero-visual{
+        min-height: 410px;
+    }
+
+
+    .hero-person{
+        max-height: 400px;
+    }
+
+}
+/* =========================================
+        INTRO STRIP RESPONSIVE
+========================================= */
+
+
+/* TABLET */
+
+@media (max-width: 992px){
+
+    .intro-item{
+
+        min-height: 82px;
+
+        gap: 11px;
+
+        padding:
+            0 28px;
+
+    }
+
+
+    .intro-item i{
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 17px;
+
+    }
+
+
+    .intro-item span{
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 768px){
+
+    .intro-strip-track{
+
+        animation-duration:
+            32s;
+
+    }
+
+
+    .intro-item{
+
+        min-height: 75px;
+
+        gap: 10px;
+
+        padding:
+            0 23px;
+
+    }
+
+
+    .intro-item::after{
+
+        height: 25px;
+
+    }
+
+
+    .intro-item i{
+
+        width: 35px;
+
+        height: 35px;
+
+        border-radius: 10px;
+
+        font-size: 15px;
+
+    }
+
+
+    .intro-item span{
+
+        font-size: 12.5px;
+
+    }
+
+}
+
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px){
+
+    .intro-strip-track{
+
+        animation-duration:
+            28s;
+
+    }
+
+
+    .intro-item{
+
+        min-height: 70px;
+
+        padding:
+            0 19px;
+
+    }
+
+
+    .intro-item i{
+
+        width: 32px;
+
+        height: 32px;
+
+        font-size: 14px;
+
+    }
+
+
+    .intro-item span{
+
+        font-size: 12px;
+
+    }
+
+}
+/* =========================================
+        MAIN MESSAGE RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        SMALL LAPTOP
+========================================= */
+
+@media (max-width: 1200px){
+
+    .message-container{
+
+        grid-template-columns:
+            minmax(0, 0.9fr)
+            minmax(0, 1.1fr);
+
+        gap:
+            50px;
+
+    }
+
+
+    .message-details{
+
+        padding:
+            25px;
+
+    }
+
+
+    .message-points li{
+
+        min-height:
+            74px;
+
+        padding:
+            12px;
+
+    }
+
+
+    .message-points li i{
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        font-size:
+            15px;
+
+    }
+
+
+    .message-points li span{
+
+        font-size:
+            13px;
+
+    }
+
+}
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width: 992px){
+
+    .main-message{
+
+        min-height:
+            auto;
+
+        padding:
+            90px 0;
+
+    }
+
+
+    .message-container{
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            50px;
+
+    }
+
+
+    .message-content{
+
+        max-width:
+            760px;
+
+    }
+
+
+    .message-content h2{
+
+        font-size:
+            clamp(35px, 6vw, 50px);
+
+    }
+
+
+    .message-details{
+
+        width:
+            100%;
+
+    }
+
+
+    .message-buildings{
+
+        width:
+            85%;
+
+        height:
+            65%;
+
+        opacity:
+            0.065;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width: 768px){
+
+    .main-message{
+
+        padding:
+            70px 0;
+
+    }
+
+
+    .message-container{
+
+        width:
+            92%;
+
+        gap:
+            38px;
+
+    }
+
+
+    .message-content{
+
+        text-align:
+            right;
+
+    }
+
+
+    .message-content::before{
+
+        width:
+            55px;
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+    .message-content h2{
+
+        margin-bottom:
+            20px;
+
+        font-size:
+            clamp(30px, 8vw, 40px);
+
+    }
+
+
+    .message-intro{
+
+        font-size:
+            15px;
+
+        line-height:
+            1.95;
+
+    }
+
+
+    .message-final{
+
+        padding:
+            17px 18px;
+
+        font-size:
+            15px;
+
+    }
+
+
+    .message-details{
+
+        padding:
+            20px;
+
+        border-radius:
+            24px;
+
+    }
+
+
+    .message-points{
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            10px;
+
+    }
+
+
+    .message-points li{
+
+        min-height:
+            62px;
+
+        padding:
+            10px 12px;
+
+    }
+
+
+    .message-points li i{
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+    }
+
+
+    .message-points li span{
+
+        font-size:
+            14px;
+
+    }
+
+
+    .message-buildings{
+
+        left:
+            -20%;
+
+        width:
+            120%;
+
+        height:
+            55%;
+
+        opacity:
+            0.055;
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px){
+
+    .main-message{
+
+        padding:
+            55px 0;
+
+    }
+
+
+    .message-container{
+
+        width:
+            94%;
+
+    }
+
+
+    .message-content h2{
+
+        font-size:
+            29px;
+
+        line-height:
+            1.5;
+
+    }
+
+
+    .message-intro{
+
+        font-size:
+            14px;
+
+    }
+
+
+    .message-final{
+
+        font-size:
+            14px;
+
+        line-height:
+            1.85;
+
+    }
+
+
+    .message-btn{
+
+        width:
+            100%;
+
+        min-height:
+            52px;
+
+        padding:
+            0 15px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .message-details{
+
+        padding:
+            14px;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    .message-points li{
+
+        min-height:
+            59px;
+
+    }
+
+
+    .message-points li span{
+
+        font-size:
+            13.5px;
+
+    }
+
+}
+/* =========================================
+        ABOUT HOME RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        SMALL LAPTOP
+========================================= */
+
+@media (max-width: 1200px){
+
+    .about-home-container{
+
+        grid-template-columns:
+            minmax(0, 1.05fr)
+            minmax(350px, 0.95fr);
+
+        gap:
+            50px;
+
+    }
+
+
+    .about-home-visual{
+
+        min-height:
+            650px;
+
+    }
+
+
+    .about-person{
+
+        width:
+            min(100%, 450px);
+
+        max-height:
+            630px;
+
+    }
+
+
+    .about-architecture{
+
+        width:
+            150%;
+
+    }
+
+}
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width: 992px){
+
+    .about-home{
+
+        min-height:
+            auto;
+
+        padding:
+            90px 0 60px;
+
+    }
+
+
+    .about-home-container{
+
+        grid-template-columns:
+            1fr 0.78fr;
+
+        gap:
+            35px;
+
+    }
+
+
+    .about-home-content h2{
+
+        font-size:
+            clamp(38px, 5vw, 52px);
+
+    }
+
+
+    .about-home-lead{
+
+        font-size:
+            16px;
+
+    }
+
+
+    .about-home-text p{
+
+        font-size:
+            14.5px;
+
+    }
+
+
+    .about-home-visual{
+
+        min-height:
+            570px;
+
+    }
+
+
+    .about-person{
+
+        width:
+            min(100%, 390px);
+
+        max-height:
+            550px;
+
+    }
+
+
+    .about-glow{
+
+        width:
+            340px;
+
+        height:
+            430px;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width: 768px){
+
+    .about-home{
+
+        padding:
+            70px 0 0;
+
+    }
+
+
+    .about-home-container{
+
+        width:
+            92%;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        gap:
+            25px;
+
+    }
+
+
+    /* النص أولًا */
+
+    .about-home-content{
+
+        width:
+            100%;
+
+        max-width:
+            100%;
+
+        order:
+            1;
+
+    }
+
+
+    .about-home-label{
+
+        margin-bottom:
+            15px;
+
+    }
+
+
+    .about-home-content h2{
+
+        font-size:
+            clamp(36px, 9vw, 48px);
+
+    }
+
+
+    .about-home-lead{
+
+        font-size:
+            16px;
+
+        line-height:
+            1.9;
+
+    }
+
+
+    .about-home-text p{
+
+        font-size:
+            14.5px;
+
+        line-height:
+            1.95;
+
+    }
+
+
+    /* الصورة بعد النص */
+
+    .about-home-visual{
+
+        width:
+            100%;
+
+        min-height:
+            560px;
+
+        order:
+            2;
+
+    }
+
+
+    .about-person{
+
+        width:
+            min(100%, 390px);
+
+        max-height:
+            540px;
+
+    }
+
+
+    .about-architecture{
+
+        width:
+            125%;
+
+        height:
+            80%;
+
+        opacity:
+            0.18;
+
+    }
+
+
+    .about-glow{
+
+        width:
+            340px;
+
+        height:
+            420px;
+
+    }
+
+
+    .about-person-shadow{
+
+        width:
+            250px;
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px){
+
+    .about-home{
+
+        padding-top:
+            55px;
+
+    }
+
+
+    .about-home-container{
+
+        width:
+            94%;
+
+    }
+
+
+    .about-home-label{
+
+        padding:
+            8px 15px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .about-home-content h2{
+
+        font-size:
+            36px;
+
+    }
+
+
+    .about-home-lead{
+
+        font-size:
+            15px;
+
+    }
+
+
+    .about-home-text p{
+
+        font-size:
+            14px;
+
+    }
+
+
+    .about-home-btn{
+
+        width:
+            100%;
+
+        min-height:
+            52px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .about-home-visual{
+
+        min-height:
+            490px;
+
+    }
+
+
+    .about-person{
+
+        width:
+            min(100%, 340px);
+
+        max-height:
+            470px;
+
+    }
+
+
+    .about-architecture{
+
+        width:
+            145%;
+
+        opacity:
+            0.16;
+
+    }
+
+
+    .about-glow{
+
+        width:
+            290px;
+
+        height:
+            360px;
+
+    }
+
+
+    .about-person-shadow{
+
+        width:
+            215px;
+
+    }
+
+}
+/* =========================================
+        EXPERIENCE STATS RESPONSIVE
+========================================= */
+
+
+/* =========================
+        TABLET
+========================= */
+
+@media (max-width: 992px){
+
+    .experience-stats{
+
+        padding:
+            85px 0 65px;
+
+    }
+
+
+    .stats-grid{
+
+        gap:
+            17px;
+
+    }
+
+
+    .stat-card{
+
+        min-height:
+            260px;
+
+        padding:
+            35px 20px;
+
+    }
+
+
+    .counter{
+
+        font-size:
+            64px;
+
+    }
+
+
+    .stat-unit{
+
+        width: 100%;
+
+        margin:
+            9px 0 0;
+
+        font-size:
+            14px;
+
+    }
+
+
+    .stat-card p{
+
+        font-size:
+            14px;
+
+    }
+
+}
+
+
+/* =========================
+        MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+    .experience-stats{
+
+        padding:
+            75px 0 55px;
+
+    }
+
+
+    .stats-heading{
+
+        margin-bottom:
+            38px;
+
+    }
+
+
+    .stats-label{
+
+        padding:
+            10px 22px;
+
+        font-size:
+            15px;
+
+    }
+
+
+    .stats-grid{
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            18px;
+
+    }
+
+
+    .stats-grid::before{
+
+        display: none;
+
+    }
+
+
+    .stat-card{
+
+        min-height:
+            230px;
+
+        border-radius:
+            24px;
+
+    }
+
+
+    /*
+        البطاقة الوسطى لا ترتفع
+        في الجوال
+    */
+
+    .stat-card-main{
+
+        transform: none;
+
+    }
+
+
+    .stat-card-main:hover{
+
+        transform:
+            translateY(-6px);
+
+    }
+
+
+    .counter{
+
+        font-size:
+            72px;
+
+    }
+
+
+    .stat-number > span:first-child{
+
+        font-size:
+            28px;
+
+    }
+
+
+    .stat-unit{
+
+        width: auto;
+
+        margin-right:
+            5px;
+
+        font-size:
+            15px;
+
+    }
+
+
+    .stat-icon{
+
+        width:
+            76px;
+
+        height:
+            76px;
+
+        margin-bottom:
+            20px;
+
+        font-size:
+            29px;
+
+    }
+
+
+    .stats-note{
+
+        width:
+            100%;
+
+        margin-top:
+            30px;
+
+        padding:
+            12px 16px;
+
+        border-radius:
+            16px;
+
+    }
+
+}
+
+
+/* =========================
+        SMALL MOBILE
+========================= */
+
+@media (max-width: 480px){
+
+    .experience-stats{
+
+        padding:
+            65px 0 45px;
+
+    }
+
+
+    .stats-label{
+
+        font-size:
+            14px;
+
+    }
+
+
+    .stat-card{
+
+        min-height:
+            215px;
+
+        padding:
+            30px 18px;
+
+    }
+
+
+    .counter{
+
+        font-size:
+            62px;
+
+    }
+
+
+    .stat-number{
+
+        margin-bottom:
+            15px;
+
+    }
+
+
+    .stat-unit{
+
+        width: 100%;
+
+        margin:
+            8px 0 0;
+
+        font-size:
+            14px;
+
+    }
+
+
+    .stat-card p{
+
+        font-size:
+            13.5px;
+
+    }
+
+
+    .stats-note{
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .stats-note p{
+
+        font-size:
+            11px;
+
+    }
+
+}
+/* =========================================
+        SERVICES RESPONSIVE
+========================================= */
+
+
+/* =========================
+        TABLET
+========================= */
+
+@media (max-width:992px){
+
+    .services-home{
+        padding:
+            90px 0;
+    }
+
+
+    .services-grid{
+        gap:20px;
+    }
+
+
+    .service-card{
+        padding:27px;
+    }
+
+
+    .service-number{
+        font-size:40px;
+    }
+
+
+    .service-icon{
+        width:55px;
+        height:55px;
+
+        font-size:20px;
+    }
+
+
+    .service-card h3{
+        font-size:21px;
+    }
+
+
+    .service-description{
+        font-size:13.5px;
+    }
+
+}
+
+
+/* =========================
+        MOBILE
+========================= */
+
+@media (max-width:768px){
+
+    .services-home{
+        padding:
+            75px 0;
+    }
+
+
+    .services-heading{
+        margin-bottom:40px;
+    }
+
+
+    .services-label{
+        padding:
+            10px 24px;
+
+        font-size:15px;
+    }
+
+
+    .services-grid{
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+
+    .service-card{
+        padding:26px;
+
+        border-radius:23px;
+    }
+
+
+    .service-card:hover{
+        transform:none;
+    }
+
+
+    .service-card-top{
+        margin-bottom:22px;
+    }
+
+
+    .service-number{
+        font-size:42px;
+    }
+
+
+    .service-icon{
+        width:58px;
+        height:58px;
+
+        border-radius:17px;
+    }
+
+
+    .service-card h3{
+        font-size:22px;
+    }
+
+
+    .service-description{
+        font-size:14px;
+
+        line-height:1.9;
+    }
+
+
+    .service-action{
+        width:100%;
+    }
+
+}
+
+
+/* =========================
+        SMALL MOBILE
+========================= */
+
+@media (max-width:480px){
+
+    .services-home{
+        padding:
+            60px 0;
+    }
+
+
+    .service-card{
+        padding:
+            22px 19px;
+    }
+
+
+    .service-number{
+        font-size:36px;
+    }
+
+
+    .service-icon{
+        width:52px;
+        height:52px;
+
+        font-size:18px;
+    }
+
+
+    .service-card h3{
+        font-size:20px;
+    }
+
+
+    .service-description{
+        font-size:13.5px;
+    }
+
+
+    .service-toggle{
+        min-height:52px;
+
+        padding:
+            0 14px;
+
+        font-size:13px;
+    }
+
+
+    .service-details-inner li{
+        padding:
+            8px 27px 8px 0;
+
+        font-size:13px;
+    }
+
+
+    .service-details-inner li::before{
+        top:8px;
+    }
+
+
+    .service-details-inner > p{
+        font-size:12.5px;
+    }
+
+
+    .service-action{
+        min-height:50px;
+
+        font-size:13px;
+    }
+
+}
+/* =========================================
+        PROPERTIES RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        LAPTOP / SMALL DESKTOP
+========================================= */
+
+@media (max-width:1100px){
+
+    .properties-filter{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+
+    }
+
+
+    .property-card{
+
+        grid-template-columns:
+            minmax(0,0.95fr)
+            minmax(0,1.05fr);
+
+    }
+
+
+    .property-content{
+
+        padding:
+            35px 28px;
+
+    }
+
+}
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width:900px){
+
+    .properties-home{
+
+        padding:
+            90px 0;
+
+    }
+
+
+    .properties-filter{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        padding:
+            22px;
+
+    }
+
+
+    /*
+        الصورة تصبح فوق
+        والمعلومات تحتها
+    */
+
+    .property-card{
+
+        grid-template-columns:
+            1fr;
+
+        min-height:
+            auto;
+
+    }
+
+
+    .property-image{
+
+        min-height:
+            430px;
+
+        height:
+            430px;
+
+    }
+
+
+    .property-content{
+
+        padding:
+            38px 34px;
+
+    }
+
+
+    .property-main-info{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+
+    }
+
+
+    .property-info-item:nth-child(1){
+
+        grid-column:
+            span 2;
+
+    }
+
+
+    .property-info-item:nth-child(9){
+
+        grid-column:
+            span 2;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .properties-home{
+
+        padding:
+            75px 0;
+
+    }
+
+
+    .properties-heading{
+
+        margin-bottom:
+            38px;
+
+    }
+
+
+    .properties-label{
+
+        padding:
+            10px 23px;
+
+        font-size:
+            15px;
+
+    }
+
+
+    .properties-heading p{
+
+        font-size:
+            14px;
+
+        line-height:
+            1.9;
+
+    }
+
+
+    /* Filters */
+
+    .properties-filter{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:
+            12px;
+
+        margin-bottom:
+            35px;
+
+        padding:
+            18px;
+
+        border-radius:
+            22px;
+
+    }
+
+
+    .filter-field select{
+
+        height:
+            50px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    /* Property */
+
+    .property-card{
+
+        border-radius:
+            25px;
+
+    }
+
+
+    .property-card:hover{
+
+        transform:
+            none;
+
+    }
+
+
+    .property-image{
+
+        min-height:
+            340px;
+
+        height:
+            340px;
+
+    }
+
+
+    .property-content{
+
+        padding:
+            30px 25px;
+
+    }
+
+
+    .property-content h3{
+
+        margin-bottom:
+            23px;
+
+        font-size:
+            25px;
+
+    }
+
+
+    .property-main-info{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+    }
+
+
+    .property-info-item:nth-child(1),
+    .property-info-item:nth-child(9){
+
+        grid-column:
+            1 / -1;
+
+    }
+
+
+    .property-actions{
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .properties-main-actions{
+
+        margin-top:
+            35px;
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+    .properties-home{
+
+        padding:
+            60px 0;
+
+    }
+
+
+    /*
+        الفلاتر تصبح واحدة تحت الثانية
+    */
+
+    .properties-filter{
+
+        grid-template-columns:
+            1fr;
+
+        padding:
+            17px;
+
+    }
+
+
+    .filter-field label{
+
+        font-size:
+            11px;
+
+    }
+
+
+    .property-image{
+
+        min-height:
+            270px;
+
+        height:
+            270px;
+
+    }
+
+
+    .property-content{
+
+        padding:
+            25px 19px;
+
+    }
+
+
+    .property-content h3{
+
+        font-size:
+            21px;
+
+        line-height:
+            1.6;
+
+    }
+
+
+    /*
+        المعلومات عمود واحد
+        حتى لا تنضغط
+    */
+
+    .property-main-info{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .property-info-item,
+    .property-info-item:nth-child(1),
+    .property-info-item:nth-child(9){
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .property-info-item{
+
+        min-height:
+            65px;
+
+    }
+
+
+    .property-info-item:nth-child(1)
+    strong{
+
+        font-size:
+            17px;
+
+    }
+
+
+    /* Buttons */
+
+    .property-actions{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .property-whatsapp-btn{
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .property-actions a{
+
+        width:
+            100%;
+
+    }
+
+
+    .properties-main-actions{
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .properties-main-actions a{
+
+        width:
+            100%;
+
+    }
+
+}
+/* =========================================
+        INVESTORS RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width:992px){
+
+    .investors-section{
+
+        min-height: auto;
+
+        padding:
+            90px 0;
+
+    }
+
+
+    .investors-container{
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            55px;
+
+    }
+
+
+    .investors-content{
+
+        max-width:
+            720px;
+
+    }
+
+
+    .investors-content h2{
+
+        font-size:
+            clamp(38px,6vw,52px);
+
+    }
+
+
+    .investors-analysis{
+
+        padding:
+            30px;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .investors-section{
+
+        padding:
+            75px 0;
+
+    }
+
+
+    .investors-container{
+
+        gap:
+            42px;
+
+    }
+
+
+    .investors-content h2{
+
+        font-size:
+            36px;
+
+        line-height:
+            1.55;
+
+    }
+
+
+    .investors-intro{
+
+        font-size:
+            15px;
+
+        line-height:
+            2;
+
+    }
+
+
+    .investors-btn{
+
+        min-height:
+            55px;
+
+    }
+
+
+    .investors-analysis{
+
+        padding:
+            24px;
+
+        border-radius:
+            25px;
+
+    }
+
+
+    .investors-points{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+    }
+
+
+    /*
+        نقلل حركة الدخول على الجوال
+        حتى لا يحدث overflow أفقي
+    */
+
+    .investors-content.reveal{
+
+        transform:
+            translateX(25px);
+
+    }
+
+
+    .investors-analysis.reveal{
+
+        transform:
+            translateX(-25px);
+
+    }
+
+
+    .investors-content.reveal.show,
+    .investors-analysis.reveal.show{
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+    .investors-section{
+
+        padding:
+            60px 0;
+
+    }
+
+
+    .investors-content::before{
+
+        width:
+            60px;
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+    .investors-content h2{
+
+        font-size:
+            30px;
+
+    }
+
+
+    .investors-intro{
+
+        font-size:
+            14px;
+
+    }
+
+
+    .investors-btn{
+
+        width:
+            100%;
+
+    }
+
+
+    .investors-analysis{
+
+        padding:
+            19px;
+
+    }
+
+
+    .investors-analysis-header h3{
+
+        font-size:
+            17px;
+
+    }
+
+
+    /*
+        النقاط تصبح عمودًا واحدًا
+    */
+
+    .investors-points{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .investor-point{
+
+        min-height:
+            67px;
+
+    }
+
+
+    .investor-point-icon{
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+    }
+
+}
+
+
+/* =========================================
+        REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    .investors-content.reveal,
+    .investors-analysis.reveal{
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+
+    }
+
+}
+/* =========================================
+        OWNERS RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width:992px){
+
+    .owners-section{
+
+        min-height: auto;
+
+        padding:
+            90px 0;
+
+    }
+
+
+    .owners-container{
+
+        grid-template-columns:
+            1fr;
+
+        gap: 55px;
+
+    }
+
+
+    .owners-content{
+
+        max-width:
+            720px;
+
+    }
+
+
+    .owners-content h2{
+
+        font-size:
+            clamp(38px,6vw,52px);
+
+    }
+
+
+    .owners-options-panel{
+
+        padding: 27px;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .owners-section{
+
+        padding:
+            75px 0;
+
+    }
+
+
+    .owners-container{
+
+        gap: 40px;
+
+    }
+
+
+    .owners-content h2{
+
+        font-size: 36px;
+
+        line-height: 1.55;
+
+    }
+
+
+    .owners-intro{
+
+        font-size: 15px;
+
+    }
+
+
+    .owners-final{
+
+        font-size: 14px;
+
+    }
+
+
+    .owners-options-panel{
+
+        padding: 22px;
+
+        border-radius: 25px;
+
+    }
+
+
+    .owners-options{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+    }
+
+
+    /*
+        حركة أخف على الجوال
+    */
+
+    .owners-content.reveal{
+
+        transform:
+            translateX(25px);
+
+    }
+
+
+    .owners-options-panel.reveal{
+
+        transform:
+            translateX(-25px);
+
+    }
+
+
+    .owners-content.reveal.show,
+    .owners-options-panel.reveal.show{
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+    .owners-section{
+
+        padding:
+            60px 0;
+
+    }
+
+
+    .owners-content::before{
+
+        width: 60px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .owners-content h2{
+
+        font-size: 30px;
+
+    }
+
+
+    .owners-intro{
+
+        font-size: 14px;
+
+    }
+
+
+    .owners-final{
+
+        padding:
+            15px 16px;
+
+        font-size: 13.5px;
+
+    }
+
+
+    .owners-btn{
+
+        width: 100%;
+
+    }
+
+
+    .owners-options-panel{
+
+        padding: 17px;
+
+    }
+
+
+    /*
+        الخيارات تصبح عمود واحد
+    */
+
+    .owners-options{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .owner-option{
+
+        min-height: 85px;
+
+    }
+
+
+    .owner-option-icon{
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 16px;
+
+    }
+
+
+    .owner-option-text{
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* =========================================
+        REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    .owners-content.reveal,
+    .owners-options-panel.reveal{
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+
+    }
+
+}
+/* =========================================
+        WORK PROCESS RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width:992px){
+
+    .work-process{
+
+        padding:
+            95px 0 105px;
+
+    }
+
+
+    .process-header{
+
+        margin-bottom:
+            65px;
+
+    }
+
+
+    .process-header h2{
+
+        font-size:
+            clamp(38px,6vw,52px);
+
+    }
+
+
+    .process-timeline{
+
+        max-width:
+            850px;
+
+    }
+
+
+    .process-step.process-right{
+
+        padding-left:
+            55px;
+
+    }
+
+
+    .process-step.process-left{
+
+        padding-right:
+            55px;
+
+    }
+
+
+    .process-step-card{
+
+        padding:
+            20px;
+
+        gap:
+            16px;
+
+    }
+
+
+    .process-step-icon{
+
+        width:
+            55px;
+
+        height:
+            55px;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .work-process{
+
+        padding:
+            75px 0 85px;
+
+    }
+
+
+    .process-header{
+
+        margin-bottom:
+            55px;
+
+        text-align:
+            right;
+
+    }
+
+
+    .process-header h2{
+
+        font-size:
+            35px;
+
+        line-height:
+            1.55;
+
+    }
+
+
+    /* Timeline */
+
+    .process-timeline{
+
+        padding-right:
+            55px;
+
+        gap:
+            22px;
+
+    }
+
+
+    /* Line moves to right */
+
+    .process-line{
+
+        left:
+            auto;
+
+        right:
+            20px;
+
+        transform:
+            none;
+
+    }
+
+
+    /* All cards same side */
+
+    .process-step,
+    .process-step.process-right,
+    .process-step.process-left{
+
+        width:
+            100%;
+
+        min-height:
+            auto;
+
+        align-self:
+            stretch;
+
+        padding:
+            0;
+
+    }
+
+
+    /* All markers on right */
+
+    .process-step.process-right
+    .process-step-marker,
+
+    .process-step.process-left
+    .process-step-marker{
+
+        left:
+            auto;
+
+        right:
+            -64px;
+
+    }
+
+
+    .process-step-marker{
+
+        width:
+            50px;
+
+        height:
+            50px;
+
+        border-width:
+            6px;
+
+    }
+
+
+    /* Cards */
+
+    .process-step-card{
+
+        min-height:
+            115px;
+
+        padding:
+            19px;
+
+        border-radius:
+            19px;
+
+    }
+
+
+    /*
+        Remove desktop arrows
+    */
+
+    .process-step.process-right
+    .process-step-card::before,
+
+    .process-step.process-left
+    .process-step-card::before{
+
+        display:
+            none;
+
+    }
+
+
+    /* All reveal from bottom */
+
+    .process-step.process-right.reveal,
+    .process-step.process-left.reveal{
+
+        transform:
+            translateY(30px);
+
+    }
+
+
+    .process-step.reveal.show{
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+    .work-process{
+
+        padding:
+            60px 0 70px;
+
+    }
+
+
+    .process-header{
+
+        margin-bottom:
+            45px;
+
+    }
+
+
+    .process-label{
+
+        min-height:
+            38px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .process-header h2{
+
+        font-size:
+            29px;
+
+    }
+
+
+    .process-timeline{
+
+        padding-right:
+            46px;
+
+    }
+
+
+    .process-line{
+
+        right:
+            16px;
+
+    }
+
+
+    .process-step.process-right
+    .process-step-marker,
+
+    .process-step.process-left
+    .process-step-marker{
+
+        right:
+            -54px;
+
+    }
+
+
+    .process-step-marker{
+
+        width:
+            43px;
+
+        height:
+            43px;
+
+        border-width:
+            5px;
+
+    }
+
+
+    .process-step-marker span{
+
+        font-size:
+            10px;
+
+    }
+
+
+    .process-step-card{
+
+        min-height:
+            auto;
+
+        padding:
+            17px;
+
+        gap:
+            14px;
+
+    }
+
+
+    .process-step-icon{
+
+        width:
+            47px;
+
+        height:
+            47px;
+
+        border-radius:
+            13px;
+
+        font-size:
+            17px;
+
+    }
+
+
+    .process-step-content h3{
+
+        font-size:
+            16px;
+
+    }
+
+
+    .process-step-content p{
+
+        font-size:
+            13px;
+
+        line-height:
+            1.8;
+
+    }
+
+}
+
+
+/* =========================================
+        REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    .process-step.reveal{
+
+        opacity:
+            1;
+
+        transform:
+            none;
+
+    }
+
+}
+/* =========================================
+        ROI CALCULATOR RESPONSIVE
+========================================= */
+
+@media (max-width:992px){
+
+    .roi-calculator{
+
+        padding:
+            95px 0 105px;
+
+    }
+
+    .roi-calculator-box{
+
+        grid-template-columns:
+            1fr;
+
+        max-width:750px;
+
+    }
+
+    .roi-input-panel{
+
+        padding:40px;
+
+    }
+
+    .roi-results-panel{
+
+        padding:40px;
+
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .roi-calculator{
+
+        padding:
+            75px 0 85px;
+
+    }
+
+    .roi-header{
+
+        margin-bottom:45px;
+
+        text-align:right;
+
+    }
+
+    .roi-header h2{
+
+        font-size:35px;
+
+        line-height:1.55;
+
+    }
+
+    .roi-calculator-box{
+
+        border-radius:24px;
+
+    }
+
+    .roi-input-panel,
+    .roi-results-panel{
+
+        padding:28px;
+
+    }
+
+    .roi-fields{
+
+        grid-template-columns:
+            1fr;
+
+        gap:18px;
+
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .roi-calculator{
+
+        padding:
+            60px 0 70px;
+
+    }
+
+    .roi-header h2{
+
+        font-size:29px;
+
+    }
+
+    .roi-label{
+
+        min-height:38px;
+
+        font-size:13px;
+
+    }
+
+    .roi-input-panel,
+    .roi-results-panel{
+
+        padding:
+            23px 18px;
+
+    }
+
+    .roi-panel-heading{
+
+        margin-bottom:27px;
+
+    }
+
+    .roi-heading-icon{
+
+        width:48px;
+        height:48px;
+
+    }
+
+    .roi-panel-heading h3{
+
+        font-size:19px;
+
+    }
+
+    .roi-input-wrap input{
+
+        height:55px;
+
+    }
+
+    .roi-results-grid{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .roi-result-card{
+
+        min-height:105px;
+
+    }
+
+    .roi-main-result strong{
+
+        font-size:40px;
+
+    }
+
+}
+/* =========================================
+        CASE STUDIES RESPONSIVE
+========================================= */
+
+@media (max-width:992px){
+
+    .case-studies{
+
+        padding:
+            95px 0 105px;
+
+    }
+
+
+    .case-journey{
+
+        grid-template-columns:
+            1fr;
+
+        gap:0;
+
+    }
+
+
+    .case-stage{
+
+        min-height:auto;
+
+    }
+
+
+    .case-arrow{
+
+        height:65px;
+
+    }
+
+
+    .case-arrow span{
+
+        width:1px;
+
+        height:42px;
+
+        background:
+
+            linear-gradient(
+                180deg,
+                rgba(18,61,114,.10),
+                rgba(18,61,114,.30)
+            );
+
+    }
+
+
+    .case-arrow i{
+
+        transform:
+            rotate(-90deg);
+
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .case-studies{
+
+        padding:
+            75px 0 85px;
+
+    }
+
+
+    .cases-header{
+
+        margin-bottom:50px;
+
+        text-align:right;
+
+    }
+
+
+    .cases-header h2{
+
+        font-size:35px;
+
+        line-height:1.55;
+
+    }
+
+
+    .case-study-card{
+
+        padding:
+            28px 24px;
+
+        border-radius:24px;
+
+    }
+
+
+    .case-number{
+
+        top:25px;
+
+        left:22px;
+
+    }
+
+
+    .case-number span{
+
+        font-size:58px;
+
+    }
+
+
+    .case-title{
+
+        padding-left:65px;
+
+        margin-bottom:30px;
+
+    }
+
+
+    .case-title h3{
+
+        font-size:25px;
+
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .case-studies{
+
+        padding:
+            60px 0 70px;
+
+    }
+
+
+    .cases-label{
+
+        min-height:38px;
+
+        font-size:13px;
+
+    }
+
+
+    .cases-header h2{
+
+        font-size:29px;
+
+    }
+
+
+    .case-study-card{
+
+        padding:
+            24px 18px;
+
+        margin-bottom:25px;
+
+        border-radius:21px;
+
+    }
+
+
+    .case-number span{
+
+        font-size:48px;
+
+    }
+
+
+    .case-title{
+
+        padding-left:55px;
+
+    }
+
+
+    .case-title h3{
+
+        font-size:21px;
+
+    }
+
+
+    .case-stage{
+
+        padding:20px;
+
+        border-radius:17px;
+
+    }
+
+
+    .case-stage-icon{
+
+        width:41px;
+
+        height:41px;
+
+    }
+
+
+    .case-stage h4{
+
+        font-size:16px;
+
+    }
+
+
+    .case-stage li,
+    .case-stage p{
+
+        font-size:13px;
+
+    }
+
+}
+/* =========================================
+        REAL ESTATE CONTENT RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        LARGE TABLET
+========================================= */
+
+@media (max-width:1100px){
+
+    .more-articles{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+
+    }
+
+}
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width:992px){
+
+    .realestate-content{
+
+        padding:
+            95px 0 105px;
+
+    }
+
+
+    .content-showcase{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .featured-article{
+
+        min-height:500px;
+
+    }
+
+
+    .side-articles{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+    }
+
+
+    .side-article{
+
+        min-height:145px;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .realestate-content{
+
+        padding:
+            75px 0 85px;
+
+    }
+
+
+    .content-header{
+
+        margin-bottom:45px;
+
+    }
+
+
+    .content-heading h2{
+
+        font-size:35px;
+
+        line-height:1.55;
+
+    }
+
+
+    /* Featured */
+
+    .featured-article{
+
+        min-height:430px;
+
+        border-radius:24px;
+
+    }
+
+
+    .featured-content{
+
+        padding:28px;
+
+    }
+
+
+    .featured-content h3{
+
+        padding-left:55px;
+
+        font-size:27px;
+
+    }
+
+
+    .article-open{
+
+        left:28px;
+
+        bottom:28px;
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+
+    /* Side */
+
+    .side-articles{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .side-article{
+
+        min-height:115px;
+
+    }
+
+
+    /* More articles */
+
+    .more-articles{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+    .realestate-content{
+
+        padding:
+            60px 0 70px;
+
+    }
+
+
+    .content-label{
+
+        min-height:38px;
+
+        font-size:13px;
+
+    }
+
+
+    .content-heading h2{
+
+        font-size:29px;
+
+    }
+
+
+    /* Featured */
+
+    .featured-article{
+
+        min-height:380px;
+
+        border-radius:21px;
+
+    }
+
+
+    .featured-content{
+
+        padding:22px;
+
+    }
+
+
+    .featured-content h3{
+
+        padding-left:0;
+
+        padding-bottom:60px;
+
+        font-size:23px;
+
+    }
+
+
+    .article-open{
+
+        left:auto;
+
+        right:22px;
+
+        bottom:22px;
+
+        width:44px;
+
+        height:44px;
+
+    }
+
+
+    /* Side article */
+
+    .side-article{
+
+        grid-template-columns:
+            35px 1fr 36px;
+
+        padding:
+            18px;
+
+        gap:10px;
+
+    }
+
+
+    .side-article-content h3{
+
+        font-size:14px;
+
+    }
+
+
+    .side-arrow{
+
+        width:35px;
+
+        height:35px;
+
+    }
+
+
+    /* Cards */
+
+    .more-articles{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .article-card{
+
+        min-height:190px;
+
+    }
+
+
+    .content-button-wrap{
+
+        margin-top:38px;
+
+    }
+
+
+    .content-main-btn{
+
+        width:100%;
+
+    }
+
+}
+/* =========================================
+        TESTIMONIALS RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width:992px){
+
+    .testimonials-section{
+
+        padding:
+            100px 0;
+
+    }
+
+
+    .testimonials-header{
+
+        margin-bottom:
+            55px;
+
+    }
+
+
+    .testimonials-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+    }
+
+
+    .testimonial-featured{
+
+        min-height:390px;
+
+        transform:none;
+
+    }
+
+
+    .testimonial-featured:hover{
+
+        transform:
+            translateY(-8px);
+
+    }
+
+
+    .testimonial-card:last-child{
+
+        grid-column:
+            1 / -1;
+
+        width:
+            calc(50% - 11px);
+
+        justify-self:center;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .testimonials-section{
+
+        padding:
+            80px 0;
+
+    }
+
+
+    .testimonials-header{
+
+        margin-bottom:
+            45px;
+
+    }
+
+
+    .testimonials-header h2{
+
+        font-size:
+            37px;
+
+    }
+
+
+    .testimonials-grid{
+
+        grid-template-columns:
+            1fr;
+
+        gap:17px;
+
+    }
+
+
+    .testimonial-card,
+    .testimonial-featured{
+
+        width:100%;
+
+        min-height:auto;
+
+        padding:27px;
+
+        transform:none;
+
+    }
+
+
+    .testimonial-card:last-child{
+
+        grid-column:auto;
+
+        width:100%;
+
+    }
+
+
+    .testimonial-card:hover,
+    .testimonial-featured:hover{
+
+        transform:
+            translateY(-5px);
+
+    }
+
+
+    .testimonial-text{
+
+        min-height:160px;
+
+    }
+
+
+    .testimonials-quote-icon{
+
+        right:-20px;
+
+        top:-55px;
+
+        font-size:120px;
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+    .testimonials-section{
+
+        padding:
+            65px 0 70px;
+
+    }
+
+
+    .testimonials-label{
+
+        min-height:38px;
+
+        padding:
+            6px 19px;
+
+        font-size:13px;
+
+    }
+
+
+    .testimonials-header h2{
+
+        font-size:
+            31px;
+
+    }
+
+
+    .testimonial-card,
+    .testimonial-featured{
+
+        padding:
+            23px;
+
+        border-radius:
+            21px;
+
+    }
+
+
+    .testimonial-avatar{
+
+        width:52px;
+
+        height:52px;
+
+    }
+
+
+    .testimonial-name{
+
+        font-size:14px;
+
+    }
+
+
+    .testimonial-text{
+
+        min-height:auto;
+
+        padding:
+            27px 0 22px;
+
+    }
+
+
+    .testimonial-text p{
+
+        font-size:14px;
+
+        line-height:1.95;
+
+    }
+
+
+    .testimonials-dots{
+
+        margin-top:32px;
+
+    }
+
+}
+/* =========================================
+        FAQ RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width:992px){
+
+    .faq-section{
+
+        padding:
+            95px 0 105px;
+
+    }
+
+
+    .faq-list{
+
+        max-width:900px;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .faq-section{
+
+        padding:
+            75px 0 85px;
+
+    }
+
+
+    .faq-header{
+
+        margin-bottom:
+            40px;
+
+    }
+
+
+    .faq-question{
+
+        min-height:82px;
+
+        padding:
+            17px 18px;
+
+        grid-template-columns:
+            35px 1fr 42px;
+
+        gap:11px;
+
+    }
+
+
+    .faq-question-text{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+
+    .faq-toggle{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+
+    .faq-answer p{
+
+        margin:
+            0 64px 0 53px;
+
+        padding-bottom:
+            25px;
+
+        font-size:14px;
+
+        line-height:1.95;
+
+    }
+
+
+    .faq-answer-inner::before{
+
+        margin:
+            0 64px 19px 53px;
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+    .faq-section{
+
+        padding:
+            60px 0 70px;
+
+    }
+
+
+    .faq-label{
+
+        min-height:40px;
+
+        padding:
+            7px 20px;
+
+        font-size:13px;
+
+    }
+
+
+    .faq-list{
+
+        gap:11px;
+
+    }
+
+
+    .faq-item{
+
+        border-radius:17px;
+
+    }
+
+
+    .faq-question{
+
+        min-height:78px;
+
+        padding:
+            16px;
+
+        grid-template-columns:
+            28px 1fr 38px;
+
+        gap:8px;
+
+    }
+
+
+    .faq-number{
+
+        font-size:11px;
+
+    }
+
+
+    .faq-question-text{
+
+        font-size:14px;
+
+        line-height:1.75;
+
+    }
+
+
+    .faq-toggle{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+
+    .faq-toggle::before{
+
+        width:14px;
+
+    }
+
+
+    .faq-toggle::after{
+
+        height:14px;
+
+    }
+
+
+    .faq-answer p{
+
+        margin:
+            0 52px 0 20px;
+
+        padding-bottom:
+            22px;
+
+        font-size:13px;
+
+        line-height:1.95;
+
+    }
+
+
+    .faq-answer-inner::before{
+
+        margin:
+            0 52px 17px 20px;
+
+    }
+
+}
+/* =========================================
+        SELL PROPERTY PAGE RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        LAPTOP / SMALL DESKTOP
+========================================= */
+
+@media (max-width:1200px){
+
+    .sell-property-form{
+
+        padding:
+            48px;
+
+    }
+
+
+    .sell-intro-decoration::before{
+
+        width:62%;
+
+        opacity:.08;
+
+    }
+
+}
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width:992px){
+
+    .sell-property-intro{
+
+        min-height:340px;
+
+        padding:
+            135px 0 70px;
+
+    }
+
+
+    .sell-intro-content h1{
+
+        font-size:
+            clamp(42px, 7vw, 60px);
+
+    }
+
+
+    .sell-property-form{
+
+        margin-top:-40px;
+
+        padding:
+            40px;
+
+        border-radius:27px;
+
+    }
+
+
+    .form-grid{
+
+        gap:
+            22px;
+
+    }
+
+
+    .upload-grid{
+
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+    }
+
+
+    .upload-box:last-child{
+
+        grid-column:
+            1 / -1;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .sell-property-intro{
+
+        min-height:300px;
+
+        padding:
+            125px 0 60px;
+
+    }
+
+
+    .sell-intro-decoration::before{
+
+        left:-20%;
+
+        width:90%;
+
+        height:75%;
+
+        opacity:.06;
+
+    }
+
+
+    .sell-intro-content{
+
+        max-width:100%;
+
+    }
+
+
+    .sell-page-label{
+
+        min-height:40px;
+
+        margin-bottom:17px;
+
+        padding:
+            7px 18px;
+
+        font-size:13px;
+
+    }
+
+
+    .sell-intro-content h1{
+
+        padding-bottom:20px;
+
+        font-size:
+            clamp(36px, 9vw, 50px);
+
+        letter-spacing:-1px;
+
+    }
+
+
+    .sell-intro-content h1::after{
+
+        width:70px;
+
+        height:3px;
+
+    }
+
+
+    /* FORM */
+
+    .sell-form-section{
+
+        padding-bottom:
+            90px;
+
+    }
+
+
+    .sell-property-form{
+
+        margin-top:-25px;
+
+        padding:
+            30px 24px;
+
+        border-radius:23px;
+
+    }
+
+
+    .form-section-block{
+
+        padding-bottom:
+            38px;
+
+        margin-bottom:
+            38px;
+
+    }
+
+
+    .form-section-heading{
+
+        margin-bottom:
+            25px;
+
+    }
+
+
+    .form-section-number{
+
+        width:44px;
+
+        height:44px;
+
+        border-radius:13px;
+
+        font-size:12px;
+
+    }
+
+
+    /* ONE COLUMN */
+
+    .form-grid{
+
+        grid-template-columns:
+            1fr;
+
+        gap:20px;
+
+    }
+
+
+    .form-choice-grid{
+
+        grid-template-columns:
+            1fr;
+
+        gap:18px;
+
+    }
+
+
+    /* INPUT */
+
+    .form-group input,
+    .form-group select{
+
+        height:55px;
+
+    }
+
+
+    /* UPLOAD */
+
+    .upload-grid{
+
+        grid-template-columns:
+            1fr;
+
+        gap:16px;
+
+    }
+
+
+    .upload-box:last-child{
+
+        grid-column:auto;
+
+    }
+
+
+    .upload-box{
+
+        min-height:145px;
+
+    }
+
+
+    /* DECLARATION */
+
+    .form-declaration{
+
+        padding:
+            20px;
+
+    }
+
+
+    .declaration-text{
+
+        font-size:13px;
+
+        line-height:1.9;
+
+    }
+
+
+    /* SUBMIT */
+
+    .sell-form-submit{
+
+        justify-content:stretch;
+
+    }
+
+
+    .sell-submit-btn{
+
+        width:100%;
+
+        min-width:0;
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+    .sell-property-intro{
+
+        min-height:265px;
+
+        padding:
+            115px 0 50px;
+
+    }
+
+
+    .sell-page-label{
+
+        font-size:12px;
+
+    }
+
+
+    .sell-intro-content h1{
+
+        font-size:
+            clamp(31px, 10vw, 42px);
+
+    }
+
+
+    .sell-property-form{
+
+        width:100%;
+
+        padding:
+            25px 17px;
+
+        border-radius:20px;
+
+    }
+
+
+    .form-section-block{
+
+        padding-bottom:
+            32px;
+
+        margin-bottom:
+            32px;
+
+    }
+
+
+    .form-section-number{
+
+        width:40px;
+
+        height:40px;
+
+        border-radius:12px;
+
+        font-size:11px;
+
+    }
+
+
+    .form-section-heading::after{
+
+        margin-right:13px;
+
+    }
+
+
+    .form-group label,
+    .choice-card legend{
+
+        font-size:13px;
+
+    }
+
+
+    .form-group input,
+    .form-group select{
+
+        height:53px;
+
+        padding:
+            0 15px;
+
+        font-size:13px;
+
+    }
+
+
+    .form-group textarea{
+
+        padding:15px;
+
+        font-size:13px;
+
+    }
+
+
+    /* YES / NO */
+
+    .choice-card{
+
+        padding:
+            20px 17px;
+
+        gap:10px;
+
+    }
+
+
+    .radio-option{
+
+        flex:1;
+
+        min-width:0;
+
+    }
+
+
+    .radio-option span{
+
+        padding:
+            8px 15px;
+
+    }
+
+
+    /* FILES */
+
+    .upload-box{
+
+        min-height:130px;
+
+        border-radius:17px;
+
+    }
+
+
+    .upload-box i{
+
+        width:47px;
+
+        height:47px;
+
+        font-size:18px;
+
+    }
+
+
+    .upload-box span{
+
+        font-size:13px;
+
+    }
+
+
+    /* DECLARATION */
+
+    .form-declaration{
+
+        padding:
+            17px;
+
+    }
+
+
+    .declaration-check{
+
+        gap:11px;
+
+    }
+
+
+    .custom-checkbox{
+
+        width:23px;
+
+        height:23px;
+
+    }
+
+
+    .declaration-text{
+
+        font-size:12.5px;
+
+    }
+
+
+    /* BUTTON */
+
+    .sell-submit-btn{
+
+        min-height:58px;
+
+        font-size:14px;
+
+    }
+
+}
+/* =========================================
+        BUY PROPERTY RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        LAPTOP
+========================================= */
+
+@media (max-width:1200px){
+
+    .buy-property-form{
+
+        padding:48px;
+
+    }
+
+
+    .buy-hero-container{
+
+        gap:35px;
+
+    }
+
+
+    .buy-hero-visual{
+
+        transform:
+            scale(.90);
+
+    }
+
+}
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width:992px){
+
+    .buy-property-hero{
+
+        min-height:420px;
+
+        padding:
+            135px 0 90px;
+
+    }
+
+
+    .buy-hero-container{
+
+        grid-template-columns:
+            minmax(0,1.3fr)
+            minmax(220px,.7fr);
+
+        gap:25px;
+
+    }
+
+
+    .buy-hero-content h1{
+
+        font-size:
+            clamp(40px,6vw,58px);
+
+    }
+
+
+    .buy-hero-visual{
+
+        min-height:250px;
+
+        transform:
+            scale(.78);
+
+    }
+
+
+    .buy-property-form{
+
+        margin-top:-50px;
+
+        padding:42px;
+
+        border-radius:28px;
+
+    }
+
+
+    .buy-form-grid{
+
+        gap:22px;
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .buy-property-hero{
+
+        min-height:auto;
+
+        padding:
+            125px 0 75px;
+
+    }
+
+
+    .buy-hero-container{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+
+    .buy-hero-content{
+
+        max-width:100%;
+
+    }
+
+
+    .buy-page-label{
+
+        min-height:40px;
+
+        margin-bottom:17px;
+
+        padding:
+            7px 18px;
+
+        font-size:13px;
+
+    }
+
+
+    .buy-hero-content h1{
+
+        max-width:100%;
+
+        padding-bottom:20px;
+
+        font-size:
+            clamp(35px,8vw,48px);
+
+        letter-spacing:-1px;
+
+    }
+
+
+    .buy-hero-content h1::after{
+
+        width:72px;
+
+        height:3px;
+
+    }
+
+
+    /* Smaller visual on mobile */
+
+    .buy-hero-visual{
+
+        min-height:180px;
+
+        transform:none;
+
+    }
+
+
+    .buy-hero-visual::before{
+
+        width:190px;
+        height:190px;
+
+        box-shadow:
+
+            0 0 0 20px
+            rgba(76,141,218,.025),
+
+            0 0 0 42px
+            rgba(18,61,114,.018);
+
+    }
+
+
+    .buy-hero-visual::after{
+
+        width:145px;
+        height:145px;
+
+    }
+
+
+    .buy-search-circle{
+
+        width:105px;
+        height:105px;
+
+    }
+
+
+    .buy-search-circle i{
+
+        font-size:31px;
+
+    }
+
+
+    .buy-hero-background::before{
+
+        left:-25%;
+
+        width:95%;
+
+        height:65%;
+
+        opacity:.055;
+
+    }
+
+
+    /* FORM */
+
+    .buy-form-section{
+
+        padding-bottom:90px;
+
+    }
+
+
+    .buy-property-form{
+
+        margin-top:-25px;
+
+        padding:
+            31px 24px;
+
+        border-radius:24px;
+
+    }
+
+
+    .buy-form-block{
+
+        padding-bottom:38px;
+
+        margin-bottom:38px;
+
+    }
+
+
+    .buy-block-marker{
+
+        margin-bottom:25px;
+
+    }
+
+
+    .buy-block-marker span{
+
+        width:44px;
+        height:44px;
+
+        font-size:11px;
+
+    }
+
+
+    /* One column */
+
+    .buy-form-grid{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .buy-full-width{
+
+        grid-column:auto;
+
+    }
+
+
+    /* Financing */
+
+    .buy-choice-options{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+
+    .buy-choice-design{
+
+        min-height:100px;
+
+    }
+
+
+    /* Questions */
+
+    .buy-question-grid{
+
+        grid-template-columns:1fr;
+
+        gap:17px;
+
+    }
+
+
+    /* Submit */
+
+    .buy-submit-area{
+
+        justify-content:stretch;
+
+    }
+
+
+    .buy-submit-btn{
+
+        width:100%;
+
+        min-width:0;
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+    .buy-property-hero{
+
+        padding:
+            115px 0 65px;
+
+    }
+
+
+    .buy-page-label{
+
+        font-size:12px;
+
+    }
+
+
+    .buy-hero-content h1{
+
+        font-size:
+            clamp(31px,9vw,41px);
+
+        line-height:1.5;
+
+    }
+
+
+    .buy-hero-visual{
+
+        min-height:150px;
+
+    }
+
+
+    .buy-hero-visual::before{
+
+        width:160px;
+        height:160px;
+
+    }
+
+
+    .buy-hero-visual::after{
+
+        width:125px;
+        height:125px;
+
+    }
+
+
+    .buy-search-circle{
+
+        width:90px;
+        height:90px;
+
+    }
+
+
+    .buy-search-circle i{
+
+        font-size:27px;
+
+    }
+
+
+    /* FORM */
+
+    .buy-property-form{
+
+        padding:
+            26px 17px;
+
+        border-radius:20px;
+
+    }
+
+
+    .buy-form-block{
+
+        padding-bottom:32px;
+
+        margin-bottom:32px;
+
+    }
+
+
+    .buy-block-marker span{
+
+        width:40px;
+        height:40px;
+
+        font-size:10px;
+
+    }
+
+
+    .buy-block-marker::after{
+
+        margin-right:13px;
+
+    }
+
+
+    .buy-form-group label,
+    .buy-choice-section legend,
+    .buy-question-card legend{
+
+        font-size:13px;
+
+    }
+
+
+    /* Inputs */
+
+    .buy-input-wrap input{
+
+        height:54px;
+
+        padding:
+            0 47px 0 14px;
+
+        font-size:13px;
+
+    }
+
+
+    .buy-input-wrap > i{
+
+        right:16px;
+
+        font-size:14px;
+
+    }
+
+
+    .buy-form-group textarea{
+
+        min-height:155px;
+
+        padding:16px;
+
+        font-size:13px;
+
+    }
+
+
+    /* Finance cards */
+
+    .buy-choice-design{
+
+        min-height:88px;
+
+        padding:17px;
+
+        justify-content:flex-start;
+
+        border-radius:17px;
+
+    }
+
+
+    .buy-choice-design > i{
+
+        width:46px;
+        height:46px;
+
+        border-radius:13px;
+
+        font-size:17px;
+
+    }
+
+
+    /* Questions */
+
+    .buy-question-card{
+
+        padding:
+            20px 17px;
+
+        border-radius:17px;
+
+    }
+
+
+    .buy-yes-no{
+
+        gap:9px;
+
+    }
+
+
+    .buy-yes-no span{
+
+        min-height:44px;
+
+        font-size:12px;
+
+    }
+
+
+    /* Button */
+
+    .buy-submit-btn{
+
+        min-height:59px;
+
+        font-size:14px;
+
+    }
+
+}
+/* =========================================
+    PROPERTY MANAGEMENT RESPONSIVE
+========================================= */
+
+
+/* =========================================
+        LAPTOP
+========================================= */
+
+@media (max-width:1200px){
+
+    .management-form{
+
+        padding:48px;
+
+    }
+
+
+    .management-hero-container{
+
+        gap:40px;
+
+    }
+
+
+    .management-hero-visual{
+
+        transform:
+            scale(.92);
+
+    }
+
+}
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width:992px){
+
+    .management-hero{
+
+        min-height:430px;
+
+        padding:
+            135px 0 90px;
+
+    }
+
+
+    .management-hero-container{
+
+        grid-template-columns:
+            minmax(0,1.2fr)
+            minmax(240px,.8fr);
+
+        gap:25px;
+
+    }
+
+
+    .management-hero-content h1{
+
+        font-size:
+            clamp(40px,6vw,58px);
+
+    }
+
+
+    .management-hero-visual{
+
+        min-height:260px;
+
+        transform:
+            scale(.82);
+
+    }
+
+
+    .management-form{
+
+        margin-top:-50px;
+
+        padding:42px;
+
+        border-radius:28px;
+
+    }
+
+
+    .management-services-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+    }
+
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .management-hero{
+
+        min-height:auto;
+
+        padding:
+            125px 0 75px;
+
+    }
+
+
+    .management-hero-container{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+
+    .management-page-label{
+
+        min-height:40px;
+
+        margin-bottom:17px;
+
+        padding:
+            7px 18px;
+
+        font-size:13px;
+
+    }
+
+
+    .management-hero-content h1{
+
+        padding-bottom:20px;
+
+        font-size:
+            clamp(35px,8vw,48px);
+
+        letter-spacing:-1px;
+
+    }
+
+
+    .management-hero-content h1::after{
+
+        width:72px;
+
+        height:3px;
+
+    }
+
+
+    /* HERO VISUAL */
+
+    .management-hero-visual{
+
+        min-height:210px;
+
+        transform:none;
+
+    }
+
+
+    .management-hero-visual::before{
+
+        width:190px;
+
+        height:190px;
+
+        box-shadow:
+
+            0 0 0 20px
+            rgba(76,141,218,.025),
+
+            0 0 0 42px
+            rgba(18,61,114,.018);
+
+    }
+
+
+    .management-building-icon{
+
+        width:105px;
+
+        height:105px;
+
+        border-radius:26px;
+
+    }
+
+
+    .management-building-icon i{
+
+        font-size:37px;
+
+    }
+
+
+    .management-orbit{
+
+        width:46px;
+
+        height:46px;
+
+        border-radius:14px;
+
+        font-size:15px;
+
+    }
+
+
+    .orbit-one{
+
+        top:5px;
+
+        right:calc(50% - 105px);
+
+    }
+
+
+    .orbit-two{
+
+        left:calc(50% - 110px);
+
+        top:90px;
+
+    }
+
+
+    .orbit-three{
+
+        right:calc(50% - 95px);
+
+        bottom:0;
+
+    }
+
+
+    .management-hero-bg::before{
+
+        left:-25%;
+
+        width:95%;
+
+        height:65%;
+
+        opacity:.05;
+
+    }
+
+
+    /* FORM */
+
+    .management-form-section{
+
+        padding-bottom:90px;
+
+    }
+
+
+    .management-form{
+
+        margin-top:-25px;
+
+        padding:
+            31px 24px;
+
+        border-radius:24px;
+
+    }
+
+
+    .management-form-block{
+
+        padding-bottom:38px;
+
+        margin-bottom:38px;
+
+    }
+
+
+    .management-block-number{
+
+        margin-bottom:25px;
+
+    }
+
+
+    .management-block-number span{
+
+        width:44px;
+
+        height:44px;
+
+        font-size:11px;
+
+    }
+
+
+    /* INPUTS ONE COLUMN */
+
+    .management-form-grid{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    /* QUESTIONS */
+
+    .management-question-grid{
+
+        grid-template-columns:1fr;
+
+        gap:17px;
+
+    }
+
+
+    /* SERVICES */
+
+    .management-services-grid{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+
+    .management-service-content{
+
+        min-height:105px;
+
+        flex-direction:row;
+
+        align-items:center;
+
+        justify-content:flex-start;
+
+        padding:
+            20px 22px;
+
+    }
+
+
+    /* SUBMIT */
+
+    .management-submit-area{
+
+        justify-content:stretch;
+
+    }
+
+
+    .management-submit-btn{
+
+        width:100%;
+
+        min-width:0;
+
+    }
+
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+    .management-hero{
+
+        padding:
+            115px 0 65px;
+
+    }
+
+
+    .management-page-label{
+
+        font-size:12px;
+
+    }
+
+
+    .management-hero-content h1{
+
+        font-size:
+            clamp(31px,9vw,41px);
+
+        line-height:1.5;
+
+    }
+
+
+    .management-hero-visual{
+
+        min-height:180px;
+
+    }
+
+
+    .management-hero-visual::before{
+
+        width:155px;
+
+        height:155px;
+
+    }
+
+
+    .management-building-icon{
+
+        width:88px;
+
+        height:88px;
+
+        border-radius:22px;
+
+    }
+
+
+    .management-building-icon i{
+
+        font-size:31px;
+
+    }
+
+
+    .management-orbit{
+
+        width:40px;
+
+        height:40px;
+
+        border-radius:12px;
+
+        font-size:13px;
+
+    }
+
+
+    /* FORM */
+
+    .management-form{
+
+        padding:
+            26px 17px;
+
+        border-radius:20px;
+
+    }
+
+
+    .management-form-block{
+
+        padding-bottom:32px;
+
+        margin-bottom:32px;
+
+    }
+
+
+    .management-block-number span{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:10px;
+
+    }
+
+
+    .management-block-number::after{
+
+        margin-right:13px;
+
+    }
+
+
+    .management-form-group label,
+
+    .management-question-card legend,
+
+    .management-services > legend{
+
+        font-size:13px;
+
+    }
+
+
+    /* INPUT */
+
+    .management-input-wrap input{
+
+        height:54px;
+
+        padding:
+            0 47px 0 14px;
+
+        font-size:13px;
+
+    }
+
+
+    .management-input-wrap > i{
+
+        right:16px;
+
+        font-size:14px;
+
+    }
+
+
+    /* QUESTIONS */
+
+    .management-question-card{
+
+        padding:
+            20px 17px;
+
+        border-radius:17px;
+
+    }
+
+
+    .management-yes-no{
+
+        gap:9px;
+
+    }
+
+
+    .management-yes-no span{
+
+        min-height:44px;
+
+        font-size:12px;
+
+    }
+
+
+    /* SERVICES */
+
+    .management-service-content{
+
+        min-height:88px;
+
+        padding:
+            17px;
+
+        border-radius:17px;
+
+        font-size:13px;
+
+    }
+
+
+    .management-service-content > i{
+
+        width:44px;
+
+        height:44px;
+
+        border-radius:12px;
+
+        font-size:16px;
+
+    }
+
+
+    .management-check{
+
+        top:12px;
+
+        left:12px;
+
+        width:24px;
+
+        height:24px;
+
+    }
+
+
+    /* TEXTAREA */
+
+    .management-form-group textarea{
+
+        min-height:155px;
+
+        padding:16px;
+
+        font-size:13px;
+
+    }
+
+
+    /* BUTTON */
+
+    .management-submit-btn{
+
+        min-height:59px;
+
+        font-size:14px;
+
+    }
+
+}

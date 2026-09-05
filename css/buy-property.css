@@ -1,0 +1,1528 @@
+/* =========================================
+        MSAA CONSULTING
+        BUY PROPERTY PAGE
+========================================= */
+
+
+/* =========================================
+        PAGE
+========================================= */
+
+.buy-property-page{
+
+    position:relative;
+    width:100%;
+    min-height:100vh;
+
+    overflow:hidden;
+
+    direction:rtl;
+
+    background:#f7faff;
+
+}
+
+
+/* =========================================
+        HERO
+========================================= */
+
+.buy-property-hero{
+
+    position:relative;
+
+    width:100%;
+    min-height:470px;
+
+    padding:150px 0 105px;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 12% 35%,
+            rgba(76,141,218,.15),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(18,61,114,.07),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            125deg,
+            #eef6fd 0%,
+            #f8fbff 42%,
+            #ffffff 72%,
+            #f3f8fd 100%
+        );
+
+}
+
+
+/* =========================================
+        BLUEPRINT BACKGROUND
+========================================= */
+
+.buy-hero-background{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+
+/* Buildings */
+
+.buy-hero-background::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-3%;
+    bottom:-45px;
+
+    width:55%;
+    height:95%;
+
+    background-image:
+        url("../images/buildings/hero-buildings.png");
+
+    background-repeat:no-repeat;
+
+    background-position:left bottom;
+
+    background-size:contain;
+
+    opacity:.085;
+
+}
+
+
+/* Architectural grid */
+
+.buy-hero-background::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(18,61,114,.022) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(18,61,114,.022) 1px,
+            transparent 1px
+        );
+
+    background-size:78px 78px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.75),
+            transparent 92%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.75),
+            transparent 92%
+        );
+
+}
+
+
+/* =========================================
+        HERO CONTAINER
+========================================= */
+
+.buy-hero-container{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.25fr)
+        minmax(280px,.75fr);
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+
+/* =========================================
+        HERO CONTENT
+========================================= */
+
+.buy-hero-content{
+
+    position:relative;
+
+    max-width:780px;
+
+}
+
+
+/* =========================================
+        LABEL
+========================================= */
+
+.buy-page-label{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    min-height:44px;
+
+    margin-bottom:22px;
+
+    padding:7px 21px;
+
+    border:
+        1px solid
+        rgba(18,61,114,.13);
+
+    border-radius:50px;
+
+    color:var(--primary-color);
+
+    background:
+        rgba(255,255,255,.70);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(18,61,114,.05);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================
+        HERO TITLE
+========================================= */
+
+.buy-hero-content h1{
+
+    position:relative;
+
+    max-width:760px;
+
+    margin:0;
+
+    padding-bottom:27px;
+
+    color:var(--dark-blue);
+
+    font-size:
+        clamp(46px,5vw,72px);
+
+    font-weight:800;
+
+    line-height:1.45;
+
+    letter-spacing:-2px;
+
+}
+
+
+/* Line */
+
+.buy-hero-content h1::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+    bottom:0;
+
+    width:95px;
+    height:4px;
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--light-blue),
+            var(--primary-color)
+        );
+
+}
+
+
+/* =========================================
+        HERO VISUAL
+========================================= */
+
+.buy-hero-visual{
+
+    position:relative;
+
+    min-height:300px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+/* Large architectural rings */
+
+.buy-hero-visual::before,
+.buy-hero-visual::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    border-radius:50%;
+
+    transform:
+        translate(-50%,-50%);
+
+}
+
+
+.buy-hero-visual::before{
+
+    width:290px;
+    height:290px;
+
+    border:
+        1px solid
+        rgba(18,61,114,.10);
+
+    box-shadow:
+
+        0 0 0 30px
+        rgba(76,141,218,.025),
+
+        0 0 0 65px
+        rgba(18,61,114,.018);
+
+}
+
+
+.buy-hero-visual::after{
+
+    width:205px;
+    height:205px;
+
+    border:
+        1px dashed
+        rgba(18,61,114,.16);
+
+    animation:
+        buyRingRotate
+        24s linear
+        infinite;
+
+}
+
+
+/* =========================================
+        SEARCH CIRCLE
+========================================= */
+
+.buy-search-circle{
+
+    position:relative;
+
+    z-index:3;
+
+    width:145px;
+    height:145px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:
+        1px solid
+        rgba(255,255,255,.85);
+
+    border-radius:50%;
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #2372b6 0%,
+            #123d72 52%,
+            #092b54 100%
+        );
+
+    box-shadow:
+
+        0 25px 55px
+        rgba(10,34,64,.22),
+
+        inset 0 1px 0
+        rgba(255,255,255,.28);
+
+    animation:
+        buySearchFloat
+        5s ease-in-out
+        infinite;
+
+}
+
+
+.buy-search-circle i{
+
+    font-size:43px;
+
+}
+
+
+/* Small glow */
+
+.buy-search-circle::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-17px;
+
+    border:
+        1px solid
+        rgba(18,61,114,.10);
+
+    border-radius:50%;
+
+}
+
+
+/* =========================================
+        HERO ANIMATIONS
+========================================= */
+
+@keyframes buyRingRotate{
+
+    from{
+
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes buySearchFloat{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-9px);
+
+    }
+
+}
+
+
+/* =========================================
+        FORM SECTION
+========================================= */
+
+.buy-form-section{
+
+    position:relative;
+
+    width:100%;
+
+    padding:
+        0 0 130px;
+
+    background:
+
+        radial-gradient(
+            circle at 100% 30%,
+            rgba(76,141,218,.055),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 0% 75%,
+            rgba(18,61,114,.04),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            180deg,
+            #f5f9fd 0%,
+            #ffffff 45%,
+            #f7fafe 100%
+        );
+
+}
+
+
+/* Decorative architectural circle */
+
+.buy-form-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    right:-390px;
+    top:35%;
+
+    border-radius:50%;
+
+    border:
+        85px solid
+        rgba(18,61,114,.018);
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================
+        FORM CONTAINER
+========================================= */
+
+.buy-form-container{
+
+    position:relative;
+
+    z-index:3;
+
+    max-width:1160px;
+
+}
+
+
+/* =========================================
+        MAIN FORM
+========================================= */
+
+.buy-property-form{
+
+    position:relative;
+
+    margin-top:-65px;
+
+    padding:55px;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,.90);
+
+    border-radius:34px;
+
+    background:
+        rgba(255,255,255,.84);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+
+    box-shadow:
+
+        0 35px 90px
+        rgba(10,34,64,.105),
+
+        inset 0 1px 0
+        rgba(255,255,255,.95);
+
+}
+
+
+/* Top decorative line */
+
+.buy-property-form::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:10%;
+
+    width:80%;
+    height:1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(76,141,218,.32),
+            transparent
+        );
+
+}
+
+
+/* =========================================
+        FORM BLOCK
+========================================= */
+
+.buy-form-block{
+
+    position:relative;
+
+    padding-bottom:48px;
+
+    margin-bottom:48px;
+
+    border-bottom:
+        1px solid
+        rgba(18,61,114,.075);
+
+}
+
+
+.buy-form-block:last-of-type{
+
+    margin-bottom:30px;
+
+}
+
+
+/* =========================================
+        BLOCK MARKER
+========================================= */
+
+.buy-block-marker{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+
+.buy-block-marker span{
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #2372b6,
+            #123d72
+        );
+
+    box-shadow:
+        0 10px 24px
+        rgba(18,61,114,.18);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+
+/* Line */
+
+.buy-block-marker::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    margin-right:18px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(18,61,114,.11)
+        );
+
+}
+
+
+/* =========================================
+        FORM GRID
+========================================= */
+
+.buy-form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:
+        25px 28px;
+
+}
+
+
+.buy-full-width{
+
+    grid-column:
+        1 / -1;
+
+}
+
+
+/* =========================================
+        FORM GROUP
+========================================= */
+
+.buy-form-group{
+
+    position:relative;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+.buy-form-group label{
+
+    padding-right:3px;
+
+    color:var(--dark-blue);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================
+        INPUT WRAPPER
+========================================= */
+
+.buy-input-wrap{
+
+    position:relative;
+
+    width:100%;
+
+}
+
+
+/* Icon */
+
+.buy-input-wrap > i{
+
+    position:absolute;
+
+    right:18px;
+    top:50%;
+
+    z-index:2;
+
+    transform:
+        translateY(-50%);
+
+    width:20px;
+
+    color:
+        rgba(18,61,114,.55);
+
+    font-size:15px;
+
+    text-align:center;
+
+    pointer-events:none;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+
+/* =========================================
+        INPUTS
+========================================= */
+
+.buy-input-wrap input{
+
+    width:100%;
+    height:58px;
+
+    padding:
+        0 52px 0 18px;
+
+    outline:none;
+
+    border:
+        1px solid
+        rgba(18,61,114,.11);
+
+    border-radius:16px;
+
+    color:var(--text-color);
+
+    background:
+        rgba(247,250,254,.88);
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:14px;
+
+    transition:
+
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.buy-input-wrap input:focus{
+
+    border-color:
+        rgba(18,61,114,.40);
+
+    background:#ffffff;
+
+    box-shadow:
+
+        0 0 0 4px
+        rgba(76,141,218,.075),
+
+        0 10px 25px
+        rgba(18,61,114,.05);
+
+}
+
+
+.buy-input-wrap:focus-within > i{
+
+    color:
+        var(--primary-color);
+
+    transform:
+        translateY(-50%)
+        scale(1.08);
+
+}
+
+
+/* =========================================
+        TEXTAREA
+========================================= */
+
+.buy-form-group textarea{
+
+    width:100%;
+
+    min-height:180px;
+
+    padding:19px;
+
+    resize:vertical;
+
+    outline:none;
+
+    border:
+        1px solid
+        rgba(18,61,114,.11);
+
+    border-radius:18px;
+
+    color:var(--text-color);
+
+    background:
+        rgba(247,250,254,.88);
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:14px;
+
+    line-height:2;
+
+    transition:
+
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.buy-form-group textarea:focus{
+
+    border-color:
+        rgba(18,61,114,.40);
+
+    background:#ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(76,141,218,.075);
+
+}
+
+
+/* =========================================
+        FINANCING CHOICE SECTION
+========================================= */
+
+.buy-choice-section{
+
+    min-width:0;
+
+    margin:0;
+
+    padding:0;
+
+    border:0;
+
+}
+
+
+.buy-choice-section legend{
+
+    margin-bottom:18px;
+
+    color:var(--dark-blue);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================
+        FINANCING CARDS
+========================================= */
+
+.buy-choice-options{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:20px;
+
+}
+
+
+.buy-choice-card{
+
+    position:relative;
+
+    cursor:pointer;
+
+}
+
+
+.buy-choice-card input{
+
+    position:absolute;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+.buy-choice-design{
+
+    position:relative;
+
+    min-height:125px;
+
+    padding:22px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:15px;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        rgba(18,61,114,.10);
+
+    border-radius:20px;
+
+    color:var(--dark-blue);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(247,251,255,.96),
+            rgba(255,255,255,.96)
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(10,34,64,.025);
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:
+
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease,
+        color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+/* Icon */
+
+.buy-choice-design > i{
+
+    width:52px;
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border-radius:15px;
+
+    color:var(--primary-color);
+
+    background:
+        rgba(18,61,114,.07);
+
+    font-size:20px;
+
+    transition:
+        .3s ease;
+
+}
+
+
+/* Hover */
+
+.buy-choice-card:hover
+.buy-choice-design{
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(18,61,114,.18);
+
+    box-shadow:
+        0 15px 35px
+        rgba(10,34,64,.065);
+
+}
+
+
+/* Checked */
+
+.buy-choice-card input:checked
++
+.buy-choice-design{
+
+    color:#ffffff;
+
+    border-color:
+        transparent;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #1764a7,
+            #0d396b
+        );
+
+    box-shadow:
+        0 17px 38px
+        rgba(11,58,105,.20);
+
+}
+
+
+.buy-choice-card input:checked
++
+.buy-choice-design
+> i{
+
+    color:#ffffff;
+
+    background:
+        rgba(255,255,255,.14);
+
+}
+
+
+/* =========================================
+        PURCHASE PERIOD
+========================================= */
+
+.buy-spacing{
+
+    margin-top:30px;
+
+}
+
+
+/* =========================================
+        QUESTION GRID
+========================================= */
+
+.buy-question-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:22px;
+
+}
+
+
+/* =========================================
+        QUESTION CARD
+========================================= */
+
+.buy-question-card{
+
+    min-width:0;
+
+    padding:25px;
+
+    border:
+        1px solid
+        rgba(18,61,114,.09);
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(247,251,255,.95),
+            rgba(255,255,255,.96)
+        );
+
+}
+
+
+.buy-question-card legend{
+
+    width:100%;
+
+    margin-bottom:19px;
+
+    padding:0;
+
+    color:var(--dark-blue);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================
+        YES / NO
+========================================= */
+
+.buy-yes-no{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+
+.buy-yes-no label{
+
+    position:relative;
+
+    cursor:pointer;
+
+}
+
+
+.buy-yes-no input{
+
+    position:absolute;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+.buy-yes-no span{
+
+    min-height:47px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:
+        1px solid
+        rgba(18,61,114,.11);
+
+    border-radius:50px;
+
+    color:#52677c;
+
+    background:#ffffff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.buy-yes-no label:hover span{
+
+    border-color:
+        rgba(18,61,114,.25);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.buy-yes-no input:checked
++
+span{
+
+    color:#ffffff;
+
+    border-color:
+        var(--primary-color);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--dark-blue)
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(18,61,114,.16);
+
+}
+
+
+/* =========================================
+        SUBMIT AREA
+========================================= */
+
+.buy-submit-area{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:flex-start;
+
+}
+
+
+/* =========================================
+        SUBMIT BUTTON
+========================================= */
+
+.buy-submit-btn{
+
+    position:relative;
+
+    min-width:260px;
+    min-height:63px;
+
+    padding:
+        0 32px;
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:25px;
+
+    overflow:hidden;
+
+    border:0;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #1c6daf 0%,
+            #103f75 52%,
+            #082d59 100%
+        );
+
+    box-shadow:
+        0 15px 35px
+        rgba(11,58,105,.23);
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:
+
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+/* Shine */
+
+.buy-submit-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+    left:-60%;
+
+    width:45%;
+    height:300%;
+
+    transform:
+        rotate(25deg);
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.22),
+            transparent
+        );
+
+    transition:
+        left .7s ease;
+
+}
+
+
+.buy-submit-btn span,
+.buy-submit-btn i{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.buy-submit-btn i{
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.buy-submit-btn:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 21px 46px
+        rgba(11,58,105,.31);
+
+}
+
+
+.buy-submit-btn:hover::before{
+
+    left:130%;
+
+}
+
+
+.buy-submit-btn:hover i{
+
+    transform:
+        translateX(-6px);
+
+}
+
+
+/* =========================================
+        FOCUS
+========================================= */
+
+.buy-choice-card:focus-within
+.buy-choice-design,
+.buy-yes-no label:focus-within span,
+.buy-submit-btn:focus-visible{
+
+    outline:
+        3px solid
+        rgba(76,141,218,.20);
+
+    outline-offset:3px;
+
+}
+
+
+/* =========================================
+        REDUCED MOTION
+========================================= */
+
+@media
+(prefers-reduced-motion:reduce){
+
+    .buy-hero-visual::after,
+    .buy-search-circle{
+
+        animation:none;
+
+    }
+
+
+    .buy-choice-design,
+    .buy-yes-no span,
+    .buy-submit-btn,
+    .buy-submit-btn i{
+
+        transition:none;
+
+    }
+
+}

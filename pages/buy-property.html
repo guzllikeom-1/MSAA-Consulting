@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>طلب شراء عقار | محمد الشيادي</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/header.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/buy-property.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+        HEADER
+========================================= -->
+
+<header class="header">
+
+    <div class="container header-container">
+
+
+        <!-- SIGNATURE -->
+
+        <a
+            href="../index.html"
+            class="brand"
+        >
+
+            <img
+                src="../images/logo/mohammed-profile-logo.png"
+                alt="توقيع محمد الشيادي"
+                class="signature-logo"
+            >
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navbar">
+
+
+            <a
+                href="../index.html"
+                class="nav-item"
+                data-title="الرئيسية"
+            >
+
+                <i class="fas fa-home"></i>
+
+            </a>
+
+
+            <a
+                href="about.html"
+                class="nav-item"
+                data-title="من أنا"
+            >
+
+                <i class="fas fa-user"></i>
+
+            </a>
+
+
+            <a
+                href="services.html"
+                class="nav-item"
+                data-title="الخدمات"
+            >
+
+                <i class="fas fa-briefcase"></i>
+
+            </a>
+
+
+            <a
+                href="properties.html"
+                class="nav-item"
+                data-title="العقارات"
+            >
+
+                <i class="fas fa-building"></i>
+
+            </a>
+
+
+            <a
+                href="articles.html"
+                class="nav-item"
+                data-title="المقالات"
+            >
+
+                <i class="fas fa-newspaper"></i>
+
+            </a>
+			
+			<a 
+			   href="faq.html"
+			   class="nav-item"
+			   data-title="الأسئلة الشائعة"
+			>
+			
+			   <i class="fas fa-circle-question"></i>
+			   
+			</a>
+
+
+            <a
+                href="contact.html"
+                class="nav-item"
+                data-title="تواصل معنا"
+            >
+
+                <i class="fas fa-envelope"></i>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- CONSULTATION -->
+
+        <a
+            href="consultation.html"
+            class="header-btn"
+        >
+
+            <i class="far fa-calendar-check"></i>
+
+            <span>
+                احجز استشارة
+            </span>
+
+        </a>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+        BUY PROPERTY PAGE
+========================================= -->
+
+<main class="buy-property-page">
+
+
+    <!-- =====================================
+            PAGE HERO
+    ====================================== -->
+
+    <section class="buy-property-hero">
+
+
+        <div
+            class="buy-hero-background"
+            aria-hidden="true"
+        ></div>
+
+
+        <div class="container buy-hero-container">
+
+
+            <div class="buy-hero-content">
+
+
+                <span class="buy-page-label">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    طلب شراء
+
+                </span>
+
+
+                <h1>
+                    أخبرنا عن العقار الذي تبحث عنه
+                </h1>
+
+
+            </div>
+
+
+            <!-- Decorative Visual -->
+
+            <div
+                class="buy-hero-visual"
+                aria-hidden="true"
+            >
+
+                <div class="buy-search-circle">
+
+                    <i class="fa-solid fa-building-circle-check"></i>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+            BUY PROPERTY FORM
+    ====================================== -->
+
+    <section class="buy-form-section">
+
+
+        <div class="container buy-form-container">
+
+
+            <form
+                class="buy-property-form"
+                id="buyPropertyForm"
+            >
+
+
+                <!-- =================================
+                        01
+                ================================== -->
+
+                <div class="buy-form-block">
+
+
+                    <div class="buy-block-marker">
+
+                        <span>
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <div class="buy-form-grid">
+
+
+                        <!-- NAME -->
+
+                        <div class="buy-form-group">
+
+                            <label for="buyerName">
+                                الاسم
+                            </label>
+
+                            <div class="buy-input-wrap">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="buyerName"
+                                    name="buyerName"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="buy-form-group">
+
+                            <label for="buyerPhone">
+                                رقم الهاتف
+                            </label>
+
+                            <div class="buy-input-wrap">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="buyerPhone"
+                                    name="buyerPhone"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="buy-form-group buy-full-width">
+
+                            <label for="buyerEmail">
+                                البريد الإلكتروني
+                            </label>
+
+                            <div class="buy-input-wrap">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="buyerEmail"
+                                    name="buyerEmail"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                        02
+                ================================== -->
+
+                <div class="buy-form-block">
+
+
+                    <div class="buy-block-marker">
+
+                        <span>
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div class="buy-form-grid">
+
+
+                        <!-- BUDGET -->
+
+                        <div class="buy-form-group">
+
+                            <label for="budget">
+                                الميزانية
+                            </label>
+
+                            <div class="buy-input-wrap">
+
+                                <i class="fa-solid fa-wallet"></i>
+
+                                <input
+                                    type="number"
+                                    id="budget"
+                                    name="budget"
+                                    min="0"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PROPERTY TYPE -->
+
+                        <div class="buy-form-group">
+
+                            <label for="buyPropertyType">
+                                نوع العقار
+                            </label>
+
+                            <div class="buy-input-wrap">
+
+                                <i class="fa-regular fa-building"></i>
+
+                                <input
+                                    type="text"
+                                    id="buyPropertyType"
+                                    name="buyPropertyType"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- LOCATION -->
+
+                        <div class="buy-form-group">
+
+                            <label for="requiredLocation">
+                                الموقع المطلوب
+                            </label>
+
+                            <div class="buy-input-wrap">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                <input
+                                    type="text"
+                                    id="requiredLocation"
+                                    name="requiredLocation"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MINIMUM INCOME -->
+
+                        <div class="buy-form-group">
+
+                            <label for="minimumIncome">
+                                الحد الأدنى للدخل
+                            </label>
+
+                            <div class="buy-input-wrap">
+
+                                <i class="fa-solid fa-chart-line"></i>
+
+                                <input
+                                    type="number"
+                                    id="minimumIncome"
+                                    name="minimumIncome"
+                                    min="0"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TARGET RETURN -->
+
+                        <div class="buy-form-group buy-full-width">
+
+                            <label for="targetReturn">
+                                العائد المستهدف
+                            </label>
+
+                            <div class="buy-input-wrap">
+
+                                <i class="fa-solid fa-percent"></i>
+
+                                <input
+                                    type="number"
+                                    id="targetReturn"
+                                    name="targetReturn"
+                                    min="0"
+                                    step="0.1"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                        03
+                ================================== -->
+
+                <div class="buy-form-block">
+
+
+                    <div class="buy-block-marker">
+
+                        <span>
+                            03
+                        </span>
+
+                    </div>
+
+
+                    <!-- FINANCING -->
+
+                    <fieldset class="buy-choice-section">
+
+                        <legend>
+                            تمويل أو شراء نقدي
+                        </legend>
+
+
+                        <div class="buy-choice-options">
+
+
+                            <label class="buy-choice-card">
+
+                                <input
+                                    type="radio"
+                                    name="purchaseMethod"
+                                    value="finance"
+                                >
+
+                                <span class="buy-choice-design">
+
+                                    <i class="fa-solid fa-building-columns"></i>
+
+                                    <span>
+                                        تمويل
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="buy-choice-card">
+
+                                <input
+                                    type="radio"
+                                    name="purchaseMethod"
+                                    value="cash"
+                                >
+
+                                <span class="buy-choice-design">
+
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+
+                                    <span>
+                                        شراء نقدي
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                    <!-- EXPECTED PURCHASE PERIOD -->
+
+                    <div class="buy-form-group buy-spacing">
+
+                        <label for="purchasePeriod">
+                            المدة المتوقعة للشراء
+                        </label>
+
+                        <div class="buy-input-wrap">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                            <input
+                                type="text"
+                                id="purchasePeriod"
+                                name="purchasePeriod"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                        04
+                ================================== -->
+
+                <div class="buy-form-block">
+
+
+                    <div class="buy-block-marker">
+
+                        <span>
+                            04
+                        </span>
+
+                    </div>
+
+
+                    <div class="buy-question-grid">
+
+
+                        <!-- RENTED PROPERTY -->
+
+                        <fieldset class="buy-question-card">
+
+                            <legend>
+                                هل ترغب في عقار مؤجر؟
+                            </legend>
+
+
+                            <div class="buy-yes-no">
+
+
+                                <label>
+
+                                    <input
+                                        type="radio"
+                                        name="rentedProperty"
+                                        value="yes"
+                                    >
+
+                                    <span>
+                                        نعم
+                                    </span>
+
+                                </label>
+
+
+                                <label>
+
+                                    <input
+                                        type="radio"
+                                        name="rentedProperty"
+                                        value="no"
+                                    >
+
+                                    <span>
+                                        لا
+                                    </span>
+
+                                </label>
+
+
+                            </div>
+
+                        </fieldset>
+
+
+
+                        <!-- DEVELOPMENT -->
+
+                        <fieldset class="buy-question-card">
+
+                            <legend>
+                                هل تقبل عقارًا يحتاج إلى تطوير؟
+                            </legend>
+
+
+                            <div class="buy-yes-no">
+
+
+                                <label>
+
+                                    <input
+                                        type="radio"
+                                        name="needsDevelopment"
+                                        value="yes"
+                                    >
+
+                                    <span>
+                                        نعم
+                                    </span>
+
+                                </label>
+
+
+                                <label>
+
+                                    <input
+                                        type="radio"
+                                        name="needsDevelopment"
+                                        value="no"
+                                    >
+
+                                    <span>
+                                        لا
+                                    </span>
+
+                                </label>
+
+
+                            </div>
+
+                        </fieldset>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                        05
+                ================================== -->
+
+                <div class="buy-form-block">
+
+
+                    <div class="buy-block-marker">
+
+                        <span>
+                            05
+                        </span>
+
+                    </div>
+
+
+                    <div class="buy-form-group">
+
+                        <label for="additionalDetails">
+                            تفاصيل إضافية
+                        </label>
+
+                        <textarea
+                            id="additionalDetails"
+                            name="additionalDetails"
+                            rows="7"
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                        SUBMIT
+                ================================== -->
+
+                <div class="buy-submit-area">
+
+
+                    <button
+                        type="submit"
+                        class="buy-submit-btn"
+                    >
+
+                        <span>
+                            إرسال طلب الشراء
+                        </span>
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+        JAVASCRIPT
+========================================= -->
+
+<script src="../js/animations.js"></script>
+
+<script src="../js/buy-property.js"></script>
+
+<!--footer-->
+<footer class="footer">
+
+    <div class="footer-overlay"></div>
+
+    <div class="container footer-grid">
+
+        <!-- Glass Card -->
+
+        <div class="footer-card">
+
+            <img src="../images/logo/mohammed-profile-logo.png"
+                 class="footer-profile-logo"
+                 alt="محمد الشيادي">
+
+            <h3>محمد الشيادي</h3>
+
+            <p>
+                خبير المباني والاستثمارات العقارية
+                في سلطنة عُمان.
+            </p>
+
+ <div class="footer-social">
+
+    <!-- WhatsApp -->
+    <a
+        href="https://wa.me/96898999835"
+        target="_blank"
+        aria-label="واتساب"
+    >
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <!-- Instagram -->
+    <a
+        href="https://www.instagram.com/msaa_re/"
+        target="_blank"
+        aria-label="إنستغرام"
+    >
+        <i class="fab fa-instagram"></i>
+    </a>
+
+
+    <!-- Email -->
+    <a
+        href="mailto:tawtir.om@gmail.com"
+        aria-label="البريد الإلكتروني"
+    >
+        <i class="fas fa-envelope"></i>
+    </a>
+
+
+    <!-- Location -->
+    <a
+        href="#"
+        aria-label="موقع المكتب"
+    >
+        <i class="fas fa-location-dot"></i>
+    </a>
+
+</div>
+
+        </div>
+
+        <!-- روابط -->
+
+        <div>
+
+            <h4>روابط الموقع</h4>
+
+            <ul>
+
+                <li><a href="../index.html">الرئيسية</a></li>
+
+                <li><a href="about.html">من أنا</a></li>
+
+                <li><a href="services.html">الخدمات</a></li>
+
+                <li><a href="properties.html">العقارات</a></li>
+
+                <li><a href="articles.html">المقالات</a></li>
+				
+			    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+
+                <li><a href="contact.html">تواصل معنا</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- الخدمات -->
+
+        <div>
+
+            <h4>الخدمات</h4>
+
+            <ul>
+
+                <li>بيع العقارات</li>
+
+                <li>شراء العقارات</li>
+
+                <li>إدارة العقارات</li>
+
+                <li>الاستثمار</li>
+
+                <li>التقييم</li>
+
+                <li>الفحص</li>
+
+                <li>الاستشارات</li>
+
+            </ul>
+
+        </div>
+
+        <!-- التواصل -->
+
+        <div>
+
+            <h4>تواصل معنا</h4>
+
+            <ul>
+
+                <li>
+    <i class="fab fa-whatsapp"></i>
+    <span dir="ltr">+968 98999835</span>
+</li>
+
+                <li><i class="fab fa-instagram"></i>msaa_re</li>
+
+                <li><i class="fas fa-envelope"></i> tatwir.om@gmail.com</li>
+
+                <li><i class="fas fa-location-dot"></i> الباطنة-مسقط-صلالة</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="container">
+
+        <p class="footer-legal">
+
+            جميع المعلومات العقارية المنشورة في الموقع لأغراض تعريفية وتسويقية، ويجب على العميل التحقق من المستندات والبيانات وإجراء الفحص القانوني والفني والمالي قبل اتخاذ أي قرار.
+
+        </p>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © MSAA Real Estate. جميع الحقوق محفوظة.
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,774 @@
+/* =========================================
+        MSAA CONSULTING
+        HERO SECTION
+========================================= */
+
+.hero{
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding-top: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 18% 45%,
+            rgba(76, 141, 218, 0.09) 0%,
+            transparent 45%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f8fbff 55%,
+            #eef5fc 100%
+        );
+
+}
+
+
+/* =========================================
+        DECORATIVE REAL ESTATE BACKGROUND
+========================================= */
+
+.hero-decoration{
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.75;
+
+    z-index: 0;
+}
+
+
+/* Architectural grid */
+
+.hero-decoration::before{
+    content: "";
+
+    position: absolute;
+
+    width: 620px;
+    height: 620px;
+
+    left: -140px;
+    bottom: -270px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(18, 61, 114, 0.08);
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 39px,
+            rgba(18, 61, 114, 0.035) 40px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 39px,
+            rgba(18, 61, 114, 0.035) 40px
+        );
+
+    transform:
+        rotate(-12deg);
+}
+
+
+/* Large architectural circle */
+
+.hero-decoration::after{
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    right: -230px;
+    top: 40px;
+
+    border-radius: 50%;
+
+    border:
+        70px solid rgba(76, 141, 218, 0.035);
+}
+
+
+/* =========================================
+        HERO CONTAINER
+========================================= */
+
+.hero-container{
+    position: relative;
+
+    z-index: 2;
+
+    min-height:
+        calc(100vh - 105px);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(360px, 0.92fr);
+
+    align-items: center;
+
+    gap: 65px;
+
+    padding-top: 55px;
+}
+
+
+/* =========================================
+        HERO CONTENT
+========================================= */
+
+.hero-content{
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 720px;
+
+    padding:
+        55px 0 75px;
+
+    animation:
+        heroContentReveal
+        0.9s ease
+        both;
+}
+
+
+/* Small decorative line */
+
+.hero-content::before{
+    content: "";
+
+    display: block;
+
+    width: 65px;
+    height: 4px;
+
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary-color),
+            var(--light-blue)
+        );
+}
+
+
+/* =========================================
+        HERO TITLE
+========================================= */
+
+.hero-content h1{
+    margin-bottom: 28px;
+
+    color:
+        var(--dark-blue);
+
+    font-size:
+        clamp(40px, 4.3vw, 67px);
+
+    line-height: 1.35;
+
+    font-weight: 800;
+
+    letter-spacing: -1.8px;
+}
+
+
+.hero-content h1 span{
+    display: block;
+
+    color:
+        var(--primary-color);
+}
+
+
+/* =========================================
+        HERO PARAGRAPHS
+========================================= */
+
+.hero-content p{
+    max-width: 680px;
+
+    margin-bottom: 13px;
+
+    color:
+        #566477;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 2.05;
+}
+
+
+.hero-content p + p{
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+        HERO BUTTONS
+========================================= */
+
+.hero-buttons{
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin-top: 35px;
+}
+
+
+.hero-buttons .primary-btn,
+.hero-buttons .secondary-btn,
+.hero-buttons .text-btn{
+    min-height: 54px;
+
+    padding:
+        0 25px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* Main Button */
+
+.hero-buttons .primary-btn{
+    position: relative;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-color),
+            var(--dark-blue)
+        );
+
+    border:
+        1px solid transparent;
+
+    box-shadow:
+        0 15px 32px
+        rgba(18, 61, 114, 0.20);
+}
+
+
+.hero-buttons .primary-btn:hover{
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 19px 38px
+        rgba(18, 61, 114, 0.27);
+}
+
+
+/* Consultation Button */
+
+.hero-buttons .secondary-btn{
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    color:
+        var(--primary-color);
+
+    border:
+        1px solid
+        rgba(18, 61, 114, 0.28);
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+}
+
+
+.hero-buttons .secondary-btn:hover{
+    color: #ffffff;
+
+    background:
+        var(--primary-color);
+
+    border-color:
+        var(--primary-color);
+}
+
+
+/* Sell Property Button */
+
+.hero-buttons .text-btn{
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color:
+        var(--dark-blue);
+
+    background:
+        rgba(18, 61, 114, 0.055);
+
+    border:
+        1px solid
+        rgba(18, 61, 114, 0.09);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.hero-buttons .text-btn span{
+    display: inline-block;
+
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.hero-buttons .text-btn:hover{
+    color:
+        var(--primary-color);
+
+    background:
+        rgba(18, 61, 114, 0.09);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(18, 61, 114, 0.08);
+}
+
+
+.hero-buttons .text-btn:hover span{
+    transform:
+        translateX(-4px);
+}
+
+
+/* =========================================
+        HERO VISUAL
+========================================= */
+
+.hero-visual{
+    position: relative;
+
+    align-self: stretch;
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    isolation: isolate;
+
+    animation:
+        heroVisualReveal
+        1s ease
+        0.15s both;
+}
+
+
+
+/* =========================================
+        SHADOW UNDER PERSON
+========================================= */
+
+.hero-person-shadow{
+    position: absolute;
+
+    width: 310px;
+    height: 42px;
+
+    left: 50%;
+    bottom: 25px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(10, 34, 64, 0.20);
+
+    filter:
+        blur(20px);
+
+    z-index: -1;
+}
+
+
+/* =========================================
+        MOHAMMED IMAGE
+========================================= */
+
+.hero-person{
+    position: relative;
+
+    z-index: 3;
+
+    width: min(100%, 510px);
+
+    max-height: 680px;
+
+    object-fit: contain;
+
+    object-position:
+        center bottom;
+
+    transform-origin:
+        center bottom;
+
+    filter:
+        drop-shadow(
+            0 20px 24px
+            rgba(10, 34, 64, 0.12)
+        );
+
+    animation:
+        personFloat
+        5.5s ease-in-out
+        1.1s infinite;
+}
+
+
+/* =========================================
+        ENTRY ANIMATIONS
+========================================= */
+
+@keyframes heroContentReveal{
+
+    from{
+        opacity: 0;
+
+        transform:
+            translateY(28px);
+    }
+
+    to{
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes heroVisualReveal{
+
+    from{
+        opacity: 0;
+
+        transform:
+            translateX(-35px);
+    }
+
+    to{
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+/* =========================================
+        PERSON FLOATING
+========================================= */
+
+@keyframes personFloat{
+
+    0%,
+    100%{
+        transform:
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            translateY(-9px);
+    }
+
+}
+
+
+/* =========================================
+        BACKGROUND SHAPE FLOATING
+========================================= */
+
+@keyframes shapeFloat{
+
+    0%,
+    100%{
+        transform:
+            translateX(-50%)
+            rotate(-8deg)
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            translateX(-50%)
+            rotate(-4deg)
+            translateY(-10px);
+    }
+
+}
+
+
+/* =========================================
+        ACCESSIBILITY
+        REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce){
+
+    .hero-content,
+    .hero-visual,
+    .hero-person,
+    .hero-image-shape{
+
+        animation: none;
+
+    }
+
+}
+/* =========================================
+        BUILDINGS BEHIND MOHAMMED
+========================================= */
+
+
+.hero-visual{
+
+    position: relative;
+
+    align-self: stretch;
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    isolation: isolate;
+
+}
+
+
+
+/* Buildings Background */
+
+.hero-visual::before{
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 15px;
+
+    transform:
+        translateX(-50%);
+
+    width: 150%;
+
+    height: 90%;
+
+    background-image:
+        url("../images/buildings/hero-buildings.png");
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        center bottom;
+
+    background-size:
+        contain;
+
+    opacity: 0.38;
+
+    z-index: -2;
+
+    pointer-events: none;
+
+}
+
+
+
+/* Soft Blue Glow */
+
+.hero-visual::after{
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 70px;
+
+    transform:
+        translateX(-50%);
+
+    width: 390px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(76, 141, 218, 0.15) 0%,
+            rgba(76, 141, 218, 0.07) 40%,
+            transparent 72%
+        );
+
+    filter:
+        blur(12px);
+
+    z-index: -1;
+
+    pointer-events: none;
+
+}
+
+
+
+/* =========================================
+        MOHAMMED SHADOW
+========================================= */
+
+
+.hero-person-shadow{
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 18px;
+
+    transform:
+        translateX(-50%);
+
+    width: 320px;
+
+    height: 42px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(10, 34, 64, 0.18);
+
+    filter:
+        blur(20px);
+
+    z-index: 0;
+
+}
+
+
+
+/* =========================================
+        MOHAMMED IMAGE
+========================================= */
+
+
+.hero-person{
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(100%, 500px);
+
+    max-height:
+        680px;
+
+    object-fit:
+        contain;
+
+    object-position:
+        center bottom;
+
+    transform-origin:
+        center bottom;
+
+    filter:
+
+        drop-shadow(
+            0 18px 18px
+            rgba(10, 34, 64, 0.10)
+        );
+
+    animation:
+        personFloat
+        5.5s
+        ease-in-out
+        1s
+        infinite;
+
+}

@@ -1,0 +1,2785 @@
+/* =========================================
+        MSAA CONSULTING
+        ABOUT PAGE
+========================================= */
+
+
+/* =========================================
+        PAGE
+========================================= */
+
+.about-page{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    direction:rtl;
+
+    background:#ffffff;
+
+}
+
+
+/* =========================================
+        ABOUT HERO
+========================================= */
+
+.about-page-hero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:850px;
+
+    padding-top:100px;
+
+    display:flex;
+
+    align-items:stretch;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 12% 45%,
+            rgba(74,139,207,.14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(18,61,114,.055),
+            transparent 26%
+        ),
+
+        linear-gradient(
+            115deg,
+            #eaf3fb 0%,
+            #f4f9fd 34%,
+            #ffffff 68%,
+            #f9fbfd 100%
+        );
+
+}
+
+
+/* =========================================
+        ARCHITECTURAL BACKGROUND
+========================================= */
+
+.about-page-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+
+/* Blueprint grid */
+
+.about-page-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(18,61,114,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(18,61,114,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        72px 72px;
+
+    mask-image:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.8),
+            rgba(0,0,0,.3) 55%,
+            transparent 92%
+        );
+
+    -webkit-mask-image:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.8),
+            rgba(0,0,0,.3) 55%,
+            transparent 92%
+        );
+
+}
+
+
+/* Large architectural curve */
+
+.about-page-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:760px;
+
+    height:760px;
+
+    left:-390px;
+
+    bottom:-320px;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.075);
+
+    border-radius:50%;
+
+    box-shadow:
+
+        0 0 0 75px
+        rgba(18,61,114,.018),
+
+        0 0 0 150px
+        rgba(76,141,218,.012);
+
+}
+
+
+/* =========================================
+        HERO CONTAINER
+========================================= */
+
+.about-page-hero-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(1450px,94%);
+
+    min-height:750px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.05fr)
+        minmax(0,.95fr);
+
+    align-items:center;
+
+    gap:55px;
+
+}
+
+
+/* =========================================
+        HERO INTRO
+========================================= */
+
+.about-page-intro{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:720px;
+
+    justify-self:end;
+
+}
+
+
+/* =========================================
+        SMALL LABEL
+========================================= */
+
+.about-page-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:112px;
+
+    min-height:44px;
+
+    margin-bottom:22px;
+
+    padding:7px 22px;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.13);
+
+    border-radius:50px;
+
+    color:var(--primary-color);
+
+    background:
+        rgba(255,255,255,.72);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(10,34,64,.04);
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================
+        HERO TITLE
+========================================= */
+
+.about-page-intro h1{
+
+    max-width:700px;
+
+    margin:0;
+
+    color:var(--dark-blue);
+
+    font-size:
+        clamp(47px,5vw,76px);
+
+    font-weight:800;
+
+    line-height:1.45;
+
+    letter-spacing:-2px;
+
+}
+
+
+/* =========================================
+        TITLE LINE
+========================================= */
+
+.about-page-title-line{
+
+    position:relative;
+
+    display:block;
+
+    width:105px;
+
+    height:4px;
+
+    margin:
+        24px 0 28px;
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--light-blue),
+            var(--primary-color)
+        );
+
+}
+
+
+.about-page-title-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-10px;
+
+    top:50%;
+
+    width:8px;
+
+    height:8px;
+
+    transform:
+        translateY(-50%);
+
+    border:
+
+        2px solid
+        var(--light-blue);
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+}
+
+
+/* =========================================
+        INTRO TEXT
+========================================= */
+
+.about-page-intro > p{
+
+    max-width:650px;
+
+    margin:0;
+
+    color:#405873;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    line-height:2.15;
+
+}
+
+
+/* =========================================
+        MOHAMMED VISUAL
+========================================= */
+
+.about-page-visual{
+
+    position:relative;
+
+    min-width:0;
+
+    min-height:750px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+}
+
+
+/* Glow behind Mohammed */
+
+.about-page-visual::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:65px;
+
+    width:530px;
+
+    height:600px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            ellipse,
+            rgba(255,255,255,.62) 0%,
+            rgba(104,164,219,.12) 42%,
+            rgba(18,61,114,.025) 62%,
+            transparent 74%
+        );
+
+    filter:
+        blur(5px);
+
+}
+
+
+/* Vertical architectural line */
+
+.about-page-visual::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:12%;
+
+    bottom:0;
+
+    width:1px;
+
+    height:70%;
+
+    background:
+
+        linear-gradient(
+            to top,
+            rgba(18,61,114,.16),
+            transparent
+        );
+
+}
+
+
+/* =========================================
+        ARCHITECTURAL LINES
+========================================= */
+
+.about-architecture{
+
+    position:absolute;
+
+    inset:
+        80px 0 0;
+
+    z-index:1;
+
+    pointer-events:none;
+
+}
+
+
+/* Large building outline */
+
+.about-architecture::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:7%;
+
+    bottom:0;
+
+    width:70%;
+
+    height:72%;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.105);
+
+    border-bottom:0;
+
+    clip-path:
+
+        polygon(
+            0 100%,
+            0 34%,
+            22% 34%,
+            22% 14%,
+            47% 14%,
+            47% 0,
+            70% 0,
+            70% 24%,
+            100% 24%,
+            100% 100%
+        );
+
+}
+
+
+/* Building glass lines */
+
+.about-architecture::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:20%;
+
+    bottom:0;
+
+    width:55%;
+
+    height:62%;
+
+    opacity:.55;
+
+    background:
+
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 49px,
+            rgba(18,61,114,.075) 50px
+        ),
+
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 69px,
+            rgba(18,61,114,.06) 70px
+        );
+
+    mask-image:
+
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.8),
+            transparent 95%
+        );
+
+}
+
+
+/* =========================================
+        EXTRA LINES
+========================================= */
+
+.architecture-line{
+
+    position:absolute;
+
+    display:block;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.10);
+
+    pointer-events:none;
+
+}
+
+
+.line-one{
+
+    width:280px;
+
+    height:280px;
+
+    left:4%;
+
+    bottom:80px;
+
+    border-radius:50%;
+
+}
+
+
+.line-two{
+
+    width:190px;
+
+    height:190px;
+
+    left:14%;
+
+    bottom:125px;
+
+    border-radius:50%;
+
+}
+
+
+.line-three{
+
+    width:330px;
+
+    height:1px;
+
+    left:0;
+
+    bottom:210px;
+
+    border:0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(18,61,114,.17),
+            transparent
+        );
+
+    transform:
+        rotate(-25deg);
+
+}
+
+
+/* =========================================
+        PERSON WRAPPER
+========================================= */
+
+.about-page-person-wrap{
+
+    position:relative;
+
+    z-index:4;
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+
+}
+
+
+/* =========================================
+        PERSON IMAGE
+========================================= */
+
+.about-page-person{
+
+    display:block;
+
+    width:auto;
+
+    height:720px;
+
+    max-width:100%;
+
+    object-fit:contain;
+
+    object-position:center bottom;
+
+    filter:
+
+        drop-shadow(
+            0 28px 25px
+            rgba(8,43,78,.15)
+        );
+
+}
+
+
+/* =========================================
+        FLOOR SHADOW
+========================================= */
+
+.about-page-shadow{
+
+    position:absolute;
+
+    z-index:2;
+
+    left:50%;
+
+    bottom:8px;
+
+    width:350px;
+
+    height:40px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+        rgba(9,47,84,.16);
+
+    filter:
+        blur(19px);
+
+}
+
+
+/* =========================================
+        FLOAT
+========================================= */
+
+@keyframes aboutPageFloat{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-8px);
+
+    }
+
+}
+
+
+/* =========================================
+        STORY SECTION
+========================================= */
+
+.about-story{
+
+    position:relative;
+
+    width:100%;
+
+    padding:
+        125px 0;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+}
+
+
+/* Vertical detail */
+
+.about-story::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:7%;
+
+    top:0;
+
+    width:1px;
+
+    height:100%;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(18,61,114,.09),
+            transparent
+        );
+
+}
+
+
+/* =========================================
+        STORY CONTAINER
+========================================= */
+
+.about-story-container{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,.32fr)
+        minmax(0,1.68fr);
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+/* =========================================
+        MSAA DECORATION
+========================================= */
+
+.about-story-decoration{
+
+    position:relative;
+
+    min-height:470px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+/* Circle */
+
+.about-story-decoration::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:310px;
+
+    height:310px;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.085);
+
+    border-radius:50%;
+
+    box-shadow:
+
+        0 0 0 38px
+        rgba(18,61,114,.018),
+
+        0 0 0 78px
+        rgba(76,141,218,.012);
+
+}
+
+
+/* Vertical line */
+
+.about-story-decoration::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:1px;
+
+    height:470px;
+
+    background:
+
+        linear-gradient(
+            transparent,
+            rgba(18,61,114,.13),
+            transparent
+        );
+
+}
+
+
+.about-story-decoration span{
+
+    position:relative;
+
+    z-index:2;
+
+    color:
+        rgba(18,61,114,.055);
+
+    font-size:74px;
+
+    font-weight:800;
+
+    letter-spacing:8px;
+
+    writing-mode:vertical-rl;
+
+    transform:
+        rotate(180deg);
+
+}
+
+
+/* =========================================
+        STORY CONTENT
+========================================= */
+
+.about-story-content{
+
+    position:relative;
+
+    max-width:900px;
+
+}
+
+
+/* =========================================
+        NUMBER LINE
+========================================= */
+
+.about-story-line{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+}
+
+
+.story-number{
+
+    color:var(--primary-color);
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+
+.story-line{
+
+    width:95px;
+
+    height:2px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--light-blue),
+            var(--primary-color)
+        );
+
+}
+
+
+/* =========================================
+        STORY TEXT
+========================================= */
+
+.about-story-text > p{
+
+    max-width:850px;
+
+    margin:
+        0 0 24px;
+
+    color:#344d67;
+
+    font-size:18px;
+
+    line-height:2.2;
+
+}
+
+
+.about-story-text > p:first-child{
+
+    color:#193b5f;
+
+    font-size:21px;
+
+    font-weight:600;
+
+    line-height:2.15;
+
+}
+
+
+/* =========================================
+        NEEDS
+========================================= */
+
+.about-needs{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:15px;
+
+    margin-top:35px;
+
+}
+
+
+/* =========================================
+        NEED ITEM
+========================================= */
+
+.about-need-item{
+
+    position:relative;
+
+    min-height:100px;
+
+    padding:
+        20px 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    overflow:hidden;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.085);
+
+    border-radius:18px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #fbfdff,
+            #f5f9fd
+        );
+
+    transition:
+
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+/* Small architectural line */
+
+.about-need-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-25px;
+
+    bottom:-35px;
+
+    width:100px;
+
+    height:100px;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.05);
+
+    border-radius:50%;
+
+}
+
+
+.need-number{
+
+    flex-shrink:0;
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    color:var(--primary-color);
+
+    background:
+        rgba(18,61,114,.065);
+
+    font-size:12px;
+
+    font-weight:800;
+
+}
+
+
+.about-need-item > span:last-child{
+
+    color:#294762;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    line-height:1.8;
+
+}
+
+
+.about-need-item:hover{
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(18,61,114,.16);
+
+    box-shadow:
+        0 17px 40px
+        rgba(10,34,64,.07);
+
+}
+
+
+/* =========================================
+        VISION & MISSION SECTION
+========================================= */
+
+.about-direction{
+
+    position:relative;
+
+    width:100%;
+
+    padding:
+        130px 0;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #eef5fb 0%,
+            #f8fbfe 48%,
+            #ffffff 100%
+        );
+
+}
+
+
+/* =========================================
+        BACKGROUND
+========================================= */
+
+.about-direction-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+
+.about-direction-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(18,61,114,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(18,61,114,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        85px 85px;
+
+    mask-image:
+
+        radial-gradient(
+            circle at center,
+            black,
+            transparent 78%
+        );
+
+}
+
+
+/* Huge circle */
+
+.about-direction-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    left:-390px;
+
+    top:-210px;
+
+    border:
+
+        90px solid
+        rgba(18,61,114,.018);
+
+    border-radius:50%;
+
+}
+
+
+/* =========================================
+        DIRECTION CONTAINER
+========================================= */
+
+.about-direction-container{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:30px;
+
+}
+
+
+/* =========================================
+        CARD
+========================================= */
+
+.about-direction-card{
+
+    position:relative;
+
+    min-height:420px;
+
+    padding:55px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    transition:
+
+        transform .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+/* =========================================
+        VISION LIGHT CARD
+========================================= */
+
+.vision-card{
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.09);
+
+    background:
+        rgba(255,255,255,.82);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    box-shadow:
+        0 25px 65px
+        rgba(10,34,64,.075);
+
+}
+
+
+/* =========================================
+        MISSION DARK CARD
+========================================= */
+
+.mission-card{
+
+    color:#ffffff;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(76,141,218,.26),
+            transparent 34%
+        ),
+
+        linear-gradient(
+            140deg,
+            #174f89 0%,
+            #103d70 47%,
+            #082a53 100%
+        );
+
+    box-shadow:
+        0 28px 70px
+        rgba(7,35,68,.22);
+
+}
+
+
+/* Grid inside dark card */
+
+.mission-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        55px 55px;
+
+    mask-image:
+
+        linear-gradient(
+            135deg,
+            black,
+            transparent 80%
+        );
+
+}
+
+
+/* =========================================
+        CARD NUMBER
+========================================= */
+
+.direction-card-number{
+
+    position:absolute;
+
+    left:35px;
+
+    top:15px;
+
+    color:
+        rgba(18,61,114,.045);
+
+    font-size:125px;
+
+    font-weight:800;
+
+    line-height:1;
+
+}
+
+
+.mission-card
+.direction-card-number{
+
+    color:
+        rgba(255,255,255,.055);
+
+}
+
+
+/* =========================================
+        DIRECTION ICON
+========================================= */
+
+.direction-icon{
+
+    position:relative;
+
+    z-index:2;
+
+    width:68px;
+
+    height:68px;
+
+    margin-bottom:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:19px;
+
+    color:var(--primary-color);
+
+    background:
+        rgba(18,61,114,.07);
+
+    font-size:25px;
+
+}
+
+
+.mission-card
+.direction-icon{
+
+    color:#ffffff;
+
+    background:
+        rgba(255,255,255,.11);
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.12);
+
+}
+
+
+/* =========================================
+        DIRECTION CONTENT
+========================================= */
+
+.direction-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.direction-content h2{
+
+    margin:0;
+
+    color:var(--dark-blue);
+
+    font-size:38px;
+
+    font-weight:800;
+
+}
+
+
+.mission-card
+.direction-content h2{
+
+    color:#ffffff;
+
+}
+
+
+/* Line */
+
+.direction-line{
+
+    display:block;
+
+    width:70px;
+
+    height:3px;
+
+    margin:
+        17px 0 22px;
+
+    border-radius:10px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--light-blue),
+            var(--primary-color)
+        );
+
+}
+
+
+.mission-card
+.direction-line{
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.35),
+            #ffffff
+        );
+
+}
+
+
+/* Paragraph */
+
+.direction-content p{
+
+    max-width:520px;
+
+    margin:0;
+
+    color:#445c74;
+
+    font-size:16px;
+
+    line-height:2.15;
+
+}
+
+
+.mission-card
+.direction-content p{
+
+    color:
+        rgba(255,255,255,.84);
+
+}
+
+
+/* Hover */
+
+.about-direction-card:hover{
+
+    transform:
+        translateY(-7px);
+
+}
+
+
+.vision-card:hover{
+
+    box-shadow:
+        0 32px 80px
+        rgba(10,34,64,.11);
+
+}
+
+
+.mission-card:hover{
+
+    box-shadow:
+        0 35px 85px
+        rgba(7,35,68,.30);
+
+}
+
+
+/* =========================================
+        VALUES SECTION
+========================================= */
+
+.about-values{
+
+    position:relative;
+
+    width:100%;
+
+    padding:
+        135px 0 150px;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fbfe 100%
+        );
+
+}
+
+
+/* =========================================
+        VALUES BACKGROUND
+========================================= */
+
+.about-values-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+
+/* Architectural circles */
+
+.about-values-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    right:-380px;
+
+    bottom:-300px;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.06);
+
+    border-radius:50%;
+
+    box-shadow:
+
+        0 0 0 65px
+        rgba(18,61,114,.015),
+
+        0 0 0 130px
+        rgba(18,61,114,.01);
+
+}
+
+
+/* Blueprint vertical lines */
+
+.about-values-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 119px,
+            rgba(18,61,114,.022) 120px
+        );
+
+    mask-image:
+
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 35%,
+            transparent
+        );
+
+}
+
+
+/* =========================================
+        VALUES CONTAINER
+========================================= */
+
+.about-values-container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* =========================================
+        VALUES HEADING
+========================================= */
+
+.about-values-heading{
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+}
+
+
+.values-small-line{
+
+    display:block;
+
+    width:55px;
+
+    height:3px;
+
+    margin:
+        0 auto 17px;
+
+    border-radius:10px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--light-blue),
+            var(--primary-color)
+        );
+
+}
+
+
+.about-values-heading h2{
+
+    margin:0;
+
+    color:var(--dark-blue);
+
+    font-size:
+        clamp(40px,4vw,58px);
+
+    font-weight:800;
+
+}
+
+
+/* =========================================
+        VALUES GRID
+========================================= */
+
+.about-values-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:20px;
+
+}
+
+
+/* Center final row */
+
+.about-value-card:nth-child(5){
+
+    grid-column:
+        1 / 2;
+
+}
+
+.about-value-card:nth-child(6){
+
+    grid-column:
+        2 / 3;
+
+}
+
+.about-value-card:nth-child(7){
+
+    grid-column:
+        3 / 4;
+
+}
+
+
+/* =========================================
+        VALUE CARD
+========================================= */
+
+.about-value-card{
+
+    position:relative;
+
+    min-height:235px;
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:flex-end;
+
+    overflow:hidden;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.08);
+
+    border-radius:23px;
+
+    background:
+        rgba(255,255,255,.78);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(10,34,64,.035);
+
+    transition:
+
+        transform .35s ease,
+        border-color .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+/* Architectural corner */
+
+.about-value-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:110px;
+
+    height:110px;
+
+    left:-45px;
+
+    top:-45px;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.06);
+
+    border-radius:50%;
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+/* Bottom line */
+
+.about-value-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:28px;
+
+    bottom:0;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--primary-color),
+            var(--light-blue)
+        );
+
+    transition:
+        width .4s ease;
+
+}
+
+
+/* =========================================
+        VALUE NUMBER
+========================================= */
+
+.value-number{
+
+    position:absolute;
+
+    top:20px;
+
+    left:22px;
+
+    color:
+        rgba(18,61,114,.20);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+
+/* =========================================
+        VALUE ICON
+========================================= */
+
+.value-icon{
+
+    width:56px;
+
+    height:56px;
+
+    margin-bottom:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    color:var(--primary-color);
+
+    background:
+        rgba(18,61,114,.065);
+
+    font-size:20px;
+
+    transition:
+
+        color .35s ease,
+        background .35s ease,
+        transform .35s ease;
+
+}
+
+
+/* =========================================
+        VALUE TITLE
+========================================= */
+
+.about-value-card h3{
+
+    margin:0;
+
+    color:#193c5f;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================================
+        VALUE HOVER
+========================================= */
+
+.about-value-card:hover{
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(18,61,114,.15);
+
+    background:#ffffff;
+
+    box-shadow:
+        0 22px 50px
+        rgba(10,34,64,.09);
+
+}
+
+
+.about-value-card:hover::before{
+
+    transform:
+        scale(1.18);
+
+}
+
+
+.about-value-card:hover::after{
+
+    width:75px;
+
+}
+
+
+.about-value-card:hover
+.value-icon{
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #2475b8,
+            #123d72
+        );
+
+    transform:
+        translateY(-3px)
+        rotate(-3deg);
+
+}
+
+
+/* =========================================
+        INITIAL REVEAL STATES
+========================================= */
+
+.about-page-intro,
+.about-page-visual,
+.about-story-content,
+.about-story-decoration,
+.about-direction-card,
+.about-value-card{
+
+    transition:
+
+        opacity .9s ease,
+        transform .9s
+        cubic-bezier(.2,.75,.3,1);
+
+}
+
+
+/* =========================================
+        ACCESSIBILITY
+========================================= */
+
+@media
+(prefers-reduced-motion:reduce){
+
+    .about-page-person-wrap{
+
+        animation:none;
+
+    }
+
+
+    .about-direction-card,
+    .about-value-card,
+    .about-need-item{
+
+        transition:none;
+
+    }
+
+}
+/* =========================================================
+   ABOUT PAGE — RESPONSIVE
+========================================================= */
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px){
+
+    /* HERO: النص أولاً ثم محمد */
+
+    .about-page-hero{
+        min-height:auto;
+        padding-top:90px;
+    }
+
+    .about-page-hero-container{
+        width:90%;
+        min-height:auto;
+        padding-top:60px;
+
+        display:flex;
+        flex-direction:column;
+
+        gap:25px;
+    }
+
+    .about-page-intro{
+        order:1;
+        width:100%;
+        max-width:700px;
+        margin:auto;
+
+        text-align:center;
+    }
+
+    .about-page-visual{
+        order:2;
+
+        width:100%;
+        min-height:570px;
+    }
+
+    .about-page-label{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .about-page-title-line{
+        margin:22px auto 27px;
+    }
+
+    .about-page-intro p{
+        max-width:650px;
+        margin:auto;
+    }
+
+    .about-page-person{
+        height:550px;
+    }
+
+    .about-page-shadow{
+        width:285px;
+    }
+
+    .about-page-visual::before{
+        width:470px;
+        height:500px;
+        bottom:25px;
+    }
+
+    .about-architecture{
+        inset:60px 0 0;
+        opacity:.7;
+    }
+
+
+    /* STORY */
+
+    .about-story{
+        padding:95px 0;
+    }
+
+    .about-story-container{
+        width:90%;
+
+        display:grid;
+        grid-template-columns:1fr;
+
+        gap:0;
+    }
+
+    .about-story-decoration{
+        display:none;
+    }
+
+    .about-story-content{
+        width:100%;
+        max-width:100%;
+    }
+
+    .about-needs{
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+    }
+
+
+    /* VISION + MISSION */
+
+    .about-direction{
+        padding:95px 0;
+    }
+
+    .about-direction-container{
+        width:90%;
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+    }
+
+    .about-direction-card{
+        min-height:350px;
+    }
+
+
+    /* VALUES */
+
+    .about-values{
+        padding:95px 0 110px;
+    }
+
+    .about-values-container{
+        width:90%;
+    }
+
+    .about-values-grid{
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+        gap:15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px){
+
+    /* ---------- HERO ---------- */
+
+    .about-page-hero{
+        padding-top:70px;
+    }
+
+    .about-page-hero-container{
+        width:91%;
+        padding-top:45px;
+
+        gap:18px;
+    }
+
+    .about-page-intro{
+        order:1;
+        text-align:center;
+    }
+
+    .about-page-visual{
+        order:2;
+
+        min-height:455px;
+        margin-top:5px;
+    }
+
+    .about-page-label{
+        min-height:38px;
+
+        padding:6px 18px;
+
+        margin-bottom:16px;
+
+        font-size:12px;
+    }
+
+    .about-page-intro h1{
+        font-size:
+            clamp(34px, 10vw, 46px);
+
+        line-height:1.45;
+        letter-spacing:-1px;
+    }
+
+    .about-page-title-line{
+        width:78px;
+        height:3px;
+
+        margin:18px auto 21px;
+    }
+
+    .about-page-intro p{
+        font-size:14.5px;
+        line-height:2;
+    }
+
+
+    /* ---------- MOHAMMED ---------- */
+
+    .about-page-person{
+        height:440px;
+        max-width:110%;
+    }
+
+    .about-page-visual::before{
+        width:375px;
+        height:405px;
+
+        bottom:15px;
+    }
+
+    .about-page-shadow{
+        width:225px;
+        height:27px;
+
+        bottom:5px;
+    }
+
+    .about-architecture{
+        inset:45px -45px 0;
+
+        opacity:.58;
+    }
+
+    .about-architecture::before{
+        left:5%;
+
+        width:90%;
+        height:65%;
+    }
+
+    .about-architecture::after{
+        left:15%;
+
+        width:72%;
+        height:55%;
+
+        opacity:.45;
+    }
+
+
+    /* ---------- STORY ---------- */
+
+    .about-story{
+        padding:70px 0;
+    }
+
+    .about-story-container{
+        width:90%;
+
+        grid-template-columns:1fr;
+    }
+
+    .about-story-decoration{
+        display:none;
+    }
+
+    .about-story-line{
+        margin-bottom:22px;
+    }
+
+    .story-line{
+        width:65px;
+    }
+
+    .about-story-text p{
+        margin-bottom:20px;
+
+        font-size:14.5px;
+        line-height:2;
+    }
+
+    .about-story-text p:first-child{
+        font-size:17px;
+        line-height:2;
+    }
+
+    /* عناصر القصة تصبح عمودًا واحدًا */
+
+    .about-needs{
+        grid-template-columns:1fr;
+
+        gap:11px;
+
+        margin-top:27px;
+    }
+
+    .about-need-item{
+        min-height:80px;
+
+        padding:16px 17px;
+    }
+
+    .need-number{
+        width:43px;
+        height:43px;
+    }
+
+
+    /* ---------- VISION + MISSION ---------- */
+
+    .about-direction{
+        padding:70px 0;
+    }
+
+    .about-direction-container{
+        width:90%;
+
+        grid-template-columns:1fr;
+
+        gap:17px;
+    }
+
+    .about-direction-card{
+        min-height:325px;
+
+        padding:30px;
+
+        border-radius:23px;
+    }
+
+    .direction-card-number{
+        left:20px;
+        top:10px;
+
+        font-size:88px;
+    }
+
+    .direction-icon{
+        width:57px;
+        height:57px;
+
+        margin-bottom:24px;
+
+        border-radius:16px;
+
+        font-size:21px;
+    }
+
+    .direction-content h2{
+        font-size:30px;
+    }
+
+    .direction-line{
+        width:57px;
+
+        margin:14px 0 18px;
+    }
+
+    .direction-content p{
+        font-size:14px;
+        line-height:2;
+    }
+
+
+    /* ---------- VALUES ---------- */
+
+    .about-values{
+        padding:75px 0 85px;
+    }
+
+    .about-values-container{
+        width:91%;
+    }
+
+    .about-values-heading{
+        margin-bottom:37px;
+    }
+
+    .about-values-heading h2{
+        font-size:
+            clamp(33px, 9vw, 42px);
+    }
+
+    /* بطاقتان في كل صف */
+
+    .about-values-grid{
+        display:grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+
+        gap:11px;
+    }
+
+    .about-value-card{
+        min-height:175px;
+
+        padding:20px 16px;
+
+        border-radius:18px;
+    }
+
+    .value-number{
+        top:14px;
+        left:14px;
+
+        font-size:9px;
+    }
+
+    .value-icon{
+        width:47px;
+        height:47px;
+
+        margin-bottom:18px;
+
+        border-radius:13px;
+
+        font-size:17px;
+    }
+
+    .about-value-card h3{
+        font-size:13.5px;
+        line-height:1.7;
+    }
+
+    /* البطاقة الأخيرة وحدها في المنتصف */
+
+    .about-value-card:last-child{
+        grid-column:1 / -1;
+
+        width:calc(50% - 5.5px);
+
+        justify-self:center;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px){
+
+    .about-page-intro h1{
+        font-size:33px;
+    }
+
+    .about-page-intro p{
+        font-size:13.5px;
+    }
+
+    .about-page-visual{
+        min-height:405px;
+    }
+
+    .about-page-person{
+        height:395px;
+    }
+
+    .about-page-visual::before{
+        width:320px;
+        height:355px;
+    }
+
+    .about-values-grid{
+        gap:8px;
+    }
+
+    .about-value-card{
+        min-height:165px;
+
+        padding:18px 13px;
+    }
+
+    .about-value-card h3{
+        font-size:12.5px;
+    }
+
+    .value-icon{
+        width:42px;
+        height:42px;
+
+        font-size:15px;
+    }
+
+    .about-value-card:last-child{
+        width:calc(50% - 4px);
+    }
+}
+
+
+/* =========================================================
+   ABOUT PAGE — ENTRANCE ANIMATIONS
+========================================================= */
+
+/*
+   مهم:
+   حركة الدخول تكون على الحاوية الخارجية.
+   Floating يكون على person-wrap.
+   هكذا لا تتعارض حركتا transform.
+*/
+
+
+/* ---------- INITIAL STATE ---------- */
+
+.about-page-intro{
+    opacity:0;
+
+    transform:
+        translateX(75px);
+}
+
+.about-page-visual{
+    opacity:0;
+
+    transform:
+        translateX(-75px);
+}
+
+
+/* ---------- WHEN VISIBLE ---------- */
+
+.about-page-intro.about-enter{
+    animation:
+        aboutTextEnter
+        1s
+        cubic-bezier(.2,.75,.3,1)
+        forwards;
+}
+
+.about-page-visual.about-enter{
+    animation:
+        aboutVisualEnter
+        1.05s
+        cubic-bezier(.2,.75,.3,1)
+        forwards;
+}
+
+
+/* النص من اليمين */
+
+@keyframes aboutTextEnter{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateX(75px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+/* محمد من اليسار */
+
+@keyframes aboutVisualEnter{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateX(-75px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+/* ---------- FLOATING ---------- */
+
+/*
+   لا يبدأ إلا بعد انتهاء حركة الدخول
+*/
+
+.about-page-person-wrap.float-active{
+    animation:
+        aboutPersonFloat
+        5.5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes aboutPersonFloat{
+
+    0%,
+    100%{
+        transform:
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            translateY(-8px);
+    }
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.about-reveal{
+    opacity:0;
+
+    transform:
+        translateY(42px);
+
+    transition:
+        opacity .85s ease,
+        transform .85s cubic-bezier(.2,.75,.3,1);
+}
+
+.about-reveal.about-visible{
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* رؤيتي من اليمين */
+
+.vision-card.about-reveal{
+    transform:
+        translateX(55px);
+}
+
+.vision-card.about-reveal.about-visible{
+    opacity:1;
+
+    transform:
+        translateX(0);
+}
+
+
+/* رسالتي من اليسار */
+
+.mission-card.about-reveal{
+    transform:
+        translateX(-55px);
+}
+
+.mission-card.about-reveal.about-visible{
+    opacity:1;
+
+    transform:
+        translateX(0);
+}
+
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce){
+
+    .about-page-intro,
+    .about-page-visual,
+    .about-reveal{
+        opacity:1;
+
+        transform:none;
+
+        animation:none;
+
+        transition:none;
+    }
+
+    .about-page-person-wrap.float-active{
+        animation:none;
+    }
+}

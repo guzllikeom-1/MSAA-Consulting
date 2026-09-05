@@ -1,0 +1,1769 @@
+/*=========================================
+        SERVICES PAGE
+=========================================*/
+
+.services-page{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:120px 0;
+
+    background:
+    linear-gradient(180deg,#f8fbff 0%,#ffffff 45%,#f8fbff 100%);
+
+}
+
+/* =========================================
+        PAGE
+========================================= */
+
+.about-page{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    direction:rtl;
+
+    background:#ffffff;
+
+}
+
+
+/* =========================================
+        ABOUT HERO
+========================================= */
+
+.about-page-hero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:850px;
+
+    padding-top:100px;
+
+    display:flex;
+
+    align-items:stretch;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 12% 45%,
+            rgba(74,139,207,.14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(18,61,114,.055),
+            transparent 26%
+        ),
+
+        linear-gradient(
+            115deg,
+            #eaf3fb 0%,
+            #f4f9fd 34%,
+            #ffffff 68%,
+            #f9fbfd 100%
+        );
+
+}
+
+
+/* =========================================
+        ARCHITECTURAL BACKGROUND
+========================================= */
+
+.about-page-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+
+/* Blueprint grid */
+
+.about-page-bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(18,61,114,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(18,61,114,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        72px 72px;
+
+    mask-image:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.8),
+            rgba(0,0,0,.3) 55%,
+            transparent 92%
+        );
+
+    -webkit-mask-image:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.8),
+            rgba(0,0,0,.3) 55%,
+            transparent 92%
+        );
+
+}
+
+
+/* Large architectural curve */
+
+.about-page-bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:760px;
+
+    height:760px;
+
+    left:-390px;
+
+    bottom:-320px;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.075);
+
+    border-radius:50%;
+
+    box-shadow:
+
+        0 0 0 75px
+        rgba(18,61,114,.018),
+
+        0 0 0 150px
+        rgba(76,141,218,.012);
+
+}
+
+
+/* =========================================
+        HERO CONTAINER
+========================================= */
+
+.about-page-hero-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(1450px,94%);
+
+    min-height:750px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.05fr)
+        minmax(0,.95fr);
+
+    align-items:center;
+
+    gap:55px;
+
+}
+
+
+/* =========================================
+        HERO INTRO
+========================================= */
+
+.about-page-intro{
+
+    position:relative;
+
+    z-index:5;
+
+    max-width:720px;
+
+    justify-self:end;
+
+}
+
+
+/* =========================================
+        SMALL LABEL
+========================================= */
+
+.about-page-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:112px;
+
+    min-height:44px;
+
+    margin-bottom:22px;
+
+    padding:7px 22px;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.13);
+
+    border-radius:50px;
+
+    color:var(--primary-color);
+
+    background:
+        rgba(255,255,255,.72);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(10,34,64,.04);
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================
+        HERO TITLE
+========================================= */
+
+.about-page-intro h1{
+
+    max-width:700px;
+
+    margin:0;
+
+    color:var(--dark-blue);
+
+    font-size:
+        clamp(47px,5vw,76px);
+
+    font-weight:800;
+
+    line-height:1.45;
+
+    letter-spacing:-2px;
+
+}
+
+
+/* =========================================
+        TITLE LINE
+========================================= */
+
+.about-page-title-line{
+
+    position:relative;
+
+    display:block;
+
+    width:105px;
+
+    height:4px;
+
+    margin:
+        24px 0 28px;
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--light-blue),
+            var(--primary-color)
+        );
+
+}
+
+
+.about-page-title-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-10px;
+
+    top:50%;
+
+    width:8px;
+
+    height:8px;
+
+    transform:
+        translateY(-50%);
+
+    border:
+
+        2px solid
+        var(--light-blue);
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+}
+
+
+/* =========================================
+        INTRO TEXT
+========================================= */
+
+.about-page-intro > p{
+
+    max-width:650px;
+
+    margin:0;
+
+    color:#405873;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    line-height:2.15;
+
+}
+
+
+/* =========================================
+        MOHAMMED VISUAL
+========================================= */
+
+.about-page-visual{
+
+    position:relative;
+
+    min-width:0;
+
+    min-height:750px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+}
+
+
+/* Glow behind Mohammed */
+
+.about-page-visual::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:65px;
+
+    width:530px;
+
+    height:600px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            ellipse,
+            rgba(255,255,255,.62) 0%,
+            rgba(104,164,219,.12) 42%,
+            rgba(18,61,114,.025) 62%,
+            transparent 74%
+        );
+
+    filter:
+        blur(5px);
+
+}
+
+
+/* Vertical architectural line */
+
+.about-page-visual::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:12%;
+
+    bottom:0;
+
+    width:1px;
+
+    height:70%;
+
+    background:
+
+        linear-gradient(
+            to top,
+            rgba(18,61,114,.16),
+            transparent
+        );
+
+}
+
+
+/* =========================================
+        ARCHITECTURAL LINES
+========================================= */
+
+.about-architecture{
+
+    position:absolute;
+
+    inset:
+        80px 0 0;
+
+    z-index:1;
+
+    pointer-events:none;
+
+}
+
+
+/* Large building outline */
+
+.about-architecture::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:7%;
+
+    bottom:0;
+
+    width:70%;
+
+    height:72%;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.105);
+
+    border-bottom:0;
+
+    clip-path:
+
+        polygon(
+            0 100%,
+            0 34%,
+            22% 34%,
+            22% 14%,
+            47% 14%,
+            47% 0,
+            70% 0,
+            70% 24%,
+            100% 24%,
+            100% 100%
+        );
+
+}
+
+
+/* Building glass lines */
+
+.about-architecture::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:20%;
+
+    bottom:0;
+
+    width:55%;
+
+    height:62%;
+
+    opacity:.55;
+
+    background:
+
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 49px,
+            rgba(18,61,114,.075) 50px
+        ),
+
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 69px,
+            rgba(18,61,114,.06) 70px
+        );
+
+    mask-image:
+
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.8),
+            transparent 95%
+        );
+
+}
+
+
+/* =========================================
+        EXTRA LINES
+========================================= */
+
+.architecture-line{
+
+    position:absolute;
+
+    display:block;
+
+    border:
+
+        1px solid
+        rgba(18,61,114,.10);
+
+    pointer-events:none;
+
+}
+
+
+.line-one{
+
+    width:280px;
+
+    height:280px;
+
+    left:4%;
+
+    bottom:80px;
+
+    border-radius:50%;
+
+}
+
+
+.line-two{
+
+    width:190px;
+
+    height:190px;
+
+    left:14%;
+
+    bottom:125px;
+
+    border-radius:50%;
+
+}
+
+
+.line-three{
+
+    width:330px;
+
+    height:1px;
+
+    left:0;
+
+    bottom:210px;
+
+    border:0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(18,61,114,.17),
+            transparent
+        );
+
+    transform:
+        rotate(-25deg);
+
+}
+
+
+/* =========================================
+        PERSON WRAPPER
+========================================= */
+
+.about-page-person-wrap{
+
+    position:relative;
+
+    z-index:4;
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+
+}
+
+
+/* =========================================
+        PERSON IMAGE
+========================================= */
+
+.about-page-person{
+
+    display:block;
+
+    width:auto;
+
+    height:720px;
+
+    max-width:100%;
+
+    object-fit:contain;
+
+    object-position:center bottom;
+
+    filter:
+
+        drop-shadow(
+            0 28px 25px
+            rgba(8,43,78,.15)
+        );
+
+}
+
+
+/* =========================================
+        FLOOR SHADOW
+========================================= */
+
+.about-page-shadow{
+
+    position:absolute;
+
+    z-index:2;
+
+    left:50%;
+
+    bottom:8px;
+
+    width:350px;
+
+    height:40px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+        rgba(9,47,84,.16);
+
+    filter:
+        blur(19px);
+
+}
+
+/*=========================================
+        SERVICES INTRO
+=========================================*/
+
+.services-intro{
+
+    max-width:820px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+}
+
+.services-intro span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 24px;
+
+    margin-bottom:20px;
+
+    border-radius:999px;
+
+    background:#eef5ff;
+
+    color:var(--primary-color);
+
+    font-weight:700;
+
+    font-size:.95rem;
+
+}
+
+.services-intro h2{
+
+    margin-bottom:22px;
+
+    color:var(--heading-color);
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    font-weight:800;
+
+    line-height:1.4;
+
+}
+
+.services-intro p{
+
+    color:var(--text-color);
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+}
+
+/*=========================================
+        SERVICES GRID
+=========================================*/
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+    gap:35px;
+
+    align-items:stretch;
+
+    margin-top:70px;
+
+}
+
+
+/*=========================================
+        TITLES
+=========================================*/
+
+.service-card h3{
+
+    margin:8px 0 0;
+
+    color:var(--heading-color);
+
+    font-size:1.65rem;
+
+    font-weight:800;
+
+    line-height:1.5;
+
+}
+
+.service-card h4{
+
+    margin-top:6px;
+
+    color:var(--primary-color);
+
+    font-size:1.08rem;
+
+    font-weight:700;
+
+}
+
+/*=========================================
+        PARAGRAPHS
+=========================================*/
+
+.service-card p{
+
+    margin:0;
+
+    color:var(--text-color);
+
+    font-size:1.02rem;
+
+    line-height:2;
+
+}
+
+/*=========================================
+        NOTE
+=========================================*/
+
+.service-note{
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    background:#f5f9ff;
+
+    border-right:4px solid var(--primary-color);
+
+    color:#5c677d;
+
+    font-size:.97rem;
+
+    line-height:1.9;
+
+}
+
+/*=========================================
+        LIST
+=========================================*/
+
+.service-list{
+
+    display:grid;
+
+    gap:14px;
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.service-list li{
+
+    position:relative;
+
+    padding-right:34px;
+
+    color:var(--text-color);
+
+    line-height:1.9;
+
+}
+
+.service-list li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    right:0;
+
+    top:2px;
+
+    width:22px;
+
+    height:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(13,71,161,.12);
+
+    color:var(--primary-color);
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+}
+
+/*=========================================
+        BUTTON
+=========================================*/
+
+.service-card .primary-btn{
+
+    align-self:flex-start;
+
+    margin-top:auto;
+
+    padding:15px 34px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+/*=========================================
+        GLASS ENHANCEMENT
+=========================================*/
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    background:
+    linear-gradient(135deg,
+    rgba(255,255,255,.28),
+    transparent 45%);
+
+    opacity:.9;
+
+    pointer-events:none;
+
+}
+
+.service-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    top:-140px;
+
+    left:-140px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(13,71,161,.10),
+    transparent 70%);
+
+    transition:
+    transform .7s ease,
+    opacity .7s ease;
+
+    pointer-events:none;
+
+    opacity:.6;
+
+}
+
+/*=========================================
+        HOVER
+=========================================*/
+
+.service-card:hover{
+
+    transform:
+    translateY(-12px);
+
+    border-color:
+    rgba(13,71,161,.18);
+
+    box-shadow:
+    0 28px 70px rgba(10,45,90,.14);
+
+}
+
+.service-card:hover::after{
+
+    transform:
+    scale(1.45);
+
+    opacity:1;
+
+}
+
+.service-card:hover .service-icon{
+
+    transform:
+    translateY(-6px)
+    rotate(-6deg);
+
+    box-shadow:
+    0 18px 45px rgba(13,71,161,.35);
+
+}
+
+.service-card:hover h3{
+
+    color:var(--primary-color);
+
+}
+
+.service-card:hover .primary-btn{
+
+    transform:
+    translateY(-3px);
+
+}
+
+.service-card:hover .service-number{
+
+    color:
+    rgba(13,71,161,.09);
+
+}
+
+/*=========================================
+        TRANSITIONS
+=========================================*/
+
+.service-card,
+.service-card h3,
+.service-card .service-icon,
+.service-card .primary-btn,
+.service-card .service-number{
+
+    transition:
+    all .4s ease;
+
+}
+
+/*=========================================
+        RIPPLE SUPPORT
+=========================================*/
+
+.primary-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+}
+
+.primary-btn span{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.primary-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    left:50%;
+
+    top:50%;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.28);
+
+    transform:
+    translate(-50%,-50%)
+    scale(0);
+
+    opacity:0;
+
+    transition:
+    transform .6s ease,
+    opacity .6s ease;
+
+}
+
+.primary-btn:active::after{
+
+    transform:
+    translate(-50%,-50%)
+    scale(18);
+
+    opacity:1;
+
+}
+
+/*=========================================
+        REVEAL ANIMATION
+=========================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:
+    translateY(60px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+    will-change:
+    opacity,
+    transform;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+.reveal-left{
+
+    opacity:0;
+
+    transform:
+    translateX(-60px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+.reveal-left.active{
+
+    opacity:1;
+
+    transform:
+    translateX(0);
+
+}
+
+.reveal-right{
+
+    opacity:0;
+
+    transform:
+    translateX(60px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+.reveal-right.active{
+
+    opacity:1;
+
+    transform:
+    translateX(0);
+
+}
+
+.reveal-scale{
+
+    opacity:0;
+
+    transform:
+    scale(.9);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+.reveal-scale.active{
+
+    opacity:1;
+
+    transform:
+    scale(1);
+
+}
+
+/*=========================================
+        SMALL DETAILS
+=========================================*/
+
+.service-list li{
+
+    transition:
+    transform .3s ease,
+    color .3s ease;
+
+}
+
+.service-card:hover
+.service-list li{
+
+    transform:
+    translateX(-4px);
+
+}
+
+.service-list li::before{
+
+    transition:
+    transform .3s ease,
+    background .3s ease;
+
+}
+
+.service-card:hover
+.service-list li::before{
+
+    transform:
+    scale(1.12);
+
+    background:
+    rgba(13,71,161,.18);
+
+}
+
+.service-note{
+
+    transition:
+    background .35s ease,
+    border-color .35s ease;
+
+}
+
+.service-card:hover
+.service-note{
+
+    background:#edf5ff;
+
+    border-right-color:#0d47a1;
+
+}
+/*=========================================
+            SERVICES CTA
+=========================================*/
+
+.services-cta{
+
+    position:relative;
+
+    margin-top:90px;
+
+    padding:80px 50px;
+
+    overflow:hidden;
+
+    border-radius:34px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(135deg,
+    #0d47a1,
+    #1565c0);
+
+    box-shadow:
+    0 25px 70px rgba(13,71,161,.18);
+
+}
+
+.services-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,255,255,.18),
+    transparent 40%);
+
+    pointer-events:none;
+
+}
+
+.services-cta::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    left:-180px;
+
+    bottom:-220px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.06);
+
+    pointer-events:none;
+
+}
+
+.cta-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+.cta-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 24px;
+
+    margin-bottom:25px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.14);
+
+    color:#fff;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.services-cta h2{
+
+    margin-bottom:20px;
+
+    color:#fff;
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    font-weight:800;
+
+    line-height:1.4;
+
+}
+
+.services-cta p{
+
+    margin-bottom:40px;
+
+    color:rgba(255,255,255,.9);
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+/*=========================================
+            CTA BUTTONS
+=========================================*/
+
+.cta-buttons .primary-btn,
+
+.cta-buttons .secondary-btn{
+
+    min-width:220px;
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    font-weight:700;
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease,
+    color .35s ease;
+
+}
+
+.cta-buttons .primary-btn{
+
+    background:#fff;
+
+    color:var(--primary-color);
+
+    box-shadow:
+    0 14px 35px rgba(255,255,255,.18);
+
+}
+
+.cta-buttons .secondary-btn{
+
+    border:2px solid rgba(255,255,255,.35);
+
+    background:transparent;
+
+    color:#fff;
+
+}
+
+.cta-buttons .primary-btn:hover,
+
+.cta-buttons .secondary-btn:hover{
+
+    transform:
+    translateY(-5px);
+
+}
+
+.cta-buttons .primary-btn:hover{
+
+    box-shadow:
+    0 20px 45px rgba(255,255,255,.28);
+
+}
+
+.cta-buttons .secondary-btn:hover{
+
+    background:#fff;
+
+    color:var(--primary-color);
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media (max-width:992px){
+
+    .services-page{
+
+        padding:90px 0;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+        gap:28px;
+
+    }
+
+    .services-hero{
+
+        padding:140px 0 90px;
+
+    }
+
+    .services-cta{
+
+        padding:60px 35px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .services-hero h1{
+
+        font-size:2.3rem;
+
+    }
+
+    .services-intro{
+
+        margin-bottom:60px;
+
+    }
+
+    .service-card{
+
+        padding:32px 24px;
+
+    }
+
+    .service-number{
+
+        font-size:4.2rem;
+
+    }
+
+    .service-icon{
+
+        width:68px;
+
+        height:68px;
+
+        font-size:1.6rem;
+
+    }
+
+    .service-card h3{
+
+        font-size:1.4rem;
+
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .cta-buttons .primary-btn,
+
+    .cta-buttons .secondary-btn{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .services-page{
+
+        padding:70px 0;
+
+    }
+
+    .services-hero{
+
+        padding:120px 0 80px;
+
+    }
+
+    .services-hero p,
+
+    .services-intro p,
+
+    .service-card p{
+
+        font-size:1rem;
+
+    }
+
+    .services-cta{
+
+        padding:45px 22px;
+
+        border-radius:24px;
+
+    }
+
+    .services-cta h2{
+
+        font-size:1.8rem;
+
+    }
+
+}
+
+/*=========================================
+            PERFORMANCE
+=========================================*/
+
+.service-card,
+
+.service-icon,
+
+.primary-btn,
+
+.secondary-btn{
+
+    will-change:
+
+    transform;
+
+}
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+.ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    pointer-events:none;
+
+    background:rgba(255,255,255,.35);
+
+    animation:rippleEffect .6s ease-out;
+
+}
+
+@keyframes rippleEffect{
+
+    to{
+
+        transform:scale(4);
+
+        opacity:0;
+
+    }
+
+}
+.service-details{
+    display: none;
+}
+
+.service-card.accordion-active .service-details{
+    display:block;
+}
+.service-card.active .service-details{
+    display:none !important;
+}
+
+.service-card.accordion-active .service-details{
+    display:block !important;
+}
+
+.service-card.active .service-toggle{
+    background:rgba(18,61,114,.035) !important;
+    color:var(--primary-color) !important;
+    border-color:rgba(18,61,114,.09) !important;
+}
+
+.service-card.active .service-toggle i{
+    transform:none !important;
+    background:var(--primary-color) !important;
+}
+
+.service-card.accordion-active .service-toggle{
+    background:linear-gradient(135deg,var(--primary-color),var(--dark-blue)) !important;
+    color:#fff !important;
+    border-color:transparent !important;
+}
+
+.service-card.accordion-active .service-toggle i{
+    transform:none !important;
+    background:rgba(255,255,255,.15) !important;
+}
+.about-page-person{
+
+    animation: floatPerson 5s ease-in-out infinite;
+
+}
+@keyframes floatPerson{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
