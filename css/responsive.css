@@ -6727,12 +6727,12 @@ and (max-height: 500px){
     }
 
     .message-content .message-final{
-        order:3;
+        order:4;
     }
 
     /* قائمة التفاصيل بعد النص */
     .message-details{
-        order:4;
+        order:3;
     }
 
     /* الزر يكون آخر شيء بعد آخر نقطة */
