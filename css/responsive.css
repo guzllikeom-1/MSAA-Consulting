@@ -6761,4 +6761,16 @@ and (max-height: 500px){
             var(--light-blue)
         );
     }
+
+   .message-content h2{
+    margin-bottom:20px;
+}
+
+.message-content .message-intro{
+    margin-bottom:22px;
+}
+
+.message-content .message-final{
+    margin-bottom:22px;
+}
 }
