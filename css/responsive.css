@@ -7133,16 +7133,29 @@ and (max-height: 500px){
 
 @media (max-width: 768px){
 
+    /* تقليل المسافات داخل قسم الملاك */
+    .owners-container{
+        gap: 0 !important;
+    }
+
     .owners-content h2{
-        margin-bottom: 20px !important;
+        margin-bottom: 15px !important;
     }
 
     .owners-intro{
-        margin-bottom: 25px !important;
+        margin-bottom: 20px !important;
     }
 
     .owners-options-panel{
         margin-top: 0 !important;
+    }
+
+    .owners-final{
+        margin-top: 20px !important;
+    }
+
+    .owners-btn{
+        margin-top: 15px !important;
     }
 
 }
