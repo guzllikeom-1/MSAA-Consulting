@@ -6704,3 +6704,61 @@ and (max-height: 500px){
     }
 
 }
+
+/* =========================================================
+   MAIN MESSAGE - MOBILE BUTTON AT END OF SECTION
+   ========================================================= */
+
+@media (max-width: 768px){
+
+    /* نخلي محتويات النص عناصر مستقلة في الجوال */
+    .message-content{
+        display: contents;
+    }
+
+    /* ترتيب محتوى القسم */
+    .message-content h2{
+        order:1;
+        text-align:right;
+    }
+
+    .message-content .message-intro{
+        order:2;
+    }
+
+    .message-content .message-final{
+        order:3;
+    }
+
+    /* قائمة التفاصيل بعد النص */
+    .message-details{
+        order:4;
+    }
+
+    /* الزر يكون آخر شيء بعد آخر نقطة */
+    .message-content .message-btn{
+        order:5;
+        width:100%;
+        margin-top:0;
+    }
+
+    /* الخط الزخرفي يبقى ظاهرًا فوق العنوان */
+    .message-content::before{
+        display:none;
+    }
+
+    .message-container::before{
+        content:"";
+        display:block;
+        order:0;
+        width:55px;
+        height:4px;
+        margin:0 0 20px auto;
+        border-radius:20px;
+        background:linear-gradient(
+            90deg,
+            var(--primary-color),
+            var(--light-blue)
+        );
+    }
+}
