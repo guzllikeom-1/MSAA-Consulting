@@ -6661,19 +6661,15 @@ and (max-height: 500px){
     }
 
    .hero-buttons{
-    grid-column:1 / -1;
-    grid-row:2;
-    align-self:end;
+    position:absolute;
+    left:50%;
+    bottom:45px;
+    transform:translateX(-50%);
+    width:max-content;
     justify-content:center;
-    width:100%;
-    margin-top:0;
-    margin-bottom:45px;
-    position:relative;
-    z-index:5;
+    margin:0;
+    z-index:10;
 }
-
-}
-
 
 /* =========================
    MOBILE
