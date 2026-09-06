@@ -6660,14 +6660,17 @@ and (max-height: 500px){
         grid-row:1 / span 2;
     }
 
-    .hero-buttons{
-        grid-column:1;
-        grid-row:2;
-        align-self:end;
-        justify-content:flex-start;
-        margin-top:0;
-        margin-bottom:75px;
-    }
+   .hero-buttons{
+    grid-column:1 / -1;
+    grid-row:2;
+    align-self:end;
+    justify-content:center;
+    width:100%;
+    margin-top:0;
+    margin-bottom:45px;
+    position:relative;
+    z-index:5;
+}
 
 }
 
