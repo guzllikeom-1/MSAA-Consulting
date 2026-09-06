@@ -6629,3 +6629,37 @@ and (max-height: 500px){
     }
 
 }
+
+/* =========================================================
+   DESKTOP HERO BUTTONS
+   Keep buttons under the text on desktop
+   ========================================================= */
+
+@media (min-width: 769px){
+
+    .hero-container{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        align-items:stretch;
+    }
+
+    .hero-content{
+        grid-column:2;
+        grid-row:1;
+    }
+
+    .hero-visual{
+        grid-column:1;
+        grid-row:1 / span 2;
+    }
+
+    .hero-buttons{
+        grid-column:2;
+        grid-row:2;
+        align-self:end;
+        justify-content:flex-start;
+        margin-top:25px;
+        margin-bottom:40px;
+    }
+
+}
