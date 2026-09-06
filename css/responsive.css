@@ -6961,6 +6961,10 @@ and (max-height: 500px){
     margin-bottom:40px !important;
 }
 
+   .about-home{
+    padding-bottom:40px !important;
+}
+
     /* خلفية الجوال */
     .about-bg{
         background-position:center top !important;
