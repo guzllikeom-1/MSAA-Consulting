@@ -6948,10 +6948,11 @@ and (max-height: 500px){
     }
 
     /* باقي الكلام */
-    .about-description{
-        order:5 !important;
-        width:100% !important;
-    }
+   .about-description{
+    order:5 !important;
+    width:100% !important;
+    margin-bottom:30px !important;
+}
 
     /* الزر */
   .about-btn{
