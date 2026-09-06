@@ -6861,43 +6861,118 @@ and (max-height: 500px){
     }
 }
 
+/* =========================================================
+   ABOUT HOME — MOBILE FINAL
+   ========================================================= */
+
 @media (max-width: 768px){
 
-    /* توسيط اسم محمد الشيادي */
+    /* ترتيب القسم */
+    .about-home-container{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+        gap:0 !important;
+    }
+
+    /* نفصل عناصر المحتوى للجوال */
+    .about-content{
+        display:contents !important;
+    }
+
+    /* من أنا */
+    .about-label{
+        order:1 !important;
+        align-self:center !important;
+        margin-bottom:12px !important;
+    }
+
+    /* محمد الشيادي */
     .about-title-row{
-        align-items:center;
-        text-align:center;
-        margin-bottom:10px;
+        order:2 !important;
+        width:100% !important;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:center !important;
+        text-align:center !important;
+        margin-bottom:0 !important;
     }
 
     .about-title-row h2{
-        width:100%;
-        text-align:center;
+        width:100% !important;
+        text-align:center !important;
     }
 
     .about-title-line{
-        margin-left:auto;
-        margin-right:auto;
+        margin-left:auto !important;
+        margin-right:auto !important;
+        margin-top:12px !important;
+        margin-bottom:10px !important;
     }
 
-    /* رفع صورة محمد وتقليل المسافة بينها وبين الاسم */
+    /* صورة محمد */
     .about-visual{
-        min-height:400px;
-        margin-top:0;
-        margin-bottom:10px;
+        order:3 !important;
+        width:100% !important;
+        min-height:390px !important;
+        height:390px !important;
+        margin:0 !important;
+        display:flex !important;
+        align-items:flex-end !important;
+        justify-content:center !important;
     }
 
     .about-person-wrap{
-        height:400px;
+        width:100% !important;
+        height:390px !important;
+        display:flex !important;
+        align-items:flex-end !important;
+        justify-content:center !important;
     }
 
     .about-person{
-        max-height:430px;
-        transform:translateY(-20px);
+        width:min(100%,340px) !important;
+        height:auto !important;
+        max-height:410px !important;
+        transform:translateY(-25px) !important;
     }
 
-    /* تقليل المسافة قبل زر تعرف على تجربتي */
+    /* النص التعريفي */
+    .about-lead{
+        order:4 !important;
+        width:100% !important;
+        margin-top:0 !important;
+        margin-bottom:20px !important;
+        text-align:right !important;
+    }
+
+    /* باقي الكلام */
+    .about-description{
+        order:5 !important;
+        width:100% !important;
+    }
+
+    /* الزر */
     .about-btn{
-        margin-top:15px;
+        order:6 !important;
+        width:100% !important;
+        margin-top:12px !important;
+    }
+
+    /* خلفية الجوال */
+    .about-bg{
+        background-position:center top !important;
+        background-size:cover !important;
+    }
+
+    .about-bg::after{
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,255,255,.35) 0%,
+                rgba(255,255,255,.72) 55%,
+                rgba(255,255,255,.94) 100%
+            ) !important;
     }
 }
