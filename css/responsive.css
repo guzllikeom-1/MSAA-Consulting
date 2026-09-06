@@ -7033,7 +7033,7 @@ and (max-height: 500px){
         z-index:20 !important;
         width:75% !important;
         margin:0 auto !important;
-        transform:translateY(-70px) !important;
+        transform:translateY(-10px) !important;
     }
 
     .about-home{
