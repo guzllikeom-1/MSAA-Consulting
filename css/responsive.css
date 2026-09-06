@@ -7021,3 +7021,60 @@ and (max-height: 500px){
         order:3 !important;
     }
 }
+
+/* =========================================================
+   زر تعرّف على تجربتي — الجوال
+   ========================================================= */
+
+@media (max-width:768px){
+
+    .about-btn{
+        position:relative !important;
+        z-index:20 !important;
+        width:75% !important;
+        margin:0 auto !important;
+        transform:translateY(-150px) !important;
+    }
+
+    .about-home{
+        overflow:visible !important;
+    }
+
+    .about-home-container{
+        padding-bottom:150px !important;
+    }
+}
+/* =========================================================
+   قسم المستثمرين — الجوال
+   ========================================================= */
+
+@media (max-width:768px){
+
+    .investors-container{
+        gap:15px !important;
+    }
+
+    .investors-content h2{
+        margin-bottom:12px !important;
+    }
+
+    .investors-intro{
+        margin-bottom:12px !important;
+        line-height:1.8 !important;
+    }
+
+    .investors-analysis{
+        order:3 !important;
+        margin-top:5px !important;
+    }
+
+    .investors-btn{
+        order:4 !important;
+        display:flex !important;
+        width:72% !important;
+        min-height:52px !important;
+        margin:20px auto 15px !important;
+        justify-content:center !important;
+        align-items:center !important;
+    }
+}
