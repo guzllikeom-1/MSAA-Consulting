@@ -6629,3 +6629,76 @@ and (max-height: 500px){
     }
 
 }
+
+/* =========================================================
+   HERO - DESKTOP + MOBILE FINAL LAYOUT
+   ========================================================= */
+
+/* =========================
+   DESKTOP
+   Keep original desktop layout
+========================= */
+
+@media (min-width: 769px){
+
+    .hero-container{
+        display:grid;
+        grid-template-columns:
+            minmax(0, 1.08fr)
+            minmax(360px, 0.92fr);
+        align-items:stretch;
+        gap:65px;
+    }
+
+    .hero-content{
+        grid-column:1;
+        grid-row:1;
+    }
+
+    .hero-visual{
+        grid-column:2;
+        grid-row:1 / span 2;
+    }
+
+    .hero-buttons{
+        grid-column:1;
+        grid-row:2;
+        align-self:end;
+        justify-content:flex-start;
+        margin-top:0;
+        margin-bottom:75px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   Text → Mohammed → Buttons
+========================= */
+
+@media (max-width: 768px){
+
+    .hero-container{
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .hero-content{
+        order:1;
+    }
+
+    .hero-visual{
+        order:2;
+    }
+
+    .hero-buttons{
+        order:3;
+        width:100%;
+        justify-content:center;
+        margin-top:0;
+        padding-bottom:30px;
+    }
+
+}
