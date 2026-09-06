@@ -6982,3 +6982,42 @@ and (max-height: 500px){
             ) !important;
     }
 }
+
+/* =========================================================
+   INVESTORS SECTION — MOBILE
+   جعل زر "ابدأ طلب شراء" آخر شيء في القسم
+   ========================================================= */
+
+@media (max-width: 768px){
+
+    .investors-container{
+        display:flex !important;
+        flex-direction:column !important;
+    }
+
+    .investors-content{
+        display:contents !important;
+    }
+
+    /* العنوان */
+    .investors-content h2{
+        order:1 !important;
+    }
+
+    /* النص */
+    .investors-intro{
+        order:2 !important;
+    }
+
+    /* زر ابدأ طلب شراء */
+    .investors-btn{
+        order:4 !important;
+        width:92% !important;
+        margin:30px auto 40px !important;
+    }
+
+    /* لوحة التحليل والنقاط */
+    .investors-analysis{
+        order:3 !important;
+    }
+}
