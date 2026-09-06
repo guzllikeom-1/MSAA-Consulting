@@ -6774,3 +6774,89 @@ and (max-height: 500px){
     margin-bottom:22px;
 }
 }
+
+/* =========================================================
+   ABOUT HOME - MOBILE ORDER
+   ========================================================= */
+
+@media (max-width: 768px){
+
+    .about-home-container{
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+    }
+
+    /* نفصل محتويات النص لعناصر مستقلة */
+    .about-content{
+        display:contents;
+    }
+
+    /* 1 — من أنا */
+    .about-label{
+        order:1;
+        align-self:flex-end;
+        margin-bottom:15px;
+    }
+
+    /* 2 — محمد الشيادي */
+    .about-title-row{
+        order:2;
+        width:100%;
+        margin-bottom:25px;
+    }
+
+    /* 3 — صورة محمد */
+    .about-visual{
+        order:3;
+        width:100%;
+        min-height:500px;
+        margin:0 0 25px;
+    }
+
+    /* 4 — الوصف المختصر */
+    .about-lead{
+        order:4;
+        width:100%;
+        margin-bottom:25px;
+    }
+
+    /* 5 — باقي الكلام */
+    .about-description{
+        order:5;
+        width:100%;
+    }
+
+    /* 6 — الزر في نهاية القسم */
+    .about-btn{
+        order:6;
+        width:100%;
+        margin-top:30px;
+    }
+
+    /* الخلفية تكون أهدأ وأرتب على الجوال */
+    .about-bg{
+        background-position:center top;
+        background-size:cover;
+    }
+
+    .about-bg::after{
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,255,255,.25) 0%,
+                rgba(255,255,255,.55) 45%,
+                rgba(255,255,255,.78) 100%
+            );
+    }
+
+    /* حجم صورة محمد */
+    .about-person{
+        width:min(100%, 340px);
+        height:auto;
+        max-height:500px;
+        object-fit:contain;
+        object-position:center bottom;
+    }
+}
