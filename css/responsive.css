@@ -6954,11 +6954,12 @@ and (max-height: 500px){
     }
 
     /* الزر */
-    .about-btn{
-        order:6 !important;
-        width:100% !important;
-        margin-top:12px !important;
-    }
+  .about-btn{
+    order:6 !important;
+    width:100% !important;
+    margin-top:12px !important;
+    margin-bottom:40px !important;
+}
 
     /* خلفية الجوال */
     .about-bg{
