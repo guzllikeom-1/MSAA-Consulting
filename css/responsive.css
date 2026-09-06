@@ -6860,3 +6860,44 @@ and (max-height: 500px){
         object-position:center bottom;
     }
 }
+
+@media (max-width: 768px){
+
+    /* توسيط اسم محمد الشيادي */
+    .about-title-row{
+        align-items:center;
+        text-align:center;
+        margin-bottom:10px;
+    }
+
+    .about-title-row h2{
+        width:100%;
+        text-align:center;
+    }
+
+    .about-title-line{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    /* رفع صورة محمد وتقليل المسافة بينها وبين الاسم */
+    .about-visual{
+        min-height:400px;
+        margin-top:0;
+        margin-bottom:10px;
+    }
+
+    .about-person-wrap{
+        height:400px;
+    }
+
+    .about-person{
+        max-height:430px;
+        transform:translateY(-20px);
+    }
+
+    /* تقليل المسافة قبل زر تعرف على تجربتي */
+    .about-btn{
+        margin-top:15px;
+    }
+}
