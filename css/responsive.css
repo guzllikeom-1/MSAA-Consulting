@@ -7130,3 +7130,19 @@ and (max-height: 500px){
         justify-content:center !important;
     }
 }
+
+@media (max-width: 768px){
+
+    .owners-content h2{
+        margin-bottom: 20px !important;
+    }
+
+    .owners-intro{
+        margin-bottom: 25px !important;
+    }
+
+    .owners-options-panel{
+        margin-top: 0 !important;
+    }
+
+}
