@@ -6660,17 +6660,19 @@ and (max-height: 500px){
         grid-row:1 / span 2;
     }
 
-   .hero-buttons{
-    position:absolute;
-    left:50%;
-    bottom:45px;
-    transform:translateX(-50%);
-    width:max-content;
+  .hero-buttons{
+    position:absolute !important;
+    left:50% !important;
+    right:auto !important;
+    bottom:45px !important;
+    transform:translateX(-50%) !important;
+
+    width:max-content !important;
     justify-content:center;
-    margin:0;
+    margin:0 !important;
+
     z-index:10;
 }
-
 }
 
 /* =========================
