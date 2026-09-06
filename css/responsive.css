@@ -7079,33 +7079,54 @@ and (max-height: 500px){
     }
 }
 /* =========================================================
-   OWNERS SECTION - MOBILE
-   ترتيب الصندوق الأزرق والزر في نهاية القسم
+   OWNERS SECTION - MOBILE ONLY
    ========================================================= */
 
 @media (max-width: 768px){
 
-    /* الصندوق الأزرق يكون بعد لوحة الخيارات */
-    .owners-content .owners-final{
+    /* نخلي محتوى القسم كله Flex */
+    .owners-container{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:stretch !important;
+    }
+
+    /* محتوى النص */
+    .owners-content{
+        display:contents !important;
+    }
+
+    /* العنوان */
+    .owners-content h2{
+        order:1 !important;
+    }
+
+    /* الفقرة */
+    .owners-intro{
+        order:2 !important;
+    }
+
+    /* لوحة الخيارات */
+    .owners-options-panel{
+        order:3 !important;
+    }
+
+    /* الصندوق الأزرق */
+    .owners-final{
         order:4 !important;
         width:92% !important;
         margin:25px auto 0 !important;
     }
 
-    /* زر أرسل تفاصيل عقارك يكون آخر شيء */
-    .owners-content .owners-btn{
+    /* زر أرسل تفاصيل عقارك - آخر شيء */
+    .owners-btn{
         order:5 !important;
-        width:72% !important;
+        width:68% !important;
         min-height:54px !important;
         height:54px !important;
-        margin:20px auto 40px !important;
+        margin:20px auto 35px !important;
         display:flex !important;
-        justify-content:center !important;
         align-items:center !important;
-    }
-
-    /* لوحة الخيارات قبل الصندوق والزر */
-    .owners-analysis{
-        order:3 !important;
+        justify-content:center !important;
     }
 }
