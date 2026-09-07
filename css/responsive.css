@@ -7254,8 +7254,8 @@ and (max-height: 500px){
 
     /* تصغير اللوجو فقط */
     .signature-logo{
-        width: 42px !important;
-        height: 42px !important;
+        width: 48px !important;
+        height: 48px !important;
         object-fit: contain !important;
        transform: translateX(-15px) !important;
     }
