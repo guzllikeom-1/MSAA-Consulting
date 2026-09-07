@@ -1,33 +1,49 @@
 /* =========================================
         MSAA CONSULTING
         SELL PROPERTY FORM
+        WHATSAPP + FILE UPLOAD
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    const form = document.getElementById("sellPropertyForm");
+    const button = document.querySelector(".sell-submit-btn");
+
+    const declaration = document.getElementById("declaration");
+    const declarationBox = document.querySelector(".form-declaration");
+
+    if (!form || !button) return;
+
+
     /* =====================================
-            FILE UPLOADS
+            FILE SELECTION
     ====================================== */
 
-    const uploadBoxes = document.querySelectorAll(".upload-box");
+    const uploadBoxes =
+        document.querySelectorAll(".upload-box");
 
     uploadBoxes.forEach((box) => {
 
-        const input = box.querySelector('input[type="file"]');
-        const text = box.querySelector("span");
+        const input =
+            box.querySelector('input[type="file"]');
+
+        const text =
+            box.querySelector("span");
 
         if (!input || !text) return;
 
-        const originalText = text.textContent.trim();
+        const originalText =
+            text.textContent.trim();
 
         input.addEventListener("change", () => {
 
             if (!input.files || input.files.length === 0) {
 
                 text.textContent = originalText;
-                box.classList.remove("file-selected");
-                return;
 
+                box.classList.remove("file-selected");
+
+                return;
             }
 
             if (input.multiple) {
@@ -46,7 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             } else {
 
-                text.textContent = input.files[0].name;
+                text.textContent =
+                    input.files[0].name;
 
             }
 
@@ -58,125 +75,245 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================
-            FORM
-    ====================================== */
-
-    const form = document.getElementById("sellPropertyForm");
-    const button = document.querySelector(".sell-submit-btn");
-
-    const declaration = document.getElementById("declaration");
-    const declarationBox = document.querySelector(".form-declaration");
-
-    if (!form || !button) return;
-
-
-    /* =====================================
             HELPERS
     ====================================== */
 
     function getValue(id) {
 
-        const element = document.getElementById(id);
+        const element =
+            document.getElementById(id);
 
         if (!element) return "غير محدد";
 
-        const value = element.value.trim();
+        const value =
+            element.value.trim();
 
-        return value !== "" ? value : "غير محدد";
+        return value !== ""
+            ? value
+            : "غير محدد";
     }
 
 
     function getSelectText(id) {
 
-        const element = document.getElementById(id);
+        const element =
+            document.getElementById(id);
 
-        if (!element || element.selectedIndex < 0) {
+        if (
+            !element ||
+            element.selectedIndex < 0
+        ) {
             return "غير محدد";
         }
 
-        const text = element.options[element.selectedIndex].text.trim();
+        const text =
+            element.options[
+                element.selectedIndex
+            ].text.trim();
 
-        return text !== "اختر" ? text : "غير محدد";
+        return text !== "اختر"
+            ? text
+            : "غير محدد";
     }
 
 
     function getRadioValue(name) {
 
-        const selected = form.querySelector(
-            'input[name="' + name + '"]:checked'
-        );
+        const selected =
+            form.querySelector(
+                'input[name="' +
+                name +
+                '"]:checked'
+            );
 
-        if (!selected) return "غير محدد";
+        if (!selected) {
+            return "غير محدد";
+        }
 
-        if (selected.value === "yes") return "نعم";
-        if (selected.value === "no") return "لا";
+        if (selected.value === "yes") {
+            return "نعم";
+        }
+
+        if (selected.value === "no") {
+            return "لا";
+        }
 
         return selected.value;
     }
 
 
-    function getFileNames(name) {
+    /* =====================================
+            UPLOAD FILES
+    ====================================== */
 
-        const input = form.querySelector(
-            'input[name="' + name + '"]'
-        );
+    async function uploadFiles() {
 
-        if (!input || !input.files || input.files.length === 0) {
-            return "لم يتم إرفاق ملف";
+        const fileInputs =
+            form.querySelectorAll(
+                'input[type="file"]'
+            );
+
+        const formData =
+            new FormData();
+
+        fileInputs.forEach((input) => {
+
+            if (
+                !input.files ||
+                input.files.length === 0
+            ) {
+                return;
+            }
+
+            Array.from(input.files).forEach(
+                (file) => {
+
+                    formData.append(
+                        input.name,
+                        file
+                    );
+
+                }
+            );
+
+        });
+
+
+        const response =
+            await fetch(
+                "https://rfgrzpcyzbcjlsdbbddl.supabase.co/functions/v1/upload-property-files",
+                {
+                    method: "POST",
+                    body: formData
+                }
+            );
+
+
+        const result =
+            await response.json();
+
+
+        if (
+            !response.ok ||
+            !result.success
+        ) {
+
+            throw new Error(
+                result.error ||
+                "حدث خطأ أثناء رفع الملفات"
+            );
+
         }
 
-        return Array.from(input.files)
-            .map(file => file.name)
-            .join("، ");
+
+        return result.files || [];
+
     }
 
 
     /* =====================================
-            SEND TO WHATSAPP
+            SEND REQUEST
     ====================================== */
 
-    button.addEventListener("click", (event) => {
+    button.addEventListener(
+        "click",
+        async (event) => {
 
-        event.preventDefault();
-        event.stopPropagation();
+            event.preventDefault();
+            event.stopPropagation();
 
 
-        /* التحقق من الإقرار */
+            /* التحقق من الإقرار */
 
-        if (declaration && !declaration.checked) {
+            if (
+                declaration &&
+                !declaration.checked
+            ) {
 
-            if (declarationBox) {
-                declarationBox.classList.add("error");
+                if (declarationBox) {
+
+                    declarationBox.classList.add(
+                        "error"
+                    );
+
+                }
+
+                declaration.focus();
+
+                if (declarationBox) {
+
+                    declarationBox.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+
+                }
+
+                return;
+
             }
 
-            declaration.focus();
 
             if (declarationBox) {
 
-                declarationBox.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
+                declarationBox.classList.remove(
+                    "error"
+                );
 
             }
 
-            return;
-        }
+
+            /* منع الضغط المتكرر */
+
+            button.disabled = true;
 
 
-        if (declarationBox) {
-            declarationBox.classList.remove("error");
-        }
+            try {
+
+                /* ==========================
+                        رفع الملفات
+                =========================== */
+
+                const uploadedFiles =
+                    await uploadFiles();
 
 
-        /* =================================
-                WHATSAPP MESSAGE
-        ================================= */
+                /* ==========================
+                        تجهيز المرفقات
+                =========================== */
 
-        const whatsappNumber = "96898999835";
+                let attachments =
+                    "لا توجد مرفقات";
 
 
-        const message =
+                if (
+                    uploadedFiles.length > 0
+                ) {
+
+                    attachments =
+                        uploadedFiles
+                            .map((file) => {
+
+                                return (
+                                    `📄 ${file.label}: ${file.name}\n` +
+                                    `🔗 فتح الملف: ${file.url}`
+                                );
+
+                            })
+                            .join("\n\n");
+
+                }
+
+
+                /* ==========================
+                        رسالة واتساب
+                =========================== */
+
+                const whatsappNumber =
+                    "96898999835";
+
+
+                const message =
 `طلب عرض عقار للبيع
 
 ━━━━━━━━━━━━━━━━
@@ -194,7 +331,6 @@ document.addEventListener("DOMContentLoaded", () => {
 المحافظة: ${getValue("governorate")}
 الولاية: ${getValue("wilayat")}
 الموقع: ${getValue("location")}
-رابط الموقع: ${getValue("locationLink")}
 
 السعر والمساحات:
 
@@ -212,13 +348,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 الوضع المالي:
 
-هل توجد رهون أو تمويلات على العقار؟ ${getRadioValue("mortgages")}
+هل توجد رهونات أو التزامات؟ ${getRadioValue("mortgages")}
 
-المستندات والمرفقات:
+رابط الموقع:
 
-مستند الملكية: ${getFileNames("ownership")}
-الكروكي: ${getFileNames("krooki")}
-صور العقار: ${getFileNames("propertyImages")}
+${getValue("locationLink")}
+
+المرفقات:
+
+${attachments}
 
 ملاحظات إضافية:
 
@@ -229,16 +367,38 @@ ${getValue("notes")}
 تم إرسال الطلب من موقع محمد الشيادي للاستشارات العقارية.`;
 
 
-        const whatsappURL =
-            "https://wa.me/" +
-            whatsappNumber +
-            "?text=" +
-            encodeURIComponent(message);
+                const whatsappURL =
+                    "https://wa.me/" +
+                    whatsappNumber +
+                    "?text=" +
+                    encodeURIComponent(
+                        message
+                    );
 
 
-        window.location.href = whatsappURL;
+                /* فتح واتساب */
 
-    });
+                window.location.href =
+                    whatsappURL;
+
+
+            } catch (error) {
+
+                console.error(
+                    "Sell property error:",
+                    error
+                );
+
+                alert(
+                    "حدث خطأ أثناء رفع الملفات. يرجى المحاولة مرة أخرى."
+                );
+
+                button.disabled = false;
+
+            }
+
+        }
+    );
 
 
     /* =====================================
@@ -247,15 +407,23 @@ ${getValue("notes")}
 
     if (declaration) {
 
-        declaration.addEventListener("change", () => {
+        declaration.addEventListener(
+            "change",
+            () => {
 
-            if (declaration.checked && declarationBox) {
+                if (
+                    declaration.checked &&
+                    declarationBox
+                ) {
 
-                declarationBox.classList.remove("error");
+                    declarationBox.classList.remove(
+                        "error"
+                    );
+
+                }
 
             }
-
-        });
+        );
 
     }
 
