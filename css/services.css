@@ -1773,6 +1773,10 @@
 
 @media (max-width: 600px){
 
+        .about-page-intro{
+    transform: translateY(90px) !important;
+}
+        
     .about-page-hero{
         min-height:auto !important;
         padding-top:55px !important;
@@ -1899,4 +1903,5 @@
         opacity:.45 !important;
     }
 
+           
 }
