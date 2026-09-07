@@ -1767,3 +1767,136 @@
     }
 
 }
+/* =========================================
+   SERVICES HERO - MOBILE ONLY
+========================================= */
+
+@media (max-width: 600px){
+
+    .about-page-hero{
+        min-height:auto !important;
+        padding-top:55px !important;
+        padding-bottom:20px !important;
+    }
+
+    .about-page-hero-container{
+        width:90% !important;
+        min-height:auto !important;
+
+        display:flex !important;
+        flex-direction:column !important;
+
+        align-items:center !important;
+        justify-content:flex-start !important;
+
+        gap:18px !important;
+        padding-top:0 !important;
+    }
+
+    /* المحتوى */
+    .about-page-intro{
+        order:1 !important;
+
+        width:100% !important;
+        max-width:650px !important;
+
+        margin:0 auto !important;
+
+        text-align:center !important;
+
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+    }
+
+    /* خدماتي */
+    .about-page-label{
+        min-width:110px !important;
+        min-height:38px !important;
+
+        margin:0 auto 16px !important;
+        padding:6px 18px !important;
+
+        font-size:13px !important;
+    }
+
+    /* العنوان الأزرق */
+    .about-page-intro h1{
+        width:100% !important;
+        max-width:500px !important;
+
+        margin:0 auto !important;
+
+        text-align:center !important;
+
+        font-size:36px !important;
+        line-height:1.45 !important;
+        letter-spacing:-1px !important;
+    }
+
+    /* الخط الأزرق */
+    .about-page-title-line{
+        width:78px !important;
+        height:3px !important;
+
+        margin:18px auto 20px !important;
+    }
+
+    /* الفقرة */
+    .about-page-intro > p{
+        width:100% !important;
+        max-width:520px !important;
+
+        margin:0 auto !important;
+
+        text-align:center !important;
+
+        font-size:14.5px !important;
+        line-height:2 !important;
+    }
+
+    /* صورة محمد */
+    .about-page-visual{
+        order:2 !important;
+
+        width:100% !important;
+        min-height:410px !important;
+        height:410px !important;
+
+        margin:0 !important;
+
+        display:flex !important;
+        align-items:flex-end !important;
+        justify-content:center !important;
+    }
+
+    .about-page-person-wrap{
+        width:100% !important;
+        height:100% !important;
+
+        display:flex !important;
+        align-items:flex-end !important;
+        justify-content:center !important;
+    }
+
+    .about-page-person{
+        width:auto !important;
+        height:390px !important;
+        max-width:100% !important;
+
+        object-fit:contain !important;
+        object-position:center bottom !important;
+    }
+
+    .about-page-shadow{
+        width:220px !important;
+        height:25px !important;
+    }
+
+    /* تخفيف الخطوط المعمارية */
+    .about-architecture{
+        inset:35px -35px 0 !important;
+        opacity:.45 !important;
+    }
+
+}
