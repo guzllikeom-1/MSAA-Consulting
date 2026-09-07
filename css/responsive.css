@@ -7250,4 +7250,18 @@ and (max-height: 500px){
         font-size: 13px !important;
     }
 }
+@media (max-width: 768px){
 
+    /* تصغير اللوجو فقط */
+    .signature-logo{
+        width: 62px !important;
+        height: 62px !important;
+        object-fit: contain !important;
+    }
+
+    /* تحريك زر احجز استشارة فقط */
+    .header-btn{
+        transform: translateX(8px) !important;
+    }
+
+}
