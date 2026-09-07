@@ -1912,3 +1912,96 @@
     }
 
 }
+/* =========================================
+   إصلاح نهائي للدفع - الجوال فقط
+========================================= */
+
+@media (max-width: 600px){
+
+    /* إظهار عنوان تفاصيل الدفع وتأكيد الحجز */
+    .payment-section > h2{
+        display:block !important;
+        visibility:visible !important;
+        opacity:1 !important;
+        font-size:20px !important;
+        line-height:1.5 !important;
+        text-align:center !important;
+        margin:0 0 10px !important;
+    }
+
+
+    /* =====================================
+       صندوق التحويل
+       الرقم والزر بجانب بعض
+    ===================================== */
+
+    .payment-transfer{
+        display:grid !important;
+        grid-template-columns:minmax(0,1fr) auto !important;
+        align-items:center !important;
+        gap:8px !important;
+        padding:10px !important;
+        min-height:82px !important;
+        box-sizing:border-box !important;
+    }
+
+    .payment-transfer > div{
+        min-width:0 !important;
+        width:auto !important;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:flex-start !important;
+        justify-content:center !important;
+        gap:4px !important;
+    }
+
+    .payment-transfer span{
+        font-size:10px !important;
+        white-space:nowrap !important;
+    }
+
+    .payment-number{
+        font-size:18px !important;
+        letter-spacing:1px !important;
+        white-space:nowrap !important;
+        display:block !important;
+    }
+
+    .copy-payment-btn{
+        width:92px !important;
+        min-width:92px !important;
+        max-width:92px !important;
+        padding:9px 5px !important;
+        font-size:11px !important;
+        white-space:nowrap !important;
+        border-radius:10px !important;
+        flex-shrink:0 !important;
+    }
+
+
+    /* =====================================
+       اسم المستفيد — كله في سطر واحد
+    ===================================== */
+
+    .payment-name{
+        display:flex !important;
+        flex-direction:row !important;
+        align-items:center !important;
+        justify-content:space-between !important;
+        gap:10px !important;
+        white-space:nowrap !important;
+    }
+
+    .payment-name span{
+        font-size:13px !important;
+        white-space:nowrap !important;
+        flex-shrink:0 !important;
+    }
+
+    .payment-name strong{
+        font-size:15px !important;
+        white-space:nowrap !important;
+        flex-shrink:0 !important;
+    }
+
+}
