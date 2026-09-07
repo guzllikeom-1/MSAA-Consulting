@@ -7159,3 +7159,94 @@ and (max-height: 500px){
     }
 
 }
+/* ================================
+   FOOTER - MOBILE ONLY
+================================ */
+
+@media (max-width: 768px){
+
+    /* تصغير الفوتر وتقليل المسافات */
+    .footer{
+        padding-top: 45px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .footer-grid{
+        width: 92% !important;
+        grid-template-columns: 1fr !important;
+        gap: 35px !important;
+    }
+
+    /* بطاقة محمد الشيادي */
+    .footer-card{
+        padding: 25px 18px !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .footer-profile-logo{
+        width: 115px !important;
+        height: 115px !important;
+        margin: 0 auto 15px !important;
+    }
+
+    .footer-card h3{
+        text-align: center !important;
+        margin: 0 0 10px !important;
+        font-size: 25px !important;
+    }
+
+    .footer-card p{
+        text-align: center !important;
+        margin: 0 auto 18px !important;
+        max-width: 300px !important;
+        line-height: 1.8 !important;
+        font-size: 15px !important;
+    }
+
+    /* أيقونات التواصل */
+    .footer-social{
+        justify-content: center !important;
+        gap: 14px !important;
+        margin-top: 10px !important;
+    }
+
+    /* تقليل المسافات بين أقسام الفوتر */
+    .footer-grid > div{
+        margin: 0 !important;
+    }
+
+    .footer-grid h4{
+        margin-bottom: 12px !important;
+    }
+
+    .footer-grid ul{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .footer-grid li{
+        margin-bottom: 9px !important;
+    }
+
+    /* الخط الفاصل */
+    .footer-divider{
+        margin: 25px 0 !important;
+    }
+
+    /* النص القانوني */
+    .footer-legal{
+        margin: 0 auto 25px !important;
+        padding: 0 15px !important;
+        text-align: center !important;
+        line-height: 1.8 !important;
+        font-size: 13px !important;
+    }
+
+    /* آخر سطر */
+    .footer-bottom{
+        padding: 18px 12px !important;
+        text-align: center !important;
+        font-size: 13px !important;
+    }
+}
