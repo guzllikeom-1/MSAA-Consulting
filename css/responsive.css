@@ -7257,11 +7257,12 @@ and (max-height: 500px){
         width: 42px !important;
         height: 42px !important;
         object-fit: contain !important;
+       transform: translateX(-15px) !important;
     }
 
     /* تحريك زر احجز استشارة فقط */
     .header-btn{
-        transform: translateX(8px) !important;
+        transform: translateX(15px) !important;
     }
 
 }
