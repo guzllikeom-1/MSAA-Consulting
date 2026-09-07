@@ -1,64 +1,34 @@
 /* =========================================
         MSAA CONSULTING
-        BUY PROPERTY FORM
+        BUY PROPERTY
         WHATSAPP
 ========================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("buyPropertyForm");
+    const button = document.querySelector(".buy-submit-btn");
 
-    if (!form) {
+    if (!form || !button) {
         return;
     }
 
 
     /* =====================================
-            RADIO OPTIONS
-    ====================================== */
-
-    const radioInputs = form.querySelectorAll(
-        'input[type="radio"]'
-    );
-
-    radioInputs.forEach((radio) => {
-
-        radio.addEventListener("change", () => {
-
-            const groupName = radio.name;
-
-            const sameGroup = form.querySelectorAll(
-                `input[name="${groupName}"]`
-            );
-
-            sameGroup.forEach((item) => {
-
-                item.setAttribute(
-                    "aria-checked",
-                    item.checked ? "true" : "false"
-                );
-
-            });
-
-        });
-
-    });
-
-
-    /* =====================================
-            GET VALUE
+            GET INPUT VALUE
     ====================================== */
 
     function getValue(id) {
 
         const element = document.getElementById(id);
 
-        if (!element || !element.value.trim()) {
+        if (!element) {
             return "غير محدد";
         }
 
-        return element.value.trim();
+        const value = element.value.trim();
 
+        return value !== "" ? value : "غير محدد";
     }
 
 
@@ -69,51 +39,58 @@ document.addEventListener("DOMContentLoaded", () => {
     function getRadioValue(name) {
 
         const selected = form.querySelector(
-            `input[name="${name}"]:checked`
+            'input[name="' + name + '"]:checked'
         );
 
         if (!selected) {
             return "غير محدد";
         }
 
-        const values = {
+        if (selected.value === "finance") {
+            return "تمويل";
+        }
 
-            finance: "تمويل",
-            cash: "شراء نقدي",
+        if (selected.value === "cash") {
+            return "شراء نقدي";
+        }
 
-            yes: "نعم",
-            no: "لا"
+        if (selected.value === "yes") {
+            return "نعم";
+        }
 
-        };
+        if (selected.value === "no") {
+            return "لا";
+        }
 
-        return values[selected.value] || selected.value;
-
+        return selected.value;
     }
 
 
     /* =====================================
-            WHATSAPP SUBMIT
+            SEND TO WHATSAPP
     ====================================== */
 
-    form.addEventListener("submit", (event) => {
+    button.addEventListener("click", function (event) {
 
         event.preventDefault();
+        event.stopPropagation();
 
 
         const whatsappNumber = "96898999835";
 
 
-        const message = `
-طلب شراء عقار
+        const message =
+`طلب شراء عقار
+
 ━━━━━━━━━━━━━━━━
 
-بيانات العميل
+بيانات العميل:
 
 الاسم: ${getValue("buyerName")}
 رقم الهاتف: ${getValue("buyerPhone")}
 البريد الإلكتروني: ${getValue("buyerEmail")}
 
-تفاصيل الطلب
+تفاصيل طلب الشراء:
 
 الميزانية: ${getValue("budget")}
 نوع العقار: ${getValue("buyPropertyType")}
@@ -125,18 +102,23 @@ document.addEventListener("DOMContentLoaded", () => {
 المدة المتوقعة للشراء: ${getValue("purchasePeriod")}
 
 هل يرغب في عقار مؤجر؟ ${getRadioValue("rentedProperty")}
+
 هل يقبل عقارًا يحتاج إلى تطوير؟ ${getRadioValue("needsDevelopment")}
 
 تفاصيل إضافية:
+
 ${getValue("additionalDetails")}
 
 ━━━━━━━━━━━━━━━━
-تم إرسال الطلب من موقع محمد الشيادي للاستشارات العقارية.
-        `.trim();
+
+تم إرسال الطلب من موقع محمد الشيادي للاستشارات العقارية.`;
 
 
         const whatsappURL =
-            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(message);
 
 
         window.location.href = whatsappURL;
