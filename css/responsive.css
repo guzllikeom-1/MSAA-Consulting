@@ -7250,3 +7250,69 @@ and (max-height: 500px){
         font-size: 13px !important;
     }
 }
+/* =================================
+   HEADER - MOBILE FINAL
+================================= */
+
+@media (max-width: 768px){
+
+    /* ترتيب الهيدر */
+    .header-container{
+        width: 96% !important;
+        min-height: 72px !important;
+        grid-template-columns: 68px 1fr 52px !important;
+        gap: 4px !important;
+        align-items: center !important;
+    }
+
+    /* تصغير اللوجو */
+    .signature-logo{
+        width: 62px !important;
+        height: 48px !important;
+        object-fit: contain !important;
+    }
+
+    .brand{
+        width: 100% !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+
+    /* ترتيب الأيقونات */
+    .navbar{
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 18px !important;
+    }
+
+    .nav-item{
+        width: 30px !important;
+        height: 30px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+    }
+
+    .nav-item i{
+        font-size: 20px !important;
+    }
+
+    /* زر احجز استشارة */
+    .header-btn{
+        transform: translateX(10px) !important;
+        width: 48px !important;
+        height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+
+    .header-btn i{
+        font-size: 20px !important;
+    }
+}
