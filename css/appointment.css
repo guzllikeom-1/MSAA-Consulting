@@ -1689,3 +1689,192 @@
     }
 
 }
+/* =========================================
+   ترتيب صفحة الحجز للجوال فقط
+========================================= */
+@media (max-width: 600px){
+
+    /* تصغير المسافات داخل قسم الدفع */
+    .payment-section{
+        padding: 3px !important;
+    }
+
+    .payment-section > h2{
+        font-size: 20px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .payment-intro{
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 14px !important;
+    }
+
+    /* صندوق التحويل */
+    .payment-box{
+        padding: 14px !important;
+        border-radius: 18px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .payment-row{
+        padding-bottom: 12px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .payment-row span{
+        font-size: 14px !important;
+    }
+
+    .payment-row strong{
+        font-size: 20px !important;
+    }
+
+    /* رقم التحويل */
+    .payment-transfer{
+        padding: 12px !important;
+        gap: 10px !important;
+        margin-bottom: 12px !important;
+        border-radius: 14px !important;
+    }
+
+    .payment-transfer span{
+        font-size: 12px !important;
+    }
+
+    .payment-number{
+        font-size: 20px !important;
+    }
+
+    .copy-payment-btn{
+        width:auto !important;
+        padding: 9px 14px !important;
+        font-size: 12px !important;
+    }
+
+    /* اسم المستفيد */
+    .payment-name{
+        padding: 10px 0 !important;
+    }
+
+    .payment-name span{
+        font-size: 13px !important;
+    }
+
+    .payment-name strong{
+        font-size: 15px !important;
+    }
+
+    /* الملاحظة */
+    .payment-note{
+        gap: 7px !important;
+        margin-top: 10px !important;
+        padding: 10px !important;
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+    }
+
+    .payment-note i{
+        font-size: 15px !important;
+    }
+
+    /* إيصال التحويل */
+    .receipt-section{
+        margin-bottom: 15px !important;
+    }
+
+    .receipt-section h3{
+        font-size: 17px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .receipt-section h3 span{
+        font-size: 12px !important;
+    }
+
+    .receipt-upload{
+        min-height: 100px !important;
+        border-radius: 15px !important;
+        gap: 5px !important;
+    }
+
+    .receipt-upload i{
+        font-size: 24px !important;
+    }
+
+    .receipt-upload strong{
+        font-size: 14px !important;
+    }
+
+    .receipt-upload small{
+        font-size: 11px !important;
+    }
+
+    /* تفاصيل الموعد */
+    .payment-appointment-summary{
+        padding: 14px !important;
+        margin-bottom: 15px !important;
+        border-radius: 16px !important;
+    }
+
+    .payment-appointment-summary h3{
+        font-size: 17px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .payment-appointment-summary p{
+        margin: 6px 0 !important;
+        gap: 2px !important;
+        font-size: 13px !important;
+    }
+
+    /* زر إرسال طلب الحجز */
+    .send-booking-btn{
+        width: 82% !important;
+        margin: 0 auto !important;
+        padding: 12px 16px !important;
+        font-size: 13px !important;
+        border-radius: 14px !important;
+    }
+
+    .send-booking-btn i{
+        font-size: 14px !important;
+    }
+
+    .payment-warning{
+        font-size: 11px !important;
+        line-height: 1.6 !important;
+        margin-top: 10px !important;
+    }
+
+    /* معلومات العميل */
+    .client-info-section{
+        padding: 16px !important;
+        margin-top: 16px !important;
+        border-radius: 18px !important;
+    }
+
+    .client-info-section h3{
+        font-size: 18px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .client-form-grid{
+        gap: 10px !important;
+    }
+
+    .client-field{
+        gap: 5px !important;
+    }
+
+    .client-field label{
+        font-size: 12px !important;
+    }
+
+    .client-field input{
+        padding: 10px 12px !important;
+        font-size: 13px !important;
+        border-radius: 10px !important;
+    }
+
+}
