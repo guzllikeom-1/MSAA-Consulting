@@ -4,13 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!form) return;
 
-    const submitButton = form.querySelector(
-        'button[type="submit"]'
-    );
-
-    if (!submitButton) return;
-
-    submitButton.addEventListener("click", (event) => {
+    form.addEventListener("submit", (event) => {
 
         event.preventDefault();
 
@@ -19,125 +13,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!element) return "غير مذكور";
 
-            if (element.type === "radio") {
-                const checked = document.querySelector(
-                    `input[name="${element.name}"]:checked`
-                );
-
-                return checked
-                    ? (checked.value || "غير مذكور")
-                    : "غير مذكور";
-            }
-
-            if (element.type === "checkbox") {
-                return element.checked ? "نعم" : "لا";
-            }
-
-            return element.value?.trim() || "غير مذكور";
+            return element.value.trim() || "غير مذكور";
         };
 
-        const getRadioValue = (name) => {
-            const checked = document.querySelector(
+        const getRadio = (name) => {
+            const selected = form.querySelector(
                 `input[name="${name}"]:checked`
             );
 
-            return checked
-                ? (checked.value || "غير مذكور")
-                : "غير مذكور";
+            if (!selected) return "غير مذكور";
+
+            return selected.value === "yes"
+                ? "نعم"
+                : selected.value === "no"
+                ? "لا"
+                : selected.value;
         };
 
-        const getSelectText = (id) => {
-            const select = document.getElementById(id);
+        const getServices = () => {
 
-            if (!select || select.selectedIndex < 0) {
+            const selected = form.querySelectorAll(
+                'input[name="services"]:checked'
+            );
+
+            if (selected.length === 0) {
                 return "غير مذكور";
             }
 
-            return select.options[select.selectedIndex].textContent.trim();
+            const serviceNames = {
+                "full-management": "إدارة كاملة",
+                "rent-collection": "تحصيل الإيجارات",
+                "marketing-renting": "تسويق وتأجير",
+                "maintenance": "متابعة الصيانة",
+                "contracts": "إعداد العقود",
+                "reports": "تقارير دورية"
+            };
+
+            return Array.from(selected)
+                .map(service => serviceNames[service.value] || service.value)
+                .join("، ");
         };
 
-        const name =
-            getValue("managementName") !== "غير مذكور"
-                ? getValue("managementName")
-                : getValue("fullName");
+        const name = getValue("managementName");
+        const phone = getValue("managementPhone");
+        const propertyType = getValue("managementPropertyType");
+        const location = getValue("managementLocation");
+        const units = getValue("managementUnits");
+        const income = getValue("managementIncome");
+        const occupancy = getValue("managementOccupancy");
+        const vacantUnits = getValue("managementVacantUnits");
 
-        const phone =
-            getValue("managementPhone") !== "غير مذكور"
-                ? getValue("managementPhone")
-                : getValue("phone");
+        const arrears = getRadio("arrears");
+        const documentedContracts = getRadio("documentedContracts");
 
-        const email =
-            getValue("managementEmail") !== "غير مذكور"
-                ? getValue("managementEmail")
-                : getValue("email");
+        const services = getServices();
 
-        const propertyType =
-            getSelectText("managementPropertyType") !== "غير مذكور"
-                ? getSelectText("managementPropertyType")
-                : getSelectText("propertyType");
-
-        const location =
-            getValue("managementLocation") !== "غير مذكور"
-                ? getValue("managementLocation")
-                : getValue("location");
-
-        const units =
-            getValue("managementUnits") !== "غير مذكور"
-                ? getValue("managementUnits")
-                : getValue("units");
-
-        const currentIncome =
-            getValue("currentIncome") !== "غير مذكور"
-                ? getValue("currentIncome")
-                : getValue("monthlyIncome");
-
-        const occupancy =
-            getValue("occupancy") !== "غير مذكور"
-                ? getValue("occupancy")
-                : getValue("occupancyRate");
-
-        const vacantUnits =
-            getValue("vacantUnits") !== "غير مذكور"
-                ? getValue("vacantUnits")
-                : getValue("vacant");
-
-        const arrears =
-            getRadioValue("arrears") !== "غير مذكور"
-                ? getRadioValue("arrears")
-                : getRadioValue("hasArrears");
-
-        const contracts =
-            getRadioValue("contracts") !== "غير مذكور"
-                ? getRadioValue("contracts")
-                : getRadioValue("documentedContracts");
-
-        const services =
-            getValue("requestedServices") !== "غير مذكور"
-                ? getValue("requestedServices")
-                : getValue("services");
-
-        const notes =
-            getValue("managementNotes") !== "غير مذكور"
-                ? getValue("managementNotes")
-                : getValue("notes");
+        const notes = getValue("managementNotes");
 
         const message = `
 طلب عرض إدارة عقار
 
 الاسم: ${name}
 رقم التواصل: ${phone}
-البريد الإلكتروني: ${email}
 
 نوع العقار: ${propertyType}
 الموقع: ${location}
 عدد الوحدات: ${units}
 
-الدخل الحالي: ${currentIncome}
-نسبة الإشغال: ${occupancy}
+الدخل الحالي: ${income}
+نسبة الإشغال: ${occupancy}%
 عدد الوحدات الشاغرة: ${vacantUnits}
 
 هل توجد متأخرات؟ ${arrears}
-هل توجد عقود موثقة؟ ${contracts}
+هل توجد عقود موثقة؟ ${documentedContracts}
 
 الخدمات المطلوبة:
 ${services}
@@ -152,6 +100,7 @@ ${notes}
             `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
         window.location.href = whatsappURL;
+
     });
 
 });
