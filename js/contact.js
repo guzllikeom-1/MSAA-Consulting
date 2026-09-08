@@ -205,7 +205,7 @@ const encodedMessage =
 
 
 
-const whatsappNumber = "96895691806";
+const whatsappNumber = "96898999835";
 
 /* =======================================
         Show Success Modal
