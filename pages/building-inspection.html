@@ -1457,6 +1457,47 @@ ${notes}
 
     });
 
+	document
+    .querySelectorAll('input[type="file"]')
+    .forEach(input => {
+
+        input.addEventListener("change", function() {
+
+            let oldList =
+                this.parentElement.querySelector(".selected-files");
+
+            if (oldList) {
+                oldList.remove();
+            }
+
+            if (!this.files.length) {
+                return;
+            }
+
+            const list =
+                document.createElement("div");
+
+            list.className =
+                "selected-files";
+
+            Array.from(this.files).forEach(file => {
+
+                const item =
+                    document.createElement("div");
+
+                item.textContent =
+                    "📎 " + file.name;
+
+                list.appendChild(item);
+
+            });
+
+            this.parentElement.appendChild(list);
+
+        });
+
+    });
+
 </script>
 
 
