@@ -11,33 +11,42 @@ document.addEventListener("DOMContentLoaded", () => {
         const getValue = (id) => {
             const element = document.getElementById(id);
 
-            if (!element) return "غير مذكور";
+            if (!element) {
+                return "غير مذكور";
+            }
 
             return element.value.trim() || "غير مذكور";
         };
 
-        const getRadio = (name) => {
+        const getRadioValue = (name) => {
+
             const selected = form.querySelector(
                 `input[name="${name}"]:checked`
             );
 
-            if (!selected) return "غير مذكور";
+            if (!selected) {
+                return "غير مذكور";
+            }
 
-            return selected.value === "yes"
-                ? "نعم"
-                : selected.value === "no"
-                ? "لا"
-                : selected.value;
+            if (selected.value === "yes") {
+                return "نعم";
+            }
+
+            if (selected.value === "no") {
+                return "لا";
+            }
+
+            return selected.value;
         };
 
         const getServices = () => {
 
-            const selected = form.querySelectorAll(
+            const selectedServices = form.querySelectorAll(
                 'input[name="services"]:checked'
             );
 
-            if (selected.length === 0) {
-                return "غير مذكور";
+            if (selectedServices.length === 0) {
+                return "لم يتم اختيار خدمة";
             }
 
             const serviceNames = {
@@ -49,22 +58,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 "reports": "تقارير دورية"
             };
 
-            return Array.from(selected)
-                .map(service => serviceNames[service.value] || service.value)
+            return Array.from(selectedServices)
+                .map(service =>
+                    serviceNames[service.value] || service.value
+                )
                 .join("، ");
         };
 
         const name = getValue("managementName");
         const phone = getValue("managementPhone");
+
         const propertyType = getValue("managementPropertyType");
         const location = getValue("managementLocation");
         const units = getValue("managementUnits");
+
         const income = getValue("managementIncome");
         const occupancy = getValue("managementOccupancy");
         const vacantUnits = getValue("managementVacantUnits");
 
-        const arrears = getRadio("arrears");
-        const documentedContracts = getRadio("documentedContracts");
+        const arrears = getRadioValue("arrears");
+        const documentedContracts =
+            getRadioValue("documentedContracts");
 
         const services = getServices();
 
