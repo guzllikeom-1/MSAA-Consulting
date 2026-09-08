@@ -1169,13 +1169,18 @@
 
 document
     .getElementById("buildingInspectionForm")
-    .addEventListener("submit", function(e) {
+    .addEventListener("submit", async function(e) {
 
         e.preventDefault();
 
+        const submitButton =
+            this.querySelector(".sell-submit-btn");
 
-        const form = new FormData(this);
+        submitButton.disabled = true;
+        submitButton.style.opacity = "0.7";
 
+        const form =
+            new FormData(this);
 
         const fullName =
             form.get("fullName") || "";
@@ -1231,16 +1236,125 @@ document
         const notes =
             form.get("notes") || "";
 
-
         const inspectionAreas =
             form.getAll("inspectionAreas");
 
-
-        let inspectionList =
+        const inspectionList =
             inspectionAreas.length
                 ? inspectionAreas.join("، ")
                 : "لم يتم تحديدها";
 
+
+        /* رفع الملفات */
+
+        let uploadedFiles = [];
+
+        try {
+
+            const uploadData =
+                new FormData();
+
+            const fileInputs =
+                this.querySelectorAll(
+                    'input[type="file"]'
+                );
+
+            fileInputs.forEach(input => {
+
+                if (
+                    !input.files ||
+                    input.files.length === 0
+                ) {
+                    return;
+                }
+
+                Array.from(input.files).forEach(file => {
+
+                    uploadData.append(
+                        input.name,
+                        file
+                    );
+
+                });
+
+            });
+
+
+            const uploadResponse =
+                await fetch(
+                    "https://rfgrzpcyzbcjlsdbbddl.supabase.co/functions/v1/upload-property-files",
+                    {
+                        method: "POST",
+                        body: uploadData
+                    }
+                );
+
+
+            const uploadResult =
+                await uploadResponse.json();
+
+
+            if (
+                !uploadResponse.ok ||
+                !uploadResult.success
+            ) {
+
+                throw new Error(
+                    uploadResult.error ||
+                    "فشل رفع الملفات"
+                );
+
+            }
+
+
+            uploadedFiles =
+                uploadResult.files || [];
+
+
+        } catch (error) {
+
+            console.error(
+                "File upload error:",
+                error
+            );
+
+            alert(
+                "حدث خطأ أثناء رفع الملفات. يرجى المحاولة مرة أخرى."
+            );
+
+            submitButton.disabled = false;
+            submitButton.style.opacity = "1";
+
+            return;
+
+        }
+
+
+        /* المرفقات */
+
+        let attachments =
+            "لا توجد مرفقات";
+
+
+        if (uploadedFiles.length > 0) {
+
+            attachments =
+                uploadedFiles
+                    .map(file => {
+
+                        return (
+                            `📎 ${file.label}\n` +
+                            `اسم الملف: ${file.name}\n` +
+                            `🔗 فتح الملف:\n${file.url}`
+                        );
+
+                    })
+                    .join("\n\n");
+
+        }
+
+
+        /* رسالة الواتساب */
 
         const message = `
 
@@ -1311,6 +1425,11 @@ ${occupied}
 ${previousInspection}
 
 
+المرفقات
+
+${attachments}
+
+
 ملاحظات إضافية:
 
 ${notes}
@@ -1321,14 +1440,6 @@ ${notes}
 
 `;
 
-
-        /*
-        ========================================
-        ضع رقم الواتساب هنا
-        مثال:
-        96891234567
-        ========================================
-        */
 
         const whatsappNumber =
             "96898999835";
@@ -1341,15 +1452,12 @@ ${notes}
             encodeURIComponent(message);
 
 
-        window.open(
-            whatsappURL,
-            "_blank"
-        );
+        window.location.href =
+            whatsappURL;
 
     });
 
 </script>
-
 
 
 <!--footer-->
