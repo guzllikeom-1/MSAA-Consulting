@@ -121,25 +121,33 @@ function showToast(message) {
 }
 
 async function openReceipt(pathValue) {
-  const path = getReceiptPath(pathValue);
+    const popup = window.open("about:blank", "_blank");
 
-  if (!path) {
-    alert("لا يوجد مسار صالح للإيصال.");
-    return;
-  }
+    const path = getReceiptPath(pathValue);
 
-  const { data, error } = await supabase
-    .storage
-    .from("payment-receipts")
-    .createSignedUrl(path, 300);
+    if (!path) {
+        popup?.close();
+        alert("لا يوجد مسار صالح للإيصال.");
+        return;
+    }
 
-  if (error) {
-    console.error("Receipt error:", error);
-    alert("تعذر فتح الإيصال.");
-    return;
-  }
+    const { data, error } = await supabase
+        .storage
+        .from("payment-receipts")
+        .createSignedUrl(path, 300);
 
-  window.open(data.signedUrl, "_blank", "noopener,noreferrer");
+    if (error) {
+        popup?.close();
+        console.error("Receipt error:", error);
+        alert("تعذر فتح الإيصال.");
+        return;
+    }
+
+    if (popup) {
+        popup.location.href = data.signedUrl;
+    } else {
+        window.location.href = data.signedUrl;
+    }
 }
 
 async function updateStatus(id, status) {
